@@ -99,6 +99,9 @@ namespace JSYS.Formularios
                 var obj_25 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Reimprimir Recibos").SingleOrDefault();
                 btn_rep_reimprimir_recibos.Enabled = obj_25.ACCESO == true ? true : false;
 
+                var obj_31 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Historial Pagos").SingleOrDefault();
+                btn_rep_historial.Enabled = obj_31.ACCESO == true ? true : false;
+
                 //Botones Barra Consultas
                 var obj_26 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Consultas - Facturas Inactivas").SingleOrDefault();
                 btn_facturas_no_activas.Enabled = obj_26.ACCESO == true ? true : false;
