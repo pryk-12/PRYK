@@ -144,7 +144,7 @@ namespace JSYS.Formularios
             }
 
             lbl_usuario.Text = "Usuario:  " + S_Utilidades.Datos_Usuario.USUARIO;
-            Cargar_Permisos();
+            //Cargar_Permisos();
         }
 
         public void ocultar_barra_menu(bool opcion)

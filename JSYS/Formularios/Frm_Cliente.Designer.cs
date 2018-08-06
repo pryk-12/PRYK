@@ -59,13 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cb_tipo_identificacion = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txt_telefono_referencia3 = new System.Windows.Forms.MaskedTextBox();
-            this.txt_direccion_referencia3 = new System.Windows.Forms.TextBox();
-            this.txt_nombre_referencia3 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -83,13 +76,17 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Txt_ID = new System.Windows.Forms.TextBox();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txt_observacion_referencia1 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txt_observacion_referencia2 = new System.Windows.Forms.TextBox();
+            this.txt_observacion = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -103,7 +100,7 @@
             this.tabControl1.Location = new System.Drawing.Point(104, 47);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(536, 367);
+            this.tabControl1.Size = new System.Drawing.Size(536, 391);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -112,13 +109,15 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(528, 340);
+            this.tabPage1.Size = new System.Drawing.Size(528, 364);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Generales";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_observacion);
+            this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.cb_casa_propia);
             this.groupBox1.Controls.Add(this.label12);
@@ -146,9 +145,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cb_tipo_identificacion);
-            this.groupBox1.Location = new System.Drawing.Point(21, 11);
+            this.groupBox1.Location = new System.Drawing.Point(21, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(491, 312);
+            this.groupBox1.Size = new System.Drawing.Size(491, 353);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
@@ -429,100 +428,20 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(528, 340);
+            this.tabPage2.Size = new System.Drawing.Size(528, 364);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Referencias";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.txt_telefono_referencia3);
-            this.groupBox5.Controls.Add(this.txt_direccion_referencia3);
-            this.groupBox5.Controls.Add(this.txt_nombre_referencia3);
-            this.groupBox5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.groupBox5.Location = new System.Drawing.Point(29, 226);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(471, 99);
-            this.groupBox5.TabIndex = 188;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Referencia Comercial 3";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(313, 28);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 13);
-            this.label20.TabIndex = 188;
-            this.label20.Text = "Teléfono";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(10, 51);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(59, 13);
-            this.label21.TabIndex = 187;
-            this.label21.Text = "Dirección";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(18, 28);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(51, 13);
-            this.label22.TabIndex = 186;
-            this.label22.Text = "Nombre";
-            // 
-            // txt_telefono_referencia3
-            // 
-            this.txt_telefono_referencia3.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_telefono_referencia3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefono_referencia3.Location = new System.Drawing.Point(372, 24);
-            this.txt_telefono_referencia3.Mask = "000-000-0000";
-            this.txt_telefono_referencia3.Name = "txt_telefono_referencia3";
-            this.txt_telefono_referencia3.Size = new System.Drawing.Size(87, 22);
-            this.txt_telefono_referencia3.TabIndex = 1;
-            // 
-            // txt_direccion_referencia3
-            // 
-            this.txt_direccion_referencia3.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_direccion_referencia3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_direccion_referencia3.Location = new System.Drawing.Point(72, 48);
-            this.txt_direccion_referencia3.MaxLength = 500;
-            this.txt_direccion_referencia3.Multiline = true;
-            this.txt_direccion_referencia3.Name = "txt_direccion_referencia3";
-            this.txt_direccion_referencia3.Size = new System.Drawing.Size(387, 44);
-            this.txt_direccion_referencia3.TabIndex = 2;
-            // 
-            // txt_nombre_referencia3
-            // 
-            this.txt_nombre_referencia3.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_nombre_referencia3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_referencia3.Location = new System.Drawing.Point(72, 24);
-            this.txt_nombre_referencia3.MaxLength = 50;
-            this.txt_nombre_referencia3.Name = "txt_nombre_referencia3";
-            this.txt_nombre_referencia3.Size = new System.Drawing.Size(237, 22);
-            this.txt_nombre_referencia3.TabIndex = 0;
-            // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.txt_observacion_referencia2);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.label19);
@@ -531,9 +450,9 @@
             this.groupBox4.Controls.Add(this.txt_nombre_referencia2);
             this.groupBox4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.groupBox4.Location = new System.Drawing.Point(29, 118);
+            this.groupBox4.Location = new System.Drawing.Point(19, 188);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(471, 99);
+            this.groupBox4.Size = new System.Drawing.Size(488, 159);
             this.groupBox4.TabIndex = 187;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Referencia Comercial 2";
@@ -543,7 +462,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(313, 27);
+            this.label17.Location = new System.Drawing.Point(327, 33);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(56, 13);
             this.label17.TabIndex = 188;
@@ -554,7 +473,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(10, 50);
+            this.label18.Location = new System.Drawing.Point(24, 56);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(59, 13);
             this.label18.TabIndex = 187;
@@ -565,7 +484,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(18, 24);
+            this.label19.Location = new System.Drawing.Point(32, 30);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(51, 13);
             this.label19.TabIndex = 186;
@@ -575,7 +494,7 @@
             // 
             this.txt_telefono_referencia2.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_telefono_referencia2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefono_referencia2.Location = new System.Drawing.Point(372, 23);
+            this.txt_telefono_referencia2.Location = new System.Drawing.Point(386, 29);
             this.txt_telefono_referencia2.Mask = "000-000-0000";
             this.txt_telefono_referencia2.Name = "txt_telefono_referencia2";
             this.txt_telefono_referencia2.Size = new System.Drawing.Size(87, 22);
@@ -585,7 +504,7 @@
             // 
             this.txt_direccion_referencia2.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_direccion_referencia2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_direccion_referencia2.Location = new System.Drawing.Point(72, 47);
+            this.txt_direccion_referencia2.Location = new System.Drawing.Point(86, 53);
             this.txt_direccion_referencia2.MaxLength = 500;
             this.txt_direccion_referencia2.Multiline = true;
             this.txt_direccion_referencia2.Name = "txt_direccion_referencia2";
@@ -596,7 +515,7 @@
             // 
             this.txt_nombre_referencia2.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_nombre_referencia2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_referencia2.Location = new System.Drawing.Point(72, 23);
+            this.txt_nombre_referencia2.Location = new System.Drawing.Point(86, 29);
             this.txt_nombre_referencia2.MaxLength = 50;
             this.txt_nombre_referencia2.Name = "txt_nombre_referencia2";
             this.txt_nombre_referencia2.Size = new System.Drawing.Size(237, 22);
@@ -604,6 +523,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.txt_observacion_referencia1);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label14);
@@ -612,9 +533,9 @@
             this.groupBox3.Controls.Add(this.txt_nombre_referencia1);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.groupBox3.Location = new System.Drawing.Point(29, 10);
+            this.groupBox3.Location = new System.Drawing.Point(19, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(471, 99);
+            this.groupBox3.Size = new System.Drawing.Size(488, 159);
             this.groupBox3.TabIndex = 186;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Referencia Comercial 1";
@@ -624,7 +545,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(313, 27);
+            this.label16.Location = new System.Drawing.Point(328, 32);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(56, 13);
             this.label16.TabIndex = 188;
@@ -635,7 +556,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(10, 50);
+            this.label15.Location = new System.Drawing.Point(25, 55);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 13);
             this.label15.TabIndex = 187;
@@ -646,7 +567,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(18, 27);
+            this.label14.Location = new System.Drawing.Point(33, 32);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(51, 13);
             this.label14.TabIndex = 186;
@@ -656,7 +577,7 @@
             // 
             this.txt_telefono_referencia1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_telefono_referencia1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefono_referencia1.Location = new System.Drawing.Point(372, 23);
+            this.txt_telefono_referencia1.Location = new System.Drawing.Point(387, 28);
             this.txt_telefono_referencia1.Mask = "000-000-0000";
             this.txt_telefono_referencia1.Name = "txt_telefono_referencia1";
             this.txt_telefono_referencia1.Size = new System.Drawing.Size(87, 22);
@@ -666,7 +587,7 @@
             // 
             this.txt_direccion_referencia1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_direccion_referencia1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_direccion_referencia1.Location = new System.Drawing.Point(72, 47);
+            this.txt_direccion_referencia1.Location = new System.Drawing.Point(87, 52);
             this.txt_direccion_referencia1.MaxLength = 500;
             this.txt_direccion_referencia1.Multiline = true;
             this.txt_direccion_referencia1.Name = "txt_direccion_referencia1";
@@ -677,7 +598,7 @@
             // 
             this.txt_nombre_referencia1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_nombre_referencia1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_referencia1.Location = new System.Drawing.Point(72, 23);
+            this.txt_nombre_referencia1.Location = new System.Drawing.Point(87, 28);
             this.txt_nombre_referencia1.MaxLength = 50;
             this.txt_nombre_referencia1.Name = "txt_nombre_referencia1";
             this.txt_nombre_referencia1.Size = new System.Drawing.Size(237, 22);
@@ -688,7 +609,7 @@
             this.groupBox2.Controls.Add(this.btn_guardar);
             this.groupBox2.Location = new System.Drawing.Point(8, 43);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(90, 371);
+            this.groupBox2.Size = new System.Drawing.Size(90, 394);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             // 
@@ -717,22 +638,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Txt_ID);
             this.panel1.Controls.Add(this.Lbl_Titulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(649, 41);
             this.panel1.TabIndex = 19;
-            // 
-            // Txt_ID
-            // 
-            this.Txt_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txt_ID.Location = new System.Drawing.Point(566, 13);
-            this.Txt_ID.Name = "Txt_ID";
-            this.Txt_ID.Size = new System.Drawing.Size(70, 22);
-            this.Txt_ID.TabIndex = 9;
-            this.Txt_ID.Visible = false;
             // 
             // Lbl_Titulo
             // 
@@ -745,10 +656,74 @@
             this.Lbl_Titulo.TabIndex = 5;
             this.Lbl_Titulo.Text = ":";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(7, 101);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(77, 13);
+            this.label20.TabIndex = 190;
+            this.label20.Text = "Observación";
+            // 
+            // txt_observacion_referencia1
+            // 
+            this.txt_observacion_referencia1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_observacion_referencia1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_observacion_referencia1.Location = new System.Drawing.Point(87, 98);
+            this.txt_observacion_referencia1.MaxLength = 500;
+            this.txt_observacion_referencia1.Multiline = true;
+            this.txt_observacion_referencia1.Name = "txt_observacion_referencia1";
+            this.txt_observacion_referencia1.Size = new System.Drawing.Size(387, 44);
+            this.txt_observacion_referencia1.TabIndex = 189;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 8.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(6, 102);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(77, 13);
+            this.label21.TabIndex = 192;
+            this.label21.Text = "Observación";
+            // 
+            // txt_observacion_referencia2
+            // 
+            this.txt_observacion_referencia2.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_observacion_referencia2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_observacion_referencia2.Location = new System.Drawing.Point(86, 99);
+            this.txt_observacion_referencia2.MaxLength = 500;
+            this.txt_observacion_referencia2.Multiline = true;
+            this.txt_observacion_referencia2.Name = "txt_observacion_referencia2";
+            this.txt_observacion_referencia2.Size = new System.Drawing.Size(387, 44);
+            this.txt_observacion_referencia2.TabIndex = 3;
+            // 
+            // txt_observacion
+            // 
+            this.txt_observacion.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_observacion.Location = new System.Drawing.Point(138, 301);
+            this.txt_observacion.MaxLength = 500;
+            this.txt_observacion.Multiline = true;
+            this.txt_observacion.Name = "txt_observacion";
+            this.txt_observacion.Size = new System.Drawing.Size(337, 44);
+            this.txt_observacion.TabIndex = 36;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(54, 306);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(81, 14);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "Observación";
+            // 
             // Frm_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
-            this.ClientSize = new System.Drawing.Size(649, 423);
+            this.ClientSize = new System.Drawing.Size(649, 446);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
@@ -758,8 +733,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -779,7 +752,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox Txt_ID;
         private System.Windows.Forms.Label Lbl_Titulo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
@@ -809,13 +781,6 @@
         internal System.Windows.Forms.MaskedTextBox txt_celular;
         private System.Windows.Forms.Label label7;
         internal System.Windows.Forms.MaskedTextBox txt_telefono;
-        internal System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        internal System.Windows.Forms.MaskedTextBox txt_telefono_referencia3;
-        internal System.Windows.Forms.TextBox txt_direccion_referencia3;
-        internal System.Windows.Forms.TextBox txt_nombre_referencia3;
         internal System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -830,5 +795,11 @@
         internal System.Windows.Forms.MaskedTextBox txt_telefono_referencia1;
         internal System.Windows.Forms.TextBox txt_direccion_referencia1;
         internal System.Windows.Forms.TextBox txt_nombre_referencia1;
+        private System.Windows.Forms.Label label21;
+        internal System.Windows.Forms.TextBox txt_observacion_referencia2;
+        private System.Windows.Forms.Label label20;
+        internal System.Windows.Forms.TextBox txt_observacion_referencia1;
+        private System.Windows.Forms.TextBox txt_observacion;
+        private System.Windows.Forms.Label label22;
     }
 }

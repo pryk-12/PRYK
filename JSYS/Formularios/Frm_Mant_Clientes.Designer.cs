@@ -33,7 +33,18 @@
             this.Txt_Buscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DG = new System.Windows.Forms.DataGridView();
-            this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_activo = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_inactivo = new System.Windows.Forms.Label();
+            this.Lbl_Total = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_nuevo = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.REFERENCIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,24 +58,12 @@
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CREADO_POR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_CREADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Lbl_Total = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_editar = new System.Windows.Forms.Button();
-            this.btn_nuevo = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_activo = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_inactivo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -103,7 +102,6 @@
             this.DG.AllowUserToDeleteRows = false;
             this.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_CLIENTE,
             this.REFERENCIA,
             this.NOMBRE,
             this.DIRECCION,
@@ -134,14 +132,151 @@
             this.DG.TabIndex = 0;
             this.DG.DoubleClick += new System.EventHandler(this.DG_DoubleClick);
             // 
-            // ID_CLIENTE
+            // groupBox1
             // 
-            this.ID_CLIENTE.DataPropertyName = "ID_CLIENTE";
-            this.ID_CLIENTE.HeaderText = "ID";
-            this.ID_CLIENTE.Name = "ID_CLIENTE";
-            this.ID_CLIENTE.ReadOnly = true;
-            this.ID_CLIENTE.Visible = false;
-            this.ID_CLIENTE.Width = 40;
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.DG);
+            this.groupBox1.Controls.Add(this.Txt_Buscar);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(11, 55);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(925, 388);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(716, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 14);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Activo";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lbl_activo);
+            this.panel3.Location = new System.Drawing.Point(664, 18);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(49, 22);
+            this.panel3.TabIndex = 23;
+            // 
+            // lbl_activo
+            // 
+            this.lbl_activo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_activo.Location = new System.Drawing.Point(1, 3);
+            this.lbl_activo.Name = "lbl_activo";
+            this.lbl_activo.Size = new System.Drawing.Size(47, 14);
+            this.lbl_activo.TabIndex = 21;
+            this.lbl_activo.Text = "0";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(855, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 14);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Inactivo";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Red;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lbl_inactivo);
+            this.panel2.Location = new System.Drawing.Point(803, 18);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(49, 22);
+            this.panel2.TabIndex = 21;
+            // 
+            // lbl_inactivo
+            // 
+            this.lbl_inactivo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_inactivo.Location = new System.Drawing.Point(1, 3);
+            this.lbl_inactivo.Name = "lbl_inactivo";
+            this.lbl_inactivo.Size = new System.Drawing.Size(47, 14);
+            this.lbl_inactivo.TabIndex = 22;
+            this.lbl_inactivo.Text = "0";
+            // 
+            // Lbl_Total
+            // 
+            this.Lbl_Total.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Total.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Lbl_Total.Location = new System.Drawing.Point(407, 37);
+            this.Lbl_Total.Name = "Lbl_Total";
+            this.Lbl_Total.Size = new System.Drawing.Size(509, 26);
+            this.Lbl_Total.TabIndex = 6;
+            this.Lbl_Total.Text = "0";
+            this.Lbl_Total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_editar);
+            this.groupBox2.Controls.Add(this.btn_nuevo);
+            this.groupBox2.Controls.Add(this.Lbl_Total);
+            this.groupBox2.Location = new System.Drawing.Point(11, 446);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(925, 70);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.ForeColor = System.Drawing.Color.White;
+            this.btn_editar.Image = global::JSYS.Properties.Resources.File_Edit_WF;
+            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editar.Location = new System.Drawing.Point(126, 14);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(113, 47);
+            this.btn_editar.TabIndex = 8;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_editar.UseVisualStyleBackColor = false;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // btn_nuevo
+            // 
+            this.btn_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_nuevo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nuevo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nuevo.ForeColor = System.Drawing.Color.White;
+            this.btn_nuevo.Image = global::JSYS.Properties.Resources.File_Add_WF;
+            this.btn_nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nuevo.Location = new System.Drawing.Point(7, 14);
+            this.btn_nuevo.Name = "btn_nuevo";
+            this.btn_nuevo.Size = new System.Drawing.Size(113, 47);
+            this.btn_nuevo.TabIndex = 7;
+            this.btn_nuevo.Text = "Nuevo";
+            this.btn_nuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_nuevo.UseVisualStyleBackColor = false;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(948, 46);
+            this.panel1.TabIndex = 9;
             // 
             // REFERENCIA
             // 
@@ -246,152 +381,6 @@
             this.FECHA_CREADO.ReadOnly = true;
             this.FECHA_CREADO.Width = 80;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.DG);
-            this.groupBox1.Controls.Add(this.Txt_Buscar);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 55);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(925, 388);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            // 
-            // Lbl_Total
-            // 
-            this.Lbl_Total.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Total.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Lbl_Total.Location = new System.Drawing.Point(407, 37);
-            this.Lbl_Total.Name = "Lbl_Total";
-            this.Lbl_Total.Size = new System.Drawing.Size(509, 26);
-            this.Lbl_Total.TabIndex = 6;
-            this.Lbl_Total.Text = "0";
-            this.Lbl_Total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btn_editar);
-            this.groupBox2.Controls.Add(this.btn_nuevo);
-            this.groupBox2.Controls.Add(this.Lbl_Total);
-            this.groupBox2.Location = new System.Drawing.Point(11, 446);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(925, 70);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            // 
-            // btn_editar
-            // 
-            this.btn_editar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_editar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editar.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_editar.ForeColor = System.Drawing.Color.White;
-            this.btn_editar.Image = global::JSYS.Properties.Resources.File_Edit_WF;
-            this.btn_editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editar.Location = new System.Drawing.Point(126, 14);
-            this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(113, 47);
-            this.btn_editar.TabIndex = 8;
-            this.btn_editar.Text = "Editar";
-            this.btn_editar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_editar.UseVisualStyleBackColor = false;
-            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
-            // 
-            // btn_nuevo
-            // 
-            this.btn_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_nuevo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nuevo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nuevo.ForeColor = System.Drawing.Color.White;
-            this.btn_nuevo.Image = global::JSYS.Properties.Resources.File_Add_WF;
-            this.btn_nuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nuevo.Location = new System.Drawing.Point(7, 14);
-            this.btn_nuevo.Name = "btn_nuevo";
-            this.btn_nuevo.Size = new System.Drawing.Size(113, 47);
-            this.btn_nuevo.TabIndex = 7;
-            this.btn_nuevo.Text = "Nuevo";
-            this.btn_nuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_nuevo.UseVisualStyleBackColor = false;
-            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(948, 46);
-            this.panel1.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(716, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 14);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Activo";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.lbl_activo);
-            this.panel3.Location = new System.Drawing.Point(664, 18);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(49, 22);
-            this.panel3.TabIndex = 23;
-            // 
-            // lbl_activo
-            // 
-            this.lbl_activo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_activo.Location = new System.Drawing.Point(1, 3);
-            this.lbl_activo.Name = "lbl_activo";
-            this.lbl_activo.Size = new System.Drawing.Size(47, 14);
-            this.lbl_activo.TabIndex = 21;
-            this.lbl_activo.Text = "0";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(855, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 14);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Inactivo";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Red;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lbl_inactivo);
-            this.panel2.Location = new System.Drawing.Point(803, 18);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 22);
-            this.panel2.TabIndex = 21;
-            // 
-            // lbl_inactivo
-            // 
-            this.lbl_inactivo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_inactivo.Location = new System.Drawing.Point(1, 3);
-            this.lbl_inactivo.Name = "lbl_inactivo";
-            this.lbl_inactivo.Size = new System.Drawing.Size(47, 14);
-            this.lbl_inactivo.TabIndex = 22;
-            this.lbl_inactivo.Text = "0";
-            // 
             // Frm_Mant_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -405,11 +394,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.DG)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -426,7 +415,12 @@
         private System.Windows.Forms.Label Lbl_Total;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_CLIENTE;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lbl_activo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbl_inactivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn REFERENCIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
@@ -440,11 +434,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CREADO_POR;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_CREADO;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbl_activo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lbl_inactivo;
     }
 }

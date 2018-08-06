@@ -16,7 +16,7 @@ namespace JSYS.Formularios
 
         public void Listar_Clientes()
         {
-            string Condicion = "(C.ID_CLIENTE LIKE'%" + Txt_Buscar.Text + "%' OR C.NOMBRE LIKE'%" + Txt_Buscar.Text + "%' OR C.REFERENCIA LIKE'%" + Txt_Buscar.Text + "%')";
+            string Condicion = "(C.NUMERO_IDENTIFICACION LIKE'%" + Txt_Buscar.Text + "%' OR C.NOMBRE LIKE'%" + Txt_Buscar.Text + "%' OR C.REFERENCIA LIKE'%" + Txt_Buscar.Text + "%')";
             DG.DataSource = S_Cliente.Listar_Clientes(Condicion);
             Lbl_Total.Text = "Total de Registros:  " + DG.RowCount.ToString();
             Cambiar_Color_Filas();
@@ -28,7 +28,7 @@ namespace JSYS.Formularios
             int inactivo = 0;
             foreach (DataGridViewRow row in DG.Rows)
             {
-                if (row.Cells[11].Value.ToString() == "Inactivo")
+                if (row.Cells[10].Value.ToString() == "Inactivo")
                 {
                     row.DefaultCellStyle.BackColor = Color.Red;
                     inactivo++;
@@ -60,7 +60,7 @@ namespace JSYS.Formularios
                 return;
             }
             CLIENTES obj = new CLIENTES();
-            obj.ID_CLIENTE = Convert.ToInt32(DG.SelectedCells[0].Value);
+            obj.REFERENCIA = DG.SelectedCells[0].Value.ToString();
             Frm_Cliente frm = new Frm_Cliente();
             frm.Recibir_Datos(obj);
             frm.Titulo("Editar Cliente");

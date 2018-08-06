@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BD_JSYSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BD_JSYSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ARTICULOS">
           <Key>
             <PropertyRef Name="ID_ARTICULO" />
@@ -24,34 +24,33 @@
         </EntityType>
         <EntityType Name="CLIENTES">
           <Key>
-            <PropertyRef Name="ID_CLIENTE" />
+            <PropertyRef Name="REFERENCIA" />
           </Key>
-          <Property Name="ID_CLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="REFERENCIA" Type="varchar" MaxLength="25" Nullable="false" />
-          <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="REFERENCIA" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="100" />
           <Property Name="ID_TIPO_IDENTIFICACION" Type="int" Nullable="false" />
-          <Property Name="NUMERO_IDENTIFICACION" Type="varchar" MaxLength="20" />
-          <Property Name="DIRECCION" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="TELEFONO" Type="varchar" MaxLength="20" />
-          <Property Name="CELULAR" Type="varchar" MaxLength="20" />
-          <Property Name="EMAIL" Type="varchar" MaxLength="50" />
-          <Property Name="SUELDO" Type="numeric" Precision="10" Scale="2" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="CREADO_POR" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
-          <Property Name="DIRECCION_TRABAJO" Type="varchar" MaxLength="500" />
-          <Property Name="NOMBRE_CONYUGUE" Type="varchar" MaxLength="50" />
-          <Property Name="TELEFONO_CONYUGUE" Type="varchar" MaxLength="15" />
-          <Property Name="CASA_PROPIA" Type="varchar" MaxLength="2" />
-          <Property Name="NOMBRE_REFERENCIA1" Type="varchar" MaxLength="50" />
-          <Property Name="DIRECCION_REFERENCIA1" Type="varchar" MaxLength="500" />
-          <Property Name="TELEFONO_REFERENCIA1" Type="varchar" MaxLength="15" />
-          <Property Name="NOMBRE_REFERENCIA2" Type="varchar" MaxLength="50" />
-          <Property Name="DIRECCION_REFERENCIA2" Type="varchar" MaxLength="500" />
-          <Property Name="TELEFONO_REFERENCIA2" Type="varchar" MaxLength="15" />
-          <Property Name="NOMBRE_REFERENCIA3" Type="varchar" MaxLength="50" />
-          <Property Name="DIRECCION_REFERENCIA3" Type="varchar" MaxLength="500" />
-          <Property Name="TELEFONO_REFERENCIA3" Type="varchar" MaxLength="15" />
+          <Property Name="NUMERO_IDENTIFICACION" Type="nvarchar" MaxLength="15" />
+          <Property Name="DIRECCION" Type="nvarchar(max)" />
+          <Property Name="TELEFONO" Type="nvarchar" MaxLength="15" />
+          <Property Name="CELULAR" Type="nvarchar" MaxLength="15" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="SUELDO" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ESTADO" Type="nvarchar" MaxLength="1" />
+          <Property Name="CREADO_POR" Type="nvarchar" MaxLength="20" />
+          <Property Name="FECHA_CREADO" Type="datetime" />
+          <Property Name="DIRECCION_TRABAJO" Type="nvarchar(max)" />
+          <Property Name="NOMBRE_CONYUGUE" Type="nvarchar" MaxLength="100" />
+          <Property Name="TELEFONO_CONYUGUE" Type="nvarchar" MaxLength="15" />
+          <Property Name="CASA_PROPIA" Type="nvarchar" MaxLength="2" />
+          <Property Name="NOMBRE_REFERENCIA1" Type="nvarchar" MaxLength="100" />
+          <Property Name="DIRECCION_REFERENCIA1" Type="nvarchar(max)" />
+          <Property Name="TELEFONO_REFERENCIA1" Type="nvarchar" MaxLength="15" />
+          <Property Name="OBSERVACION_REFERENCIA1" Type="nvarchar(max)" />
+          <Property Name="NOMBRE_REFERENCIA2" Type="nvarchar" MaxLength="100" />
+          <Property Name="DIRECCION_REFERENCIA2" Type="nvarchar(max)" />
+          <Property Name="TELEFONO_REFERENCIA2" Type="nvarchar" MaxLength="15" />
+          <Property Name="OBSERVACION_REFERENCIA2" Type="nvarchar(max)" />
+          <Property Name="OBSERVACION" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="COBRADORES">
           <Key>
@@ -542,34 +541,33 @@
         </EntityType>
         <EntityType Name="CLIENTES">
           <Key>
-            <PropertyRef Name="ID_CLIENTE" />
+            <PropertyRef Name="REFERENCIA" />
           </Key>
-          <Property Name="ID_CLIENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="REFERENCIA" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="REFERENCIA" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID_TIPO_IDENTIFICACION" Type="Int32" Nullable="false" />
-          <Property Name="NUMERO_IDENTIFICACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFONO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="CELULAR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="SUELDO" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="CREADO_POR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="DIRECCION_TRABAJO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="NOMBRE_CONYUGUE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFONO_CONYUGUE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="CASA_PROPIA" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
-          <Property Name="NOMBRE_REFERENCIA1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION_REFERENCIA1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFONO_REFERENCIA1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="NOMBRE_REFERENCIA2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION_REFERENCIA2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFONO_REFERENCIA2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="NOMBRE_REFERENCIA3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION_REFERENCIA3" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFONO_REFERENCIA3" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="NUMERO_IDENTIFICACION" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="DIRECCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CELULAR" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SUELDO" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ESTADO" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="CREADO_POR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_CREADO" Type="DateTime" Precision="3" />
+          <Property Name="DIRECCION_TRABAJO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NOMBRE_CONYUGUE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO_CONYUGUE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CASA_PROPIA" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="NOMBRE_REFERENCIA1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DIRECCION_REFERENCIA1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO_REFERENCIA1" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="OBSERVACION_REFERENCIA1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NOMBRE_REFERENCIA2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DIRECCION_REFERENCIA2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO_REFERENCIA2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="OBSERVACION_REFERENCIA2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OBSERVACION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="COBRADORES">
           <Key>
@@ -865,12 +863,12 @@
           <EntitySetMapping Name="CLIENTES">
             <EntityTypeMapping TypeName="BD_JSYSModel.CLIENTES">
               <MappingFragment StoreEntitySet="CLIENTES">
-                <ScalarProperty Name="TELEFONO_REFERENCIA3" ColumnName="TELEFONO_REFERENCIA3" />
-                <ScalarProperty Name="DIRECCION_REFERENCIA3" ColumnName="DIRECCION_REFERENCIA3" />
-                <ScalarProperty Name="NOMBRE_REFERENCIA3" ColumnName="NOMBRE_REFERENCIA3" />
+                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+                <ScalarProperty Name="OBSERVACION_REFERENCIA2" ColumnName="OBSERVACION_REFERENCIA2" />
                 <ScalarProperty Name="TELEFONO_REFERENCIA2" ColumnName="TELEFONO_REFERENCIA2" />
                 <ScalarProperty Name="DIRECCION_REFERENCIA2" ColumnName="DIRECCION_REFERENCIA2" />
                 <ScalarProperty Name="NOMBRE_REFERENCIA2" ColumnName="NOMBRE_REFERENCIA2" />
+                <ScalarProperty Name="OBSERVACION_REFERENCIA1" ColumnName="OBSERVACION_REFERENCIA1" />
                 <ScalarProperty Name="TELEFONO_REFERENCIA1" ColumnName="TELEFONO_REFERENCIA1" />
                 <ScalarProperty Name="DIRECCION_REFERENCIA1" ColumnName="DIRECCION_REFERENCIA1" />
                 <ScalarProperty Name="NOMBRE_REFERENCIA1" ColumnName="NOMBRE_REFERENCIA1" />
@@ -890,7 +888,6 @@
                 <ScalarProperty Name="ID_TIPO_IDENTIFICACION" ColumnName="ID_TIPO_IDENTIFICACION" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
                 <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
-                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
