@@ -11,7 +11,7 @@ namespace JSYS.Formularios
     {
         public class _CLIENTE
         {
-            public int ID_CLIENTE { get; set; }
+            public string  REFERENCIA { get; set; }
             public string NOMBRE { get; set; }
         }
 
@@ -35,10 +35,9 @@ namespace JSYS.Formularios
         public Frm_Rep_Facturas()
         {
             InitializeComponent();
-            S_Utilidades.Llenar_ComboBox<_CLIENTE>(cb_cliente, "NOMBRE", "ID_CLIENTE", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "CLIENTES");
+            S_Utilidades.Llenar_ComboBox<_CLIENTE>(cb_cliente, "NOMBRE", "REFERENCIA", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "CLIENTES");
             S_Utilidades.Llenar_ComboBox<ESTADO_FACTURAS>(cb_estado, "DESCRIPCION", "ID_ESTADO", "DESCRIPCION LIKE'%" + "" + "%'", "ESTADO_FACTURAS");
             Llenar_ComboBox_Cobrador();
-            Llenar_ComboBox_Vendedor();
         }
 
         void Llenar_ComboBox_Cobrador()
@@ -60,24 +59,7 @@ namespace JSYS.Formularios
             cb_cobrador.DisplayMember = "USUARIO";
         }
 
-        void Llenar_ComboBox_Vendedor()
-        {
-            List<_USUARIO> Lista = new List<_USUARIO>();
-            var Lista_Cobrador = (from e in db.FACTURAS
-                                  join u in db.USUARIOS on e.ID_VENDEDOR equals u.ID_USUARIO
-                                  select new _USUARIO()
-                                  {
-                                      USUARIO = u.USUARIO,
-                                  }).Distinct().ToList();
-
-            Lista.AddRange(new _USUARIO[] { new _USUARIO { USUARIO = "" } });
-            foreach (_USUARIO emp in Lista_Cobrador)
-            {
-                Lista.Add(emp);
-            }
-            cb_vendedor.DataSource = Lista;
-            cb_vendedor.DisplayMember = "USUARIO";
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {

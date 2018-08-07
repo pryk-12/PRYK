@@ -15,19 +15,19 @@
         <EntityTypeShape EntityType="BD_JSYSModel.EMPRESA" Width="1.5" PointX="2.75" PointY="7.75" />
         <EntityTypeShape EntityType="BD_JSYSModel.ENCABEZADO_CUOTAS" Width="1.5" PointX="8.75" PointY="0.75" />
         <EntityTypeShape EntityType="BD_JSYSModel.ESTADO_FACTURAS" Width="1.5" PointX="8.75" PointY="3.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.FACTURAS" Width="1.5" PointX="4.75" PointY="8.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.INVENTARIO_ARTICULOS" Width="1.5" PointX="8.75" PointY="6.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.MOTIVOS_MOVIMIENTOS" Width="1.5" PointX="6.75" PointY="9.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.MOVIMIENTOS" Width="1.5" PointX="8.75" PointY="9.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.PAGOS_CXP" Width="1.5" PointX="10.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.PANTALLAS" Width="1.5" PointX="10.75" PointY="4.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.PERMISOS" Width="1.5" PointX="10.75" PointY="7.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.PROVEEDORES" Width="1.5" PointX="10.75" PointY="10.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.RECIBOS_COBRADOS" Width="1.5" PointX="12.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="12.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.TIPOS_IDENTIFICACIONES" Width="1.5" PointX="12.75" PointY="5.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.USUARIOS" Width="1.5" PointX="12.75" PointY="8.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.VENDEDORES" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.FACTURAS" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.INVENTARIO_ARTICULOS" Width="1.5" PointX="4.75" PointY="9.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.MOTIVOS_MOVIMIENTOS" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.MOVIMIENTOS" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.PAGOS_CXP" Width="1.5" PointX="10.75" PointY="7.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.PANTALLAS" Width="1.5" PointX="10.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.PERMISOS" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.PROVEEDORES" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.RECIBOS_COBRADOS" Width="1.5" PointX="2.75" PointY="12.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.sysdiagrams" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.TIPOS_IDENTIFICACIONES" Width="1.5" PointX="4.75" PointY="12.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.USUARIOS" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.VENDEDORES" Width="1.5" PointX="6.75" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

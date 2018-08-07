@@ -99,6 +99,41 @@ namespace Datos
             }
         }
 
+        public void Actualizar_Encabezado_Cuota(ENCABEZADO_CUOTAS obj)
+        {
+            using (var db = new BD_JSYSEntities())
+            {
+                var obj_enc = db.ENCABEZADO_CUOTAS.Find(obj.ID_FACTURA);
+                obj_enc.CANTIADA_CUOTA  = obj.CANTIADA_CUOTA;
+                obj_enc.FECHA_PRIMERA_CUOTA  = obj.FECHA_PRIMERA_CUOTA;
+                obj_enc.MODO_CALCULO = obj.MODO_CALCULO;
+                db.SaveChanges();
+            }
+        }
+
+        public void Eliminar_Cuotas(int id)
+        {
+            using (var db = new BD_JSYSEntities())
+            {
+                var obj_det = db.DETALLES_CUOTAS.Where(e => e.ID_FACTURA == id).Where(e=>e.MONTO_PAGADO == 0).ToList();
+                db.DETALLES_CUOTAS.RemoveRange(obj_det);
+                db.SaveChanges();
+            }
+        }
+
+        public void Actualizar_Cuotas(DETALLES_CUOTAS obj)
+        {
+            using (var db = new BD_JSYSEntities())
+            {
+                var obj_det = db.DETALLES_CUOTAS.Where(e => e.ID_FACTURA == obj.ID_FACTURA ).Where(e => e.MONTO_PAGADO > 0).ToList();
+                if(obj_det.Count() > 0)
+                {
+                    obj_det[0].RE_CALCULADO = obj.RE_CALCULADO;
+                }
+                db.SaveChanges();
+            }
+        }
+
         public void Insertar_Detalle_Cuota(DETALLES_CUOTAS obj)
         {
             using (var db = new BD_JSYSEntities())
@@ -117,6 +152,27 @@ namespace Datos
                 obj_factura.CAMBIO_ESTADO_POR = obj.CAMBIO_ESTADO_POR;
                 obj_factura.FECHA_CAMBIO_ESTADO = obj.FECHA_CAMBIO_ESTADO;
                 obj_factura.NOTA_CAMBIO_ESTADO = obj.NOTA_CAMBIO_ESTADO;
+                db.SaveChanges();
+            }
+        }
+
+        public void Actualizar(FACTURAS obj)
+        {
+            using (var db = new BD_JSYSEntities())
+            {
+                var obj_factura = db.FACTURAS.Find(obj.ID_FACTURA);
+                obj_factura.ID_COBRADOR = obj.ID_COBRADOR ;
+                obj_factura.ID_ESTADO = obj.ID_ESTADO;
+                obj_factura.MONTO_TOTAL = obj.MONTO_TOTAL;
+                obj_factura.NUMERO_LOTERIA = obj.NUMERO_LOTERIA;
+                obj_factura.OBSERVACION = obj.OBSERVACION;
+                obj_factura.GARANTIA1 = obj.GARANTIA1;
+                obj_factura.GARANTIA2 = obj.GARANTIA2;
+                obj_factura.GARANTIA3 = obj.GARANTIA3;
+                obj_factura.GARANTIA4 = obj.GARANTIA4;
+                obj_factura.GARANTIA5 = obj.GARANTIA5;
+                obj_factura.GARANTIA6 = obj.GARANTIA6;
+                obj_factura.GARANTIA7 = obj.GARANTIA7;
                 db.SaveChanges();
             }
         }

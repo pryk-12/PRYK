@@ -20,5 +20,6 @@ namespace Datos
         public decimal MONTO_CUOTA { get; set; }
         public decimal MONTO_PAGADO { get; set; }
         public decimal MONTO_PENDIENTE { get; set; }
+        public string RE_CALCULADO { get; set; }
     }
 }

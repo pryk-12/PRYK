@@ -61,7 +61,13 @@ namespace Servicios
             Metodo.Insertar_Factura(obj);
         }
 
-       public static void Cambiar_Estado_Factura(FACTURAS obj)
+        public static void Actualizar_Factura(FACTURAS obj)
+        {
+            D_Factura Metodo = new D_Factura();
+            Metodo.Actualizar(obj);
+        }
+
+        public static void Cambiar_Estado_Factura(FACTURAS obj)
         {
             D_Factura Metodo = new D_Factura();
             Metodo.Cambiar_Estado_Factura(obj);
@@ -91,7 +97,13 @@ namespace Servicios
            Metodo.Actualizar_Inventario(obj);
        }
 
-       public static void Actualizar_Inventario_Entrada(INVENTARIO_ARTICULOS obj)
+        public static void Actualizar_Encabezado_Cuota(ENCABEZADO_CUOTAS obj)
+        {
+            D_Factura Metodo = new D_Factura();
+            Metodo.Actualizar_Encabezado_Cuota(obj);
+        }
+
+        public static void Actualizar_Inventario_Entrada(INVENTARIO_ARTICULOS obj)
        {
            D_Factura Metodo = new D_Factura();
            Metodo.Actualizar_Inventario_Entrada(obj);
@@ -131,6 +143,18 @@ namespace Servicios
         {
             D_Factura Metodo = new D_Factura();
             Metodo.Anular_Detalle_Cuota(obj);
+        }
+
+        public static void Actualizar_Cuotas(DETALLES_CUOTAS obj)
+        {
+            D_Factura Metodo = new D_Factura();
+            Metodo.Actualizar_Cuotas(obj);
+        }
+
+        public static void Eliminar_Cuotas(int id)
+        {
+            D_Factura Metodo = new D_Factura();
+            Metodo.Eliminar_Cuotas(id);
         }
 
         public static void Insertar_Cuadre_Diario(CUADRES_DIARIOS obj)

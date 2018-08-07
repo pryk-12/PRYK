@@ -128,12 +128,6 @@
     <Compile Include="Formularios\Frm_Consultar_Articulo.Designer.cs">
       <DependentUpon>Frm_Consultar_Articulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frm_Consultar_Articulo_Para_Factura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Frm_Consultar_Articulo_Para_Factura.Designer.cs">
-      <DependentUpon>Frm_Consultar_Articulo_Para_Factura.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Frm_Consultar_Cliente_Para_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,9 +441,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Consultar_Articulo.resx">
       <DependentUpon>Frm_Consultar_Articulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Frm_Consultar_Articulo_Para_Factura.resx">
-      <DependentUpon>Frm_Consultar_Articulo_Para_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Consultar_Cliente_Para_Factura.resx">
       <DependentUpon>Frm_Consultar_Cliente_Para_Factura.cs</DependentUpon>

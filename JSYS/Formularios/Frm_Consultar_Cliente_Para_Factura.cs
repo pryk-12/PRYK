@@ -14,7 +14,7 @@ namespace JSYS.Formularios
 
         public void Listar_Clientes()
         {
-            string Condicion = "(ID_CLIENTE LIKE'%" + Txt_Buscar.Text + "%' OR NOMBRE LIKE'%" + Txt_Buscar.Text + "%' OR REFERENCIA LIKE'%" + Txt_Buscar.Text + "%') AND ESTADO='A'";
+            string Condicion = "(NUMERO_IDENTIFICACION LIKE'%" + Txt_Buscar.Text + "%' OR NOMBRE LIKE'%" + Txt_Buscar.Text + "%' OR REFERENCIA LIKE'%" + Txt_Buscar.Text + "%') AND ESTADO='A'";
             DG.DataSource = S_Cliente.Listar_Clientes(Condicion);
         }
 

@@ -28,41 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.cb_vendedor = new System.Windows.Forms.ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.cb_cobrador = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_garantia_7 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_garantia_6 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_garantia_5 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_garantia_4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_garantia_3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_garantia_2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_garantia_1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.cb_estado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.dg_detalle_factura = new System.Windows.Forms.DataGridView();
-            this.ID_ARTICULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.REFERENCIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO_VENTA1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SUBTOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cb_cobrador = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.dt_fecha_factura = new System.Windows.Forms.DateTimePicker();
             this.label25 = new System.Windows.Forms.Label();
-            this.txt_numero_contrato = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.cb_numero_loteria = new System.Windows.Forms.ComboBox();
             this.txt_numero_factura = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.cb_cliente = new System.Windows.Forms.ComboBox();
             this.txt_observacion = new System.Windows.Forms.TextBox();
@@ -73,6 +75,9 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_monto_pendiente = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dt_fecha_primera_cuota = new System.Windows.Forms.DateTimePicker();
             this.txt_cantidad_cuota = new System.Windows.Forms.TextBox();
@@ -82,17 +87,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Txt_ID = new System.Windows.Forms.TextBox();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_quitar_articulo = new System.Windows.Forms.Button();
-            this.btn_agregar_articulo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_detalle_factura)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -111,6 +109,48 @@
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::JSYS.Properties.Resources._1450119000_reports;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(9, 88);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(71, 59);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Reporte";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.Color.White;
+            this.btn_guardar.Image = global::JSYS.Properties.Resources.File_Save_WF;
+            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_guardar.Location = new System.Drawing.Point(9, 15);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(71, 59);
+            this.btn_guardar.TabIndex = 6;
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -123,14 +163,11 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox8);
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.cb_estado);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.txt_total);
             this.tabPage1.Controls.Add(this.label27);
-            this.tabPage1.Controls.Add(this.btn_quitar_articulo);
-            this.tabPage1.Controls.Add(this.dg_detalle_factura);
-            this.tabPage1.Controls.Add(this.btn_agregar_articulo);
             this.tabPage1.Controls.Add(this.groupBox7);
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.txt_observacion);
@@ -143,66 +180,169 @@
             this.tabPage1.Text = "Datos de Factura";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // groupBox8
+            // groupBox1
             // 
-            this.groupBox8.Controls.Add(this.cb_vendedor);
-            this.groupBox8.Controls.Add(this.label30);
-            this.groupBox8.Controls.Add(this.cb_cobrador);
-            this.groupBox8.Controls.Add(this.label31);
-            this.groupBox8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(17, 115);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(636, 51);
-            this.groupBox8.TabIndex = 42;
-            this.groupBox8.TabStop = false;
+            this.groupBox1.Controls.Add(this.txt_garantia_7);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.txt_garantia_6);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.txt_garantia_5);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txt_garantia_4);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.txt_garantia_3);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.txt_garantia_2);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txt_garantia_1);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(17, 150);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(637, 207);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Garantías";
             // 
-            // cb_vendedor
+            // txt_garantia_7
             // 
-            this.cb_vendedor.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.cb_vendedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_vendedor.FormattingEnabled = true;
-            this.cb_vendedor.Items.AddRange(new object[] {
-            "",
-            "Activo",
-            "Inactivo"});
-            this.cb_vendedor.Location = new System.Drawing.Point(76, 17);
-            this.cb_vendedor.Name = "cb_vendedor";
-            this.cb_vendedor.Size = new System.Drawing.Size(230, 22);
-            this.cb_vendedor.TabIndex = 0;
+            this.txt_garantia_7.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_garantia_7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_garantia_7.Location = new System.Drawing.Point(36, 171);
+            this.txt_garantia_7.MaxLength = 25;
+            this.txt_garantia_7.Name = "txt_garantia_7";
+            this.txt_garantia_7.Size = new System.Drawing.Size(585, 22);
+            this.txt_garantia_7.TabIndex = 6;
             // 
-            // label30
+            // label13
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(7, 21);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(66, 14);
-            this.label30.TabIndex = 37;
-            this.label30.Text = "Vendedor";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(12, 175);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(19, 14);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "7:";
             // 
-            // cb_cobrador
+            // txt_garantia_6
             // 
-            this.cb_cobrador.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.cb_cobrador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_cobrador.FormattingEnabled = true;
-            this.cb_cobrador.Items.AddRange(new object[] {
-            "",
-            "Activo",
-            "Inactivo"});
-            this.cb_cobrador.Location = new System.Drawing.Point(393, 17);
-            this.cb_cobrador.Name = "cb_cobrador";
-            this.cb_cobrador.Size = new System.Drawing.Size(230, 22);
-            this.cb_cobrador.TabIndex = 1;
+            this.txt_garantia_6.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_garantia_6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_garantia_6.Location = new System.Drawing.Point(36, 147);
+            this.txt_garantia_6.MaxLength = 25;
+            this.txt_garantia_6.Name = "txt_garantia_6";
+            this.txt_garantia_6.Size = new System.Drawing.Size(585, 22);
+            this.txt_garantia_6.TabIndex = 5;
             // 
-            // label31
+            // label14
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(326, 20);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(64, 14);
-            this.label31.TabIndex = 39;
-            this.label31.Text = "Cobrador";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(12, 151);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(19, 14);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "6:";
+            // 
+            // txt_garantia_5
+            // 
+            this.txt_garantia_5.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_garantia_5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_garantia_5.Location = new System.Drawing.Point(36, 123);
+            this.txt_garantia_5.MaxLength = 25;
+            this.txt_garantia_5.Name = "txt_garantia_5";
+            this.txt_garantia_5.Size = new System.Drawing.Size(585, 22);
+            this.txt_garantia_5.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(12, 127);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(19, 14);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "5:";
+            // 
+            // txt_garantia_4
+            // 
+            this.txt_garantia_4.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_garantia_4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_garantia_4.Location = new System.Drawing.Point(36, 99);
+            this.txt_garantia_4.MaxLength = 25;
+            this.txt_garantia_4.Name = "txt_garantia_4";
+            this.txt_garantia_4.Size = new System.Drawing.Size(585, 22);
+            this.txt_garantia_4.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 103);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 14);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "4:";
+            // 
+            // txt_garantia_3
+            // 
+            this.txt_garantia_3.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_garantia_3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_garantia_3.Location = new System.Drawing.Point(36, 75);
+            this.txt_garantia_3.MaxLength = 25;
+            this.txt_garantia_3.Name = "txt_garantia_3";
+            this.txt_garantia_3.Size = new System.Drawing.Size(585, 22);
+            this.txt_garantia_3.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(12, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(19, 14);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "3:";
+            // 
+            // txt_garantia_2
+            // 
+            this.txt_garantia_2.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_garantia_2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_garantia_2.Location = new System.Drawing.Point(36, 51);
+            this.txt_garantia_2.MaxLength = 25;
+            this.txt_garantia_2.Name = "txt_garantia_2";
+            this.txt_garantia_2.Size = new System.Drawing.Size(585, 22);
+            this.txt_garantia_2.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 14);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "2:";
+            // 
+            // txt_garantia_1
+            // 
+            this.txt_garantia_1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_garantia_1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_garantia_1.Location = new System.Drawing.Point(36, 27);
+            this.txt_garantia_1.MaxLength = 25;
+            this.txt_garantia_1.Name = "txt_garantia_1";
+            this.txt_garantia_1.Size = new System.Drawing.Size(585, 22);
+            this.txt_garantia_1.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(12, 31);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(19, 14);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "1:";
             // 
             // cb_estado
             // 
@@ -217,7 +357,7 @@
             this.cb_estado.Location = new System.Drawing.Point(104, 368);
             this.cb_estado.Name = "cb_estado";
             this.cb_estado.Size = new System.Drawing.Size(323, 22);
-            this.cb_estado.TabIndex = 1;
+            this.cb_estado.TabIndex = 0;
             // 
             // label5
             // 
@@ -233,132 +373,70 @@
             // 
             this.txt_total.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_total.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_total.Location = new System.Drawing.Point(543, 325);
+            this.txt_total.Location = new System.Drawing.Point(542, 369);
             this.txt_total.MaxLength = 25;
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(111, 22);
-            this.txt_total.TabIndex = 30;
+            this.txt_total.TabIndex = 1;
             this.txt_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(502, 329);
+            this.label27.Location = new System.Drawing.Point(501, 373);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(38, 14);
             this.label27.TabIndex = 31;
             this.label27.Text = "Total";
             // 
-            // dg_detalle_factura
-            // 
-            this.dg_detalle_factura.AllowUserToAddRows = false;
-            this.dg_detalle_factura.AllowUserToDeleteRows = false;
-            this.dg_detalle_factura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_detalle_factura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_ARTICULO,
-            this.REFERENCIA,
-            this.DESCRIPCION,
-            this.PRECIO_VENTA1,
-            this.precio,
-            this.SUBTOTAL});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_detalle_factura.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dg_detalle_factura.Location = new System.Drawing.Point(17, 175);
-            this.dg_detalle_factura.Name = "dg_detalle_factura";
-            this.dg_detalle_factura.ReadOnly = true;
-            this.dg_detalle_factura.RowHeadersVisible = false;
-            this.dg_detalle_factura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_detalle_factura.Size = new System.Drawing.Size(636, 148);
-            this.dg_detalle_factura.TabIndex = 28;
-            // 
-            // ID_ARTICULO
-            // 
-            this.ID_ARTICULO.DataPropertyName = "ID_ARTICULO";
-            this.ID_ARTICULO.HeaderText = "ID";
-            this.ID_ARTICULO.Name = "ID_ARTICULO";
-            this.ID_ARTICULO.ReadOnly = true;
-            this.ID_ARTICULO.Visible = false;
-            this.ID_ARTICULO.Width = 40;
-            // 
-            // REFERENCIA
-            // 
-            this.REFERENCIA.DataPropertyName = "REFERENCIA";
-            this.REFERENCIA.HeaderText = "Referencia";
-            this.REFERENCIA.Name = "REFERENCIA";
-            this.REFERENCIA.ReadOnly = true;
-            this.REFERENCIA.Width = 80;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.DataPropertyName = "DESCRIPCION";
-            this.DESCRIPCION.HeaderText = "Descripción";
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 325;
-            // 
-            // PRECIO_VENTA1
-            // 
-            this.PRECIO_VENTA1.DataPropertyName = "CANTIDAD";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "n2";
-            this.PRECIO_VENTA1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.PRECIO_VENTA1.HeaderText = "Cant.";
-            this.PRECIO_VENTA1.Name = "PRECIO_VENTA1";
-            this.PRECIO_VENTA1.ReadOnly = true;
-            this.PRECIO_VENTA1.Width = 40;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "PRECIO";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.precio.DefaultCellStyle = dataGridViewCellStyle2;
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 90;
-            // 
-            // SUBTOTAL
-            // 
-            this.SUBTOTAL.DataPropertyName = "MONTO_TOTAL";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.SUBTOTAL.DefaultCellStyle = dataGridViewCellStyle3;
-            this.SUBTOTAL.HeaderText = "Total";
-            this.SUBTOTAL.Name = "SUBTOTAL";
-            this.SUBTOTAL.ReadOnly = true;
-            this.SUBTOTAL.Width = 90;
-            // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.cb_cobrador);
+            this.groupBox7.Controls.Add(this.label31);
             this.groupBox7.Controls.Add(this.label26);
             this.groupBox7.Controls.Add(this.dt_fecha_factura);
             this.groupBox7.Controls.Add(this.label25);
-            this.groupBox7.Controls.Add(this.txt_numero_contrato);
-            this.groupBox7.Controls.Add(this.label24);
             this.groupBox7.Controls.Add(this.cb_numero_loteria);
             this.groupBox7.Controls.Add(this.txt_numero_factura);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(17, 61);
+            this.groupBox7.Location = new System.Drawing.Point(17, 76);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(637, 52);
+            this.groupBox7.Size = new System.Drawing.Size(637, 65);
             this.groupBox7.TabIndex = 26;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Datos de Factura";
+            this.groupBox7.Text = "Datos del Préstamo";
+            // 
+            // cb_cobrador
+            // 
+            this.cb_cobrador.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.cb_cobrador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_cobrador.FormattingEnabled = true;
+            this.cb_cobrador.Items.AddRange(new object[] {
+            "",
+            "Activo",
+            "Inactivo"});
+            this.cb_cobrador.Location = new System.Drawing.Point(490, 29);
+            this.cb_cobrador.Name = "cb_cobrador";
+            this.cb_cobrador.Size = new System.Drawing.Size(134, 22);
+            this.cb_cobrador.TabIndex = 3;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(423, 32);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(64, 14);
+            this.label31.TabIndex = 39;
+            this.label31.Text = "Cobrador";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(464, 25);
+            this.label26.Location = new System.Drawing.Point(255, 33);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(41, 14);
             this.label26.TabIndex = 23;
@@ -368,7 +446,7 @@
             // 
             this.dt_fecha_factura.CalendarMonthBackground = System.Drawing.Color.PaleGoldenrod;
             this.dt_fecha_factura.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_fecha_factura.Location = new System.Drawing.Point(508, 21);
+            this.dt_fecha_factura.Location = new System.Drawing.Point(299, 29);
             this.dt_fecha_factura.Name = "dt_fecha_factura";
             this.dt_fecha_factura.Size = new System.Drawing.Size(115, 22);
             this.dt_fecha_factura.TabIndex = 2;
@@ -377,32 +455,11 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(325, 25);
+            this.label25.Location = new System.Drawing.Point(118, 33);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(74, 14);
             this.label25.TabIndex = 21;
             this.label25.Text = "No. Loteria";
-            // 
-            // txt_numero_contrato
-            // 
-            this.txt_numero_contrato.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_numero_contrato.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_numero_contrato.Location = new System.Drawing.Point(232, 21);
-            this.txt_numero_contrato.MaxLength = 25;
-            this.txt_numero_contrato.Name = "txt_numero_contrato";
-            this.txt_numero_contrato.Size = new System.Drawing.Size(74, 22);
-            this.txt_numero_contrato.TabIndex = 0;
-            this.txt_numero_contrato.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(142, 25);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(87, 14);
-            this.label24.TabIndex = 20;
-            this.label24.Text = "No. Contrato";
             // 
             // cb_numero_loteria
             // 
@@ -511,7 +568,7 @@
             "97",
             "98",
             "99"});
-            this.cb_numero_loteria.Location = new System.Drawing.Point(402, 21);
+            this.cb_numero_loteria.Location = new System.Drawing.Point(195, 29);
             this.cb_numero_loteria.Name = "cb_numero_loteria";
             this.cb_numero_loteria.Size = new System.Drawing.Size(49, 22);
             this.cb_numero_loteria.TabIndex = 1;
@@ -521,10 +578,10 @@
             this.txt_numero_factura.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_numero_factura.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_numero_factura.Enabled = false;
-            this.txt_numero_factura.Location = new System.Drawing.Point(74, 21);
+            this.txt_numero_factura.Location = new System.Drawing.Point(37, 29);
             this.txt_numero_factura.MaxLength = 25;
             this.txt_numero_factura.Name = "txt_numero_factura";
-            this.txt_numero_factura.Size = new System.Drawing.Size(52, 22);
+            this.txt_numero_factura.Size = new System.Drawing.Size(72, 22);
             this.txt_numero_factura.TabIndex = 0;
             this.txt_numero_factura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -532,7 +589,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 25);
+            this.label6.Location = new System.Drawing.Point(7, 33);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(27, 14);
             this.label6.TabIndex = 18;
@@ -546,16 +603,30 @@
             this.groupBox6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(17, 6);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(636, 51);
+            this.groupBox6.Size = new System.Drawing.Size(636, 62);
             this.groupBox6.TabIndex = 25;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Datos del Cliente";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::JSYS.Properties.Resources.Search_16x16;
+            this.button1.Location = new System.Drawing.Point(529, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 24);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Consultar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(22, 26);
+            this.label23.Location = new System.Drawing.Point(22, 30);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(49, 14);
             this.label23.TabIndex = 18;
@@ -570,7 +641,7 @@
             "",
             "Activo",
             "Inactivo"});
-            this.cb_cliente.Location = new System.Drawing.Point(74, 22);
+            this.cb_cliente.Location = new System.Drawing.Point(74, 26);
             this.cb_cliente.Name = "cb_cliente";
             this.cb_cliente.Size = new System.Drawing.Size(453, 22);
             this.cb_cliente.TabIndex = 0;
@@ -616,14 +687,14 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_detalle_cuotas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_detalle_cuotas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_detalle_cuotas.Location = new System.Drawing.Point(329, 10);
             this.dg_detalle_cuotas.Name = "dg_detalle_cuotas";
             this.dg_detalle_cuotas.ReadOnly = true;
@@ -650,9 +721,9 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "DESCRIPCION";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "n2";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "n2";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn3.HeaderText = "Monto";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -660,6 +731,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_monto_pendiente);
+            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.dt_fecha_primera_cuota);
@@ -671,10 +744,53 @@
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.groupBox3.Location = new System.Drawing.Point(30, 10);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(282, 179);
+            this.groupBox3.Size = new System.Drawing.Size(282, 191);
             this.groupBox3.TabIndex = 186;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Calculo de Cuota(s)";
+            // 
+            // txt_monto_pendiente
+            // 
+            this.txt_monto_pendiente.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_monto_pendiente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_monto_pendiente.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_monto_pendiente.Location = new System.Drawing.Point(151, 92);
+            this.txt_monto_pendiente.MaxLength = 25;
+            this.txt_monto_pendiente.Name = "txt_monto_pendiente";
+            this.txt_monto_pendiente.Size = new System.Drawing.Size(108, 21);
+            this.txt_monto_pendiente.TabIndex = 48;
+            this.txt_monto_pendiente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(45, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Monto Pendiente";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::JSYS.Properties.Resources.Money_Coin_02_WF;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(152, 130);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 46);
+            this.button3.TabIndex = 47;
+            this.button3.Text = "Calcular";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label7
             // 
@@ -694,7 +810,7 @@
             this.dt_fecha_primera_cuota.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_fecha_primera_cuota.Location = new System.Drawing.Point(151, 69);
             this.dt_fecha_primera_cuota.Name = "dt_fecha_primera_cuota";
-            this.dt_fecha_primera_cuota.Size = new System.Drawing.Size(115, 21);
+            this.dt_fecha_primera_cuota.Size = new System.Drawing.Size(108, 21);
             this.dt_fecha_primera_cuota.TabIndex = 45;
             // 
             // txt_cantidad_cuota
@@ -779,109 +895,6 @@
             this.Lbl_Titulo.TabIndex = 5;
             this.Lbl_Titulo.Text = ":";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::JSYS.Properties.Resources._1450119000_reports;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(9, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 59);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Reporte";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_guardar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.btn_guardar.Image = global::JSYS.Properties.Resources.File_Save_WF;
-            this.btn_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_guardar.Location = new System.Drawing.Point(9, 15);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(71, 59);
-            this.btn_guardar.TabIndex = 6;
-            this.btn_guardar.Text = "Guardar";
-            this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_guardar.UseVisualStyleBackColor = false;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
-            // 
-            // btn_quitar_articulo
-            // 
-            this.btn_quitar_articulo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_quitar_articulo.Image = global::JSYS.Properties.Resources.Delete_16x16;
-            this.btn_quitar_articulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_quitar_articulo.Location = new System.Drawing.Point(143, 325);
-            this.btn_quitar_articulo.Name = "btn_quitar_articulo";
-            this.btn_quitar_articulo.Size = new System.Drawing.Size(124, 32);
-            this.btn_quitar_articulo.TabIndex = 29;
-            this.btn_quitar_articulo.Text = "Borrar Articulo";
-            this.btn_quitar_articulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_quitar_articulo.UseVisualStyleBackColor = true;
-            // 
-            // btn_agregar_articulo
-            // 
-            this.btn_agregar_articulo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_agregar_articulo.Image = global::JSYS.Properties.Resources.Add_16x16;
-            this.btn_agregar_articulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_agregar_articulo.Location = new System.Drawing.Point(17, 325);
-            this.btn_agregar_articulo.Name = "btn_agregar_articulo";
-            this.btn_agregar_articulo.Size = new System.Drawing.Size(124, 32);
-            this.btn_agregar_articulo.TabIndex = 0;
-            this.btn_agregar_articulo.Text = "Agregar Articulo";
-            this.btn_agregar_articulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_agregar_articulo.UseVisualStyleBackColor = true;
-            this.btn_agregar_articulo.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::JSYS.Properties.Resources.Search_16x16;
-            this.button1.Location = new System.Drawing.Point(529, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 24);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Consultar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::JSYS.Properties.Resources.Money_Coin_02_WF;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(153, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 46);
-            this.button3.TabIndex = 47;
-            this.button3.Text = "Calcular";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // Frm_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -895,9 +908,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_detalle_factura)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -918,13 +930,10 @@
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btn_agregar_articulo;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DateTimePicker dt_fecha_factura;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txt_numero_contrato;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cb_numero_loteria;
         private System.Windows.Forms.TextBox txt_numero_factura;
         private System.Windows.Forms.Label label6;
@@ -940,13 +949,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox Txt_ID;
         private System.Windows.Forms.Label Lbl_Titulo;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox cb_vendedor;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox cb_cobrador;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button btn_quitar_articulo;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dt_fecha_primera_cuota;
@@ -958,15 +963,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        public System.Windows.Forms.DataGridView dg_detalle_factura;
         public System.Windows.Forms.TextBox txt_total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_ARTICULO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn REFERENCIA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_VENTA1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SUBTOTAL;
         public System.Windows.Forms.ComboBox cb_cliente;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt_monto_pendiente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_garantia_7;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_garantia_6;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_garantia_5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_garantia_4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_garantia_3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_garantia_2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_garantia_1;
+        private System.Windows.Forms.Label label11;
     }
 }

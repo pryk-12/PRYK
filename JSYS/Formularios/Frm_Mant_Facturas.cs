@@ -17,7 +17,7 @@ namespace JSYS.Formularios
 
         public void Listar_Facturas()
         {
-            string Condicion = "(B.NOMBRE LIKE'%" + Txt_Buscar.Text + "%' OR A.ID_FACTURA LIKE'%" + Txt_Buscar.Text + "%' OR A.NUMERO_CONTRATO LIKE'%" + Txt_Buscar.Text + "%') ORDER BY A.ID_FACTURA DESC";
+            string Condicion = "(B.NOMBRE LIKE'%" + Txt_Buscar.Text + "%' OR A.ID_FACTURA LIKE'%" + Txt_Buscar.Text + "%') ORDER BY A.ID_FACTURA DESC";
             DG.DataSource = S_Factura.Listar_Facturas(Condicion);
             Lbl_Total.Text = "Total de Registros:  " + DG.RowCount.ToString();
             Cambiar_Color_Filas();

@@ -13,7 +13,7 @@ namespace JSYS.Formularios
 
         public class _CLIENTE
         {
-            public int ID_CLIENTE { get; set; }
+            public string  REFERENCIA { get; set; }
             public string NOMBRE { get; set; }
         }
 
@@ -26,7 +26,7 @@ namespace JSYS.Formularios
         public Frm_Reimprimir_Recibos()
         {
             InitializeComponent();
-            S_Utilidades.Llenar_ComboBox<_CLIENTE>(cb_cliente, "NOMBRE", "ID_CLIENTE", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "CLIENTES");
+            S_Utilidades.Llenar_ComboBox<_CLIENTE>(cb_cliente, "NOMBRE", "REFERENCIA", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "CLIENTES");
             Llenar_ComboBox_Cobrador();
         }
 

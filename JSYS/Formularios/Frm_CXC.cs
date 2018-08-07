@@ -18,7 +18,7 @@ namespace JSYS.Formularios
 
         public void Listar_Facturas()
         {
-            string Condicion = "(B.NOMBRE LIKE'%" + Txt_Buscar.Text + "%' OR A.ID_FACTURA LIKE'%" + Txt_Buscar.Text + "%' OR A.NUMERO_CONTRATO LIKE'%" + Txt_Buscar.Text + "%') AND A.MONTO_PENDIENTE>0 AND A.ID_ESTADO=1 ORDER BY A.ID_FACTURA DESC";
+            string Condicion = "(B.NOMBRE LIKE'%" + Txt_Buscar.Text + "%' OR A.ID_FACTURA LIKE'%" + Txt_Buscar.Text + "%') AND A.MONTO_PENDIENTE>0 AND A.ID_ESTADO=1 ORDER BY A.ID_FACTURA DESC";
             DG.DataSource = S_Factura.Listar_Facturas(Condicion);
         }
 

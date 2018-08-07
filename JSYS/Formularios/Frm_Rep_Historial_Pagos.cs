@@ -20,15 +20,15 @@ namespace JSYS.Formularios
         public Frm_Rep_Historial_Pagos()
         {
             InitializeComponent();
-            S_Utilidades.Llenar_ComboBox<JSYS.Formularios.Frm_Factura._CLIENTE>(cb_cliente, "NOMBRE", "ID_CLIENTE", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "CLIENTES");
+            S_Utilidades.Llenar_ComboBox<JSYS.Formularios.Frm_Factura._CLIENTE>(cb_cliente, "NOMBRE", "REFERENCIA", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "CLIENTES");
         }
 
 
-        void Llenar_ComboBox_facturas(int id)
+        void Llenar_ComboBox_facturas(string REF)
         {
             List<_ID> Lista = new List<_ID>();
             var numero_factura = (from e in db.FACTURAS
-                                  where e.ID_CLIENTE == id && e.MONTO_PAGADO > 0
+                                  where e.REFERENCIA == REF && e.MONTO_PAGADO > 0
                                   select new _ID()
                                   {
                                       id_factura = e.ID_FACTURA,
@@ -43,24 +43,6 @@ namespace JSYS.Formularios
             cb_facturas.DisplayMember = "id_factura";
         }
 
-        void Llenar_ComboBox_contratos(int id)
-        {
-            List<_ID> Lista = new List<_ID>();
-            var numero_factura = (from e in db.FACTURAS
-                                  where e.ID_CLIENTE == id && e.MONTO_PAGADO > 0
-                                  select new _ID()
-                                  {
-                                      id_factura = e.NUMERO_CONTRATO,
-                                  }).Distinct().ToList();
-
-            Lista.AddRange(new _ID[] { new _ID { id_factura = 0 } });
-            foreach (_ID emp in numero_factura)
-            {
-                Lista.Add(emp);
-            }
-            cb_contratos.DataSource = Lista;
-            cb_contratos.DisplayMember = "id_factura";
-        }
 
         private void cb_facturas_SelectedIndexChanged(object sender, System.EventArgs e)
         {
@@ -76,22 +58,15 @@ namespace JSYS.Formularios
             }
 
             string condicion = "";
-            if(cb_facturas.Text =="" && cb_contratos.Text =="")
+            if(cb_facturas.Text =="")
             {
                 condicion = @"([NOMBRE] = '" + cb_cliente.Text + "')";
             }
-            else if (cb_facturas.Text != "" && cb_contratos.Text == "")
+            else if (cb_facturas.Text != "")
             {
                 condicion = @"([NOMBRE] = '" + cb_cliente.Text + "' AND [ID_FACTURA] = " + cb_facturas.Text + ")";
             }
-            else if (cb_facturas.Text == "" && cb_contratos.Text != "")
-            {
-                condicion = @"([NOMBRE] = '" + cb_cliente.Text + "' AND [NUMERO_CONTRATO] = " + cb_contratos.Text + ")";
-            }
-            else if (cb_facturas.Text != "" && cb_contratos.Text != "")
-            {
-                condicion = @"([NOMBRE] = '" + cb_cliente.Text + "' AND [ID_FACTURA] = " + cb_facturas.Text + " AND [NUMERO_CONTRATO] = " + cb_contratos.Text + ")";
-            }
+           
 
 
             Reportes.Rep_Pagos_Cliente report = new Reportes.Rep_Pagos_Cliente();
@@ -105,9 +80,9 @@ namespace JSYS.Formularios
            
             try
             {
-                int id = Convert.ToInt32(cb_cliente.SelectedValue);
-                Llenar_ComboBox_facturas(id);
-                Llenar_ComboBox_contratos(id);
+                string REF = cb_cliente.SelectedValue.ToString();
+                Llenar_ComboBox_facturas(REF);
+
             }
             catch
             {

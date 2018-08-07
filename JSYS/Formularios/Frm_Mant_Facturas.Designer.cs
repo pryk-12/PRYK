@@ -52,16 +52,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_entregado = new System.Windows.Forms.Label();
             this.DG = new System.Windows.Forms.DataGridView();
-            this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.REFERENCIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_TIPO_IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creado_Por = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_CREADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.verReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detalleCuotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +65,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
+            this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_TIPO_IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creado_Por = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_CREADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -294,7 +293,6 @@
             this.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_CLIENTE,
-            this.REFERENCIA,
             this.NOMBRE,
             this.DIRECCION,
             this.ID_TIPO_IDENTIFICACION,
@@ -320,90 +318,6 @@
             this.DG.Size = new System.Drawing.Size(919, 336);
             this.DG.TabIndex = 0;
             this.DG.DoubleClick += new System.EventHandler(this.DG_DoubleClick);
-            // 
-            // ID_CLIENTE
-            // 
-            this.ID_CLIENTE.DataPropertyName = "ID_FACTURA";
-            this.ID_CLIENTE.HeaderText = "No";
-            this.ID_CLIENTE.Name = "ID_CLIENTE";
-            this.ID_CLIENTE.ReadOnly = true;
-            this.ID_CLIENTE.Width = 40;
-            // 
-            // REFERENCIA
-            // 
-            this.REFERENCIA.DataPropertyName = "NUMERO_CONTRATO";
-            this.REFERENCIA.HeaderText = "No Contrato";
-            this.REFERENCIA.Name = "REFERENCIA";
-            this.REFERENCIA.ReadOnly = true;
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.DataPropertyName = "FECHA";
-            this.NOMBRE.HeaderText = "Fecha";
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 80;
-            // 
-            // DIRECCION
-            // 
-            this.DIRECCION.DataPropertyName = "CLIENTE";
-            this.DIRECCION.HeaderText = "Cliente";
-            this.DIRECCION.Name = "DIRECCION";
-            this.DIRECCION.ReadOnly = true;
-            this.DIRECCION.Width = 200;
-            // 
-            // ID_TIPO_IDENTIFICACION
-            // 
-            this.ID_TIPO_IDENTIFICACION.DataPropertyName = "MONTO_TOTAL";
-            this.ID_TIPO_IDENTIFICACION.HeaderText = "Total";
-            this.ID_TIPO_IDENTIFICACION.Name = "ID_TIPO_IDENTIFICACION";
-            this.ID_TIPO_IDENTIFICACION.ReadOnly = true;
-            this.ID_TIPO_IDENTIFICACION.Width = 90;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.DataPropertyName = "MONTO_PAGADO";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.DESCRIPCION.DefaultCellStyle = dataGridViewCellStyle1;
-            this.DESCRIPCION.HeaderText = "Pagado";
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 90;
-            // 
-            // IDENTIFICACION
-            // 
-            this.IDENTIFICACION.DataPropertyName = "MONTO_PENDIENTE";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.IDENTIFICACION.DefaultCellStyle = dataGridViewCellStyle2;
-            this.IDENTIFICACION.HeaderText = "Pendiente";
-            this.IDENTIFICACION.Name = "IDENTIFICACION";
-            this.IDENTIFICACION.ReadOnly = true;
-            this.IDENTIFICACION.Width = 90;
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.DataPropertyName = "ESTADO";
-            this.ESTADO.HeaderText = "Estado";
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
-            // 
-            // Creado_Por
-            // 
-            this.Creado_Por.DataPropertyName = "CREADO_POR";
-            this.Creado_Por.HeaderText = "Creado_Por";
-            this.Creado_Por.Name = "Creado_Por";
-            this.Creado_Por.ReadOnly = true;
-            // 
-            // FECHA_CREADO
-            // 
-            this.FECHA_CREADO.DataPropertyName = "FECHA_CREADO";
-            this.FECHA_CREADO.HeaderText = "Fecha Creado";
-            this.FECHA_CREADO.Name = "FECHA_CREADO";
-            this.FECHA_CREADO.ReadOnly = true;
-            this.FECHA_CREADO.Width = 110;
             // 
             // contextMenuStrip1
             // 
@@ -553,6 +467,83 @@
             this.btn_nuevo.UseVisualStyleBackColor = false;
             this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
+            // ID_CLIENTE
+            // 
+            this.ID_CLIENTE.DataPropertyName = "ID_FACTURA";
+            this.ID_CLIENTE.HeaderText = "No";
+            this.ID_CLIENTE.Name = "ID_CLIENTE";
+            this.ID_CLIENTE.ReadOnly = true;
+            this.ID_CLIENTE.Width = 40;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.DataPropertyName = "FECHA";
+            this.NOMBRE.HeaderText = "Fecha";
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            this.NOMBRE.Width = 80;
+            // 
+            // DIRECCION
+            // 
+            this.DIRECCION.DataPropertyName = "CLIENTE";
+            this.DIRECCION.HeaderText = "Cliente";
+            this.DIRECCION.Name = "DIRECCION";
+            this.DIRECCION.ReadOnly = true;
+            this.DIRECCION.Width = 200;
+            // 
+            // ID_TIPO_IDENTIFICACION
+            // 
+            this.ID_TIPO_IDENTIFICACION.DataPropertyName = "MONTO_TOTAL";
+            this.ID_TIPO_IDENTIFICACION.HeaderText = "Total";
+            this.ID_TIPO_IDENTIFICACION.Name = "ID_TIPO_IDENTIFICACION";
+            this.ID_TIPO_IDENTIFICACION.ReadOnly = true;
+            this.ID_TIPO_IDENTIFICACION.Width = 90;
+            // 
+            // DESCRIPCION
+            // 
+            this.DESCRIPCION.DataPropertyName = "MONTO_PAGADO";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.DESCRIPCION.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DESCRIPCION.HeaderText = "Pagado";
+            this.DESCRIPCION.Name = "DESCRIPCION";
+            this.DESCRIPCION.ReadOnly = true;
+            this.DESCRIPCION.Width = 90;
+            // 
+            // IDENTIFICACION
+            // 
+            this.IDENTIFICACION.DataPropertyName = "MONTO_PENDIENTE";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            this.IDENTIFICACION.DefaultCellStyle = dataGridViewCellStyle2;
+            this.IDENTIFICACION.HeaderText = "Pendiente";
+            this.IDENTIFICACION.Name = "IDENTIFICACION";
+            this.IDENTIFICACION.ReadOnly = true;
+            this.IDENTIFICACION.Width = 90;
+            // 
+            // ESTADO
+            // 
+            this.ESTADO.DataPropertyName = "ESTADO";
+            this.ESTADO.HeaderText = "Estado";
+            this.ESTADO.Name = "ESTADO";
+            this.ESTADO.ReadOnly = true;
+            // 
+            // Creado_Por
+            // 
+            this.Creado_Por.DataPropertyName = "CREADO_POR";
+            this.Creado_Por.HeaderText = "Creado_Por";
+            this.Creado_Por.Name = "Creado_Por";
+            this.Creado_Por.ReadOnly = true;
+            // 
+            // FECHA_CREADO
+            // 
+            this.FECHA_CREADO.DataPropertyName = "FECHA_CREADO";
+            this.FECHA_CREADO.HeaderText = "Fecha Creado";
+            this.FECHA_CREADO.Name = "FECHA_CREADO";
+            this.FECHA_CREADO.ReadOnly = true;
+            this.FECHA_CREADO.Width = 110;
+            // 
             // Frm_Mant_Facturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -612,8 +603,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dt_hasta;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem verReporteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem detalleCuotasToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_CLIENTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn REFERENCIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_TIPO_IDENTIFICACION;
@@ -622,8 +615,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Creado_Por;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_CREADO;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem verReporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem detalleCuotasToolStripMenuItem;
     }
 }

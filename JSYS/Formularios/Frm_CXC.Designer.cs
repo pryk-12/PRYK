@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.btn_aceptar = new System.Windows.Forms.Button();
@@ -41,7 +41,6 @@
             this.Txt_Buscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.REFERENCIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_TIPO_IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,21 +121,20 @@
             this.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_CLIENTE,
-            this.REFERENCIA,
             this.NOMBRE,
             this.DIRECCION,
             this.ID_TIPO_IDENTIFICACION,
             this.DESCRIPCION,
             this.IDENTIFICACION,
             this.ESTADO});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DG.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG.DefaultCellStyle = dataGridViewCellStyle12;
             this.DG.Location = new System.Drawing.Point(104, 79);
             this.DG.Name = "DG";
             this.DG.ReadOnly = true;
@@ -170,15 +168,7 @@
             this.ID_CLIENTE.HeaderText = "No";
             this.ID_CLIENTE.Name = "ID_CLIENTE";
             this.ID_CLIENTE.ReadOnly = true;
-            this.ID_CLIENTE.Width = 40;
-            // 
-            // REFERENCIA
-            // 
-            this.REFERENCIA.DataPropertyName = "NUMERO_CONTRATO";
-            this.REFERENCIA.HeaderText = "Contrato";
-            this.REFERENCIA.Name = "REFERENCIA";
-            this.REFERENCIA.ReadOnly = true;
-            this.REFERENCIA.Width = 70;
+            this.ID_CLIENTE.Width = 60;
             // 
             // NOMBRE
             // 
@@ -194,14 +184,14 @@
             this.DIRECCION.HeaderText = "Cliente";
             this.DIRECCION.Name = "DIRECCION";
             this.DIRECCION.ReadOnly = true;
-            this.DIRECCION.Width = 200;
+            this.DIRECCION.Width = 250;
             // 
             // ID_TIPO_IDENTIFICACION
             // 
             this.ID_TIPO_IDENTIFICACION.DataPropertyName = "MONTO_TOTAL";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            this.ID_TIPO_IDENTIFICACION.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N2";
+            this.ID_TIPO_IDENTIFICACION.DefaultCellStyle = dataGridViewCellStyle9;
             this.ID_TIPO_IDENTIFICACION.HeaderText = "Total";
             this.ID_TIPO_IDENTIFICACION.Name = "ID_TIPO_IDENTIFICACION";
             this.ID_TIPO_IDENTIFICACION.ReadOnly = true;
@@ -210,9 +200,9 @@
             // DESCRIPCION
             // 
             this.DESCRIPCION.DataPropertyName = "MONTO_PAGADO";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            this.DESCRIPCION.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N2";
+            this.DESCRIPCION.DefaultCellStyle = dataGridViewCellStyle10;
             this.DESCRIPCION.HeaderText = "Pagado";
             this.DESCRIPCION.Name = "DESCRIPCION";
             this.DESCRIPCION.ReadOnly = true;
@@ -221,9 +211,9 @@
             // IDENTIFICACION
             // 
             this.IDENTIFICACION.DataPropertyName = "MONTO_PENDIENTE";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.IDENTIFICACION.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "N2";
+            this.IDENTIFICACION.DefaultCellStyle = dataGridViewCellStyle11;
             this.IDENTIFICACION.HeaderText = "Pendiente";
             this.IDENTIFICACION.Name = "IDENTIFICACION";
             this.IDENTIFICACION.ReadOnly = true;
@@ -268,7 +258,6 @@
         private System.Windows.Forms.TextBox Txt_Buscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_CLIENTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn REFERENCIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_TIPO_IDENTIFICACION;

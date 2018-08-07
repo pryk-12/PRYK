@@ -38,8 +38,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cb_facturas = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cb_contratos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
@@ -130,8 +128,6 @@
             // 
             this.groupBox1.Controls.Add(this.cb_facturas);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cb_contratos);
             this.groupBox1.Controls.Add(this.cb_cliente);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label31);
@@ -169,40 +165,15 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(230, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 14);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Contrato";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // cb_contratos
-            // 
-            this.cb_contratos.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.cb_contratos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_contratos.FormattingEnabled = true;
-            this.cb_contratos.Items.AddRange(new object[] {
-            "",
-            "Activo",
-            "Inactivo"});
-            this.cb_contratos.Location = new System.Drawing.Point(297, 71);
-            this.cb_contratos.Name = "cb_contratos";
-            this.cb_contratos.Size = new System.Drawing.Size(69, 22);
-            this.cb_contratos.TabIndex = 46;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 74);
+            this.label1.Location = new System.Drawing.Point(8, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 14);
+            this.label1.Size = new System.Drawing.Size(63, 14);
             this.label1.TabIndex = 45;
-            this.label1.Text = "Facturas";
+            this.label1.Text = "Contrato";
             // 
             // openFileDialog1
             // 
@@ -238,8 +209,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox cb_facturas;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cb_contratos;
         private System.Windows.Forms.Button button1;
     }
 }

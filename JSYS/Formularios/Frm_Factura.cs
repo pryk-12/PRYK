@@ -13,7 +13,7 @@ namespace JSYS.Formularios
 
         public class _CLIENTE
         {
-            public int ID_CLIENTE { get; set; }
+            public string REFERENCIA { get; set; }
             public string NOMBRE { get; set; }
         }
 
@@ -36,8 +36,7 @@ namespace JSYS.Formularios
         {
             InitializeComponent();
 
-            S_Utilidades.Llenar_ComboBox<_CLIENTE>(cb_cliente, "NOMBRE", "ID_CLIENTE", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "CLIENTES");
-            S_Utilidades.Llenar_ComboBox<_USUARIO>(cb_vendedor, "NOMBRE", "ID_USUARIO", "NOMBRE LIKE'%" + "" + "%' AND TIPO='Vendedor' AND ESTADO='A'", "USUARIOS");
+            S_Utilidades.Llenar_ComboBox<_CLIENTE>(cb_cliente, "NOMBRE", "REFERENCIA", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "CLIENTES");
             S_Utilidades.Llenar_ComboBox<_USUARIO>(cb_cobrador, "NOMBRE", "ID_USUARIO", "NOMBRE LIKE'%" + "" + "%' AND TIPO='Cobrador' AND ESTADO='A'", "USUARIOS");
             S_Utilidades.Llenar_ComboBox<ESTADO_FACTURAS>(cb_estado, "DESCRIPCION", "ID_ESTADO", "DESCRIPCION LIKE'%" + "" + "%'", "ESTADO_FACTURAS");
         }
@@ -50,23 +49,21 @@ namespace JSYS.Formularios
                 //factura
                 var obj_factura = db.FACTURAS.Find(obj.ID_FACTURA);
                 txt_numero_factura.Text = obj_factura.ID_FACTURA.ToString();
-                txt_numero_contrato.Text = obj_factura.NUMERO_CONTRATO.ToString();
                 txt_observacion.Text = obj_factura.OBSERVACION;
                 txt_total.Text = obj_factura.MONTO_TOTAL.ToString("N2");
-                cb_cliente.SelectedValue = obj_factura.ID_CLIENTE;
+                cb_cliente.SelectedValue = obj_factura.REFERENCIA;
                 cb_cobrador.SelectedValue = obj_factura.ID_COBRADOR;
                 cb_estado.SelectedValue = obj_factura.ID_ESTADO;
                 cb_numero_loteria.Text = obj_factura.NUMERO_LOTERIA;
-                cb_vendedor.SelectedValue = obj_factura.ID_VENDEDOR;
-
-                groupBox3.Enabled = false;
-                groupBox6.Enabled = false;
-                groupBox7.Enabled = false;
-                groupBox8.Enabled = false;
-                btn_agregar_articulo.Enabled = false;
-                btn_quitar_articulo.Enabled = false;
+                txt_monto_pendiente.Text = obj_factura.MONTO_PENDIENTE.ToString("N2");
+                txt_garantia_1.Text = obj_factura.GARANTIA1;
+                txt_garantia_2.Text = obj_factura.GARANTIA2;
+                txt_garantia_3.Text = obj_factura.GARANTIA3;
+                txt_garantia_4.Text = obj_factura.GARANTIA4;
+                txt_garantia_5.Text = obj_factura.GARANTIA5;
+                txt_garantia_6.Text = obj_factura.GARANTIA6;
+                txt_garantia_7.Text = obj_factura.GARANTIA7;
                 txt_total.Enabled = false;
-                dg_detalle_cuotas.Enabled = false;
                 
                 if(cb_estado.Text !="Activo")
                 {
@@ -75,15 +72,7 @@ namespace JSYS.Formularios
                     btn_guardar.Enabled = false;
                 }
 
-                //detalle factura
-                List<E_Detalles_Factura> Lista_Detalle = S_Factura.Listar_Detalles_Facturas("A.ID_FACTURA=" + obj_factura.ID_FACTURA + "");
-                dg_detalle_factura.Rows.Clear();
-                foreach (E_Detalles_Factura p in Lista_Detalle)
-                {
-                    dg_detalle_factura.Rows.Add(p.ID_ARTICULO, p.REFERENCIA,p.DESCRIPCION,p.CANTIDAD,p.PRECIO,p.MONTO_TOTAL.ToString("n2"));
-                }               
-                dg_detalle_factura.DataSource = null;
-
+               
                 //encabezado cuotas
                 var encabezado = db.ENCABEZADO_CUOTAS.Where(e => e.ID_FACTURA == obj_factura.ID_FACTURA).Single();
                 cb_modo_calculo.Text = encabezado.MODO_CALCULO;
@@ -109,16 +98,23 @@ namespace JSYS.Formularios
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Frm_Consultar_Articulo_Para_Factura frm = new Frm_Consultar_Articulo_Para_Factura();
-            frm.ShowDialog();
+
         }
 
         public void Calcular_Cuotas()
         {
             DateTime fecha = dt_fecha_primera_cuota.Value;
             DateTime fecha_1 = dt_fecha_primera_cuota.Value;
-            decimal valor_cuotas;
-            decimal total = Convert.ToDecimal(txt_total.Text);
+            decimal valor_cuotas=0;
+            decimal total = 0;
+            if (txt_numero_factura.Text.Length==0)
+            {
+                total = Convert.ToDecimal(txt_total.Text);
+            }
+            else
+            {
+                total = Convert.ToDecimal(txt_monto_pendiente.Text);
+            }
             int numero_cuotas = Convert.ToInt32(txt_cantidad_cuota.Text);
 
             valor_cuotas = (total / numero_cuotas );
@@ -198,17 +194,22 @@ namespace JSYS.Formularios
                 obj_factura.FECHA = dt_fecha_factura.Value;
                 obj_factura.FECHA_CAMBIO_ESTADO = "";
                 obj_factura.FECHA_CREADO = DateTime.Now;
-                obj_factura.ID_CLIENTE = Convert.ToInt32(cb_cliente.SelectedValue);
+                obj_factura.REFERENCIA = cb_cliente.SelectedValue.ToString();
                 obj_factura.ID_COBRADOR = Convert.ToInt32(cb_cobrador.SelectedValue);
                 obj_factura.ID_ESTADO = Convert.ToInt32(cb_estado.SelectedValue);
-                obj_factura.ID_VENDEDOR = Convert.ToInt32(cb_vendedor.SelectedValue);
                 obj_factura.MONTO_PAGADO = 0;
                 obj_factura.MONTO_PENDIENTE = Convert.ToDecimal(txt_total.Text);
                 obj_factura.MONTO_TOTAL = Convert.ToDecimal(txt_total.Text);
                 obj_factura.NOTA_CAMBIO_ESTADO = "";
-                obj_factura.NUMERO_CONTRATO = Convert.ToInt32(txt_numero_contrato.Text);
                 obj_factura.NUMERO_LOTERIA = cb_numero_loteria.Text;
                 obj_factura.OBSERVACION = txt_observacion.Text.Trim();
+                obj_factura.GARANTIA1 = txt_garantia_1.Text.Trim();
+                obj_factura.GARANTIA2 = txt_garantia_2.Text.Trim();
+                obj_factura.GARANTIA3 = txt_garantia_3.Text.Trim();
+                obj_factura.GARANTIA4 = txt_garantia_4.Text.Trim();
+                obj_factura.GARANTIA5 = txt_garantia_5.Text.Trim();
+                obj_factura.GARANTIA6 = txt_garantia_6.Text.Trim();
+                obj_factura.GARANTIA7 = txt_garantia_7.Text.Trim();
 
                 S_Factura.Insertar_Factura(obj_factura);
 
@@ -217,26 +218,6 @@ namespace JSYS.Formularios
                 //obtener ultimo numero de factura
                 int id_factura = db.FACTURAS.Max(m => m.ID_FACTURA);
 
-                //insertar detalles factura
-                foreach (DataGridViewRow row in dg_detalle_factura.Rows)
-                {
-                    DETALLES_FACTURAS obj_detalle_factura = new DETALLES_FACTURAS();
-
-                    obj_detalle_factura.ID_FACTURA = id_factura;
-                    obj_detalle_factura.ID_ARTICULO = Convert.ToInt32(row.Cells[0].Value);
-                    obj_detalle_factura.CANTIDAD = Convert.ToInt32(row.Cells[3].Value);
-                    obj_detalle_factura.PRECIO = Convert.ToDecimal(row.Cells[4].Value);
-                    obj_detalle_factura.MONTO_TOTAL = Convert.ToDecimal(row.Cells[5].Value);
-
-                    S_Factura.Insertar_Detalle_Factura(obj_detalle_factura);
-
-                    //actualizar inventario
-                    INVENTARIO_ARTICULOS obj_inventario = new INVENTARIO_ARTICULOS();
-                    obj_inventario.ID_ARTICULO = Convert.ToInt32(row.Cells[0].Value);
-                    obj_inventario.STOCK_ACTUAL = Convert.ToInt32(row.Cells[3].Value);
-
-                    S_Factura.Actualizar_Inventario(obj_inventario);
-                }
                
                 //insertar encabezado cuota
                 ENCABEZADO_CUOTAS obj_encabezado_cuota = new ENCABEZADO_CUOTAS();
@@ -257,7 +238,70 @@ namespace JSYS.Formularios
                     obj_detalle_cuotas.MONTO_CUOTA = Convert.ToDecimal(row.Cells[2].Value);
                     obj_detalle_cuotas.MONTO_PAGADO = 0;
                     obj_detalle_cuotas.MONTO_PENDIENTE = Convert.ToDecimal(row.Cells[2].Value);
+                    obj_detalle_cuotas.RE_CALCULADO = "NO";
+                    S_Factura.Insertar_Detalle_Cuota(obj_detalle_cuotas);
+                }
+                Close();
+            }
+            catch (Exception ex)
+            {
+                S_Utilidades.Mensaje_Error(ex.Message);
+            }
+        }
 
+        public void Actualizar()
+        {
+            try
+            {
+                //insertar_factura
+                FACTURAS obj_factura = new FACTURAS();
+                obj_factura.ID_FACTURA= Convert.ToInt32(txt_numero_factura.Text);
+                obj_factura.ID_COBRADOR = Convert.ToInt32(cb_cobrador.SelectedValue);
+                obj_factura.ID_ESTADO = Convert.ToInt32(cb_estado.SelectedValue);
+                obj_factura.MONTO_TOTAL = Convert.ToDecimal(txt_total.Text);
+                obj_factura.NUMERO_LOTERIA = cb_numero_loteria.Text;
+                obj_factura.OBSERVACION = txt_observacion.Text.Trim();
+                obj_factura.GARANTIA1 = txt_garantia_1.Text.Trim();
+                obj_factura.GARANTIA2 = txt_garantia_2.Text.Trim();
+                obj_factura.GARANTIA3 = txt_garantia_3.Text.Trim();
+                obj_factura.GARANTIA4 = txt_garantia_4.Text.Trim();
+                obj_factura.GARANTIA5 = txt_garantia_5.Text.Trim();
+                obj_factura.GARANTIA6 = txt_garantia_6.Text.Trim();
+                obj_factura.GARANTIA7 = txt_garantia_7.Text.Trim();
+
+                S_Factura.Actualizar_Factura(obj_factura);
+
+                BD_JSYSEntities db = new BD_JSYSEntities();
+
+ 
+                //insertar encabezado cuota
+                ENCABEZADO_CUOTAS obj_encabezado_cuota = new ENCABEZADO_CUOTAS();
+                obj_encabezado_cuota.CANTIADA_CUOTA = Convert.ToInt32(txt_cantidad_cuota.Text);
+                obj_encabezado_cuota.ID_FACTURA = Convert.ToInt32(txt_numero_factura.Text);
+                obj_encabezado_cuota.MODO_CALCULO = cb_modo_calculo.Text;
+                obj_encabezado_cuota.FECHA_PRIMERA_CUOTA = dt_fecha_primera_cuota.Value;
+                S_Factura.Actualizar_Encabezado_Cuota(obj_encabezado_cuota);
+
+                //insertar detalles cuotas
+                S_Factura.Eliminar_Cuotas(Convert.ToInt32(txt_numero_factura.Text));
+
+                DETALLES_CUOTAS obj_detalle = new DETALLES_CUOTAS();
+
+                obj_detalle.ID_FACTURA = Convert.ToInt32(txt_numero_factura.Text);
+                obj_detalle.RE_CALCULADO = "SI";
+                S_Factura.Actualizar_Cuotas(obj_detalle);
+
+                foreach (DataGridViewRow row in dg_detalle_cuotas.Rows)
+                {
+                    DETALLES_CUOTAS obj_detalle_cuotas = new DETALLES_CUOTAS();
+
+                    obj_detalle_cuotas.ID_FACTURA = Convert.ToInt32(txt_numero_factura.Text);
+                    obj_detalle_cuotas.NUMERO_CUOTA = Convert.ToInt32(row.Cells[0].Value);
+                    obj_detalle_cuotas.FECHA = Convert.ToDateTime(row.Cells[1].Value);
+                    obj_detalle_cuotas.MONTO_CUOTA = Convert.ToDecimal(row.Cells[2].Value);
+                    obj_detalle_cuotas.MONTO_PAGADO = 0;
+                    obj_detalle_cuotas.MONTO_PENDIENTE = Convert.ToDecimal(row.Cells[2].Value);
+                    obj_detalle_cuotas.RE_CALCULADO = "NO";
                     S_Factura.Insertar_Detalle_Cuota(obj_detalle_cuotas);
                 }
                 Close();
@@ -283,18 +327,7 @@ namespace JSYS.Formularios
                 obj_factura.NOTA_CAMBIO_ESTADO = txt_observacion.Text.Trim();
                 S_Factura.Cambiar_Estado_Factura(obj_factura);
                 
-                if (cb_estado.Text == "Anulado" || cb_estado.Text == "Abandonado")
-                {
-                    foreach (DataGridViewRow row in dg_detalle_factura.Rows)
-                    {
-                        //actualizar inventario
-                        INVENTARIO_ARTICULOS obj_inventario = new INVENTARIO_ARTICULOS();
-                        obj_inventario.ID_ARTICULO = Convert.ToInt32(row.Cells[0].Value);
-                        obj_inventario.STOCK_ACTUAL = Convert.ToInt32(row.Cells[3].Value);
-
-                        S_Factura.Actualizar_Inventario_Entrada(obj_inventario);
-                    }
-                }
+               
                 S_Utilidades.Mensaje_Informacion("Datos Actualizados con Exito");
                 Close();        
         }
@@ -308,24 +341,10 @@ namespace JSYS.Formularios
                 return;
             }
 
-            if (txt_numero_contrato.Text == "")
-            {
-                S_Utilidades.Mensaje_Informacion("El Numero de Contrato es Obligatorio");
-                txt_numero_contrato.Focus();
-                return;
-            }
-
             if (cb_numero_loteria.Text == "")
             {
                 S_Utilidades.Mensaje_Informacion("El Numero de Loteria Obligatorio");
                 cb_numero_loteria.Focus();
-                return;
-            }
-
-            if (cb_vendedor.Text == "")
-            {
-                S_Utilidades.Mensaje_Informacion("El Venderor es Obligatorio");
-                cb_vendedor.Focus();
                 return;
             }
 
@@ -340,12 +359,6 @@ namespace JSYS.Formularios
             {
                 S_Utilidades.Mensaje_Informacion("El Estado es Obligatorio");
                 cb_estado.Focus();
-                return;
-            }
-
-            if (dg_detalle_factura.Rows.Count == 0)
-            {
-                S_Utilidades.Mensaje_Informacion("Se debe Ingresar por lo menos un Articulo");
                 return;
             }
 
@@ -374,6 +387,7 @@ namespace JSYS.Formularios
                     return;
                 }
                 Cambiar_Estado();
+                Actualizar();
             }
         }
 
