@@ -126,11 +126,12 @@ namespace Datos
             using (var db = new BD_JSYSEntities())
             {
                 var obj_det = db.DETALLES_CUOTAS.Where(e => e.ID_FACTURA == obj.ID_FACTURA ).Where(e => e.MONTO_PAGADO > 0).ToList();
-                if(obj_det.Count() > 0)
+                if (obj_det.Count()>0)
                 {
                     obj_det[0].RE_CALCULADO = obj.RE_CALCULADO;
+                    db.SaveChanges();
                 }
-                db.SaveChanges();
+               
             }
         }
 
@@ -173,6 +174,7 @@ namespace Datos
                 obj_factura.GARANTIA5 = obj.GARANTIA5;
                 obj_factura.GARANTIA6 = obj.GARANTIA6;
                 obj_factura.GARANTIA7 = obj.GARANTIA7;
+                obj_factura.MONTO_DESCONTADO = obj.MONTO_DESCONTADO;
                 db.SaveChanges();
             }
         }
@@ -213,7 +215,7 @@ namespace Datos
         {
             using (var db = new BD_JSYSEntities())
             {
-                var obj_detalle = db.DETALLES_CUOTAS.Where(a => a.ID_FACTURA == obj.ID_FACTURA).Where(a => a.NUMERO_CUOTA == obj.NUMERO_CUOTA).Single();
+                var obj_detalle = db.DETALLES_CUOTAS.Where(a => a.ID_FACTURA == obj.ID_FACTURA).Where(a => a.NUMERO_CUOTA == obj.NUMERO_CUOTA).Where(a => a.RE_CALCULADO == "NO").Single();
                 obj_detalle.MONTO_PAGADO = obj_detalle.MONTO_PAGADO + obj.MONTO_PAGADO;
                 obj_detalle.MONTO_PENDIENTE = obj.MONTO_PENDIENTE;
                 db.SaveChanges();
@@ -258,7 +260,7 @@ namespace Datos
         {
             using (var db = new BD_JSYSEntities())
             {
-                var obj_detalle = db.DETALLES_CUOTAS.Where(a => a.ID_FACTURA == obj.ID_FACTURA).Where(a => a.NUMERO_CUOTA == obj.NUMERO_CUOTA).Single();
+                var obj_detalle = db.DETALLES_CUOTAS.Where(a => a.ID_FACTURA == obj.ID_FACTURA).Where(a => a.NUMERO_CUOTA == obj.NUMERO_CUOTA).Where(a => a.RE_CALCULADO == "NO").Single();
                 obj_detalle.MONTO_PAGADO = obj_detalle.MONTO_PAGADO - obj.MONTO_PAGADO;
                 obj_detalle.MONTO_PENDIENTE = obj_detalle.MONTO_PENDIENTE + obj.MONTO_PAGADO;
                 db.SaveChanges();

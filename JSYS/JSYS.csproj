@@ -604,6 +604,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="BD_JSYS.bak" />
+    <None Include="bin\Debug\ApplicationInsights.config" />
+    <None Include="bin\Debug\JSYS.exe.config" />
+    <None Include="bin\Debug\JSYS.vshost.exe.config" />
+    <None Include="bin\Debug\JSYS.vshost.exe.manifest" />
+    <None Include="bin\Release\ApplicationInsights.config" />
+    <None Include="bin\Release\JSYS.exe.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -793,6 +799,34 @@
     <None Include="Resources\ventas.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Datos.dll" />
+    <Content Include="bin\Debug\Datos.pdb" />
+    <Content Include="bin\Debug\Entidades.dll" />
+    <Content Include="bin\Debug\Entidades.pdb" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\JSYS.exe" />
+    <Content Include="bin\Debug\JSYS.pdb" />
+    <Content Include="bin\Debug\JSYS.vshost.exe" />
+    <Content Include="bin\Release\Datos.dll" />
+    <Content Include="bin\Release\Datos.pdb" />
+    <Content Include="bin\Release\Entidades.dll" />
+    <Content Include="bin\Release\Entidades.pdb" />
+    <Content Include="bin\Release\EntityFramework.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Release\EntityFramework.xml" />
+    <Content Include="bin\Release\JSYS.exe" />
+    <Content Include="bin\Release\JSYS.pdb" />
+    <Content Include="bin\Release\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Release\Microsoft.AspNet.TelemetryCorrelation.dll" />
+    <Content Include="bin\Release\Microsoft.AspNet.TelemetryCorrelation.xml" />
+    <Content Include="bin\Release\Servicios.dll" />
+    <Content Include="bin\Release\Servicios.pdb" />
+    <Content Include="bin\Release\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\Release\System.Diagnostics.DiagnosticSource.xml" />
     <Content Include="Imagenes\cliente 32.png" />
     <Content Include="Imagenes\clientes 24.png" />
     <Content Include="Imagenes\configuracion 32.png" />

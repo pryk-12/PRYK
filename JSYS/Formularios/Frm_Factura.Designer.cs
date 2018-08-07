@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -52,8 +52,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cb_estado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_total = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.cb_cobrador = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -76,7 +74,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_monto_pendiente = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dt_fecha_primera_cuota = new System.Windows.Forms.DateTimePicker();
@@ -87,6 +84,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Txt_ID = new System.Windows.Forms.TextBox();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
+            this.txt_descuento = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_total = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txt_monto_pagado = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cb_recalcular = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -97,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dg_detalle_cuotas)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -166,8 +174,6 @@
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.cb_estado);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.txt_total);
-            this.tabPage1.Controls.Add(this.label27);
             this.tabPage1.Controls.Add(this.groupBox7);
             this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.txt_observacion);
@@ -356,7 +362,7 @@
             "Inactivo"});
             this.cb_estado.Location = new System.Drawing.Point(104, 368);
             this.cb_estado.Name = "cb_estado";
-            this.cb_estado.Size = new System.Drawing.Size(323, 22);
+            this.cb_estado.Size = new System.Drawing.Size(227, 22);
             this.cb_estado.TabIndex = 0;
             // 
             // label5
@@ -368,27 +374,6 @@
             this.label5.Size = new System.Drawing.Size(49, 14);
             this.label5.TabIndex = 16;
             this.label5.Text = "Estado";
-            // 
-            // txt_total
-            // 
-            this.txt_total.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_total.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_total.Location = new System.Drawing.Point(542, 369);
-            this.txt_total.MaxLength = 25;
-            this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(111, 22);
-            this.txt_total.TabIndex = 1;
-            this.txt_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(501, 373);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(38, 14);
-            this.label27.TabIndex = 31;
-            this.label27.Text = "Total";
             // 
             // groupBox7
             // 
@@ -668,6 +653,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.dg_detalle_cuotas);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
@@ -687,20 +673,20 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Khaki;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_detalle_cuotas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_detalle_cuotas.Location = new System.Drawing.Point(329, 10);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Khaki;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_detalle_cuotas.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dg_detalle_cuotas.Location = new System.Drawing.Point(312, 10);
             this.dg_detalle_cuotas.Name = "dg_detalle_cuotas";
             this.dg_detalle_cuotas.ReadOnly = true;
             this.dg_detalle_cuotas.RowHeadersVisible = false;
             this.dg_detalle_cuotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_detalle_cuotas.Size = new System.Drawing.Size(311, 432);
+            this.dg_detalle_cuotas.Size = new System.Drawing.Size(349, 432);
             this.dg_detalle_cuotas.TabIndex = 187;
             // 
             // dataGridViewTextBoxColumn1
@@ -721,9 +707,9 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "DESCRIPCION";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "n2";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "n2";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn3.HeaderText = "Monto";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -731,8 +717,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txt_monto_pendiente);
-            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.cb_recalcular);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.dt_fecha_primera_cuota);
@@ -742,9 +728,9 @@
             this.groupBox3.Controls.Add(this.cb_modo_calculo);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.groupBox3.Location = new System.Drawing.Point(30, 10);
+            this.groupBox3.Location = new System.Drawing.Point(13, 10);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(282, 191);
+            this.groupBox3.Size = new System.Drawing.Size(282, 187);
             this.groupBox3.TabIndex = 186;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Calculo de Cuota(s)";
@@ -753,24 +739,14 @@
             // 
             this.txt_monto_pendiente.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_monto_pendiente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_monto_pendiente.Enabled = false;
             this.txt_monto_pendiente.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_monto_pendiente.Location = new System.Drawing.Point(151, 92);
+            this.txt_monto_pendiente.Location = new System.Drawing.Point(154, 78);
             this.txt_monto_pendiente.MaxLength = 25;
             this.txt_monto_pendiente.Name = "txt_monto_pendiente";
-            this.txt_monto_pendiente.Size = new System.Drawing.Size(108, 21);
+            this.txt_monto_pendiente.Size = new System.Drawing.Size(111, 21);
             this.txt_monto_pendiente.TabIndex = 48;
             this.txt_monto_pendiente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(45, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Monto Pendiente";
             // 
             // button3
             // 
@@ -783,9 +759,9 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::JSYS.Properties.Resources.Money_Coin_02_WF;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(152, 130);
+            this.button3.Location = new System.Drawing.Point(13, 128);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 46);
+            this.button3.Size = new System.Drawing.Size(246, 41);
             this.button3.TabIndex = 47;
             this.button3.Text = "Calcular";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -797,7 +773,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(24, 73);
+            this.label7.Location = new System.Drawing.Point(24, 78);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(124, 13);
             this.label7.TabIndex = 46;
@@ -808,7 +784,7 @@
             this.dt_fecha_primera_cuota.CalendarMonthBackground = System.Drawing.Color.PaleGoldenrod;
             this.dt_fecha_primera_cuota.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_fecha_primera_cuota.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_fecha_primera_cuota.Location = new System.Drawing.Point(151, 69);
+            this.dt_fecha_primera_cuota.Location = new System.Drawing.Point(151, 74);
             this.dt_fecha_primera_cuota.Name = "dt_fecha_primera_cuota";
             this.dt_fecha_primera_cuota.Size = new System.Drawing.Size(108, 21);
             this.dt_fecha_primera_cuota.TabIndex = 45;
@@ -818,7 +794,7 @@
             this.txt_cantidad_cuota.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txt_cantidad_cuota.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_cantidad_cuota.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidad_cuota.Location = new System.Drawing.Point(151, 46);
+            this.txt_cantidad_cuota.Location = new System.Drawing.Point(151, 51);
             this.txt_cantidad_cuota.MaxLength = 25;
             this.txt_cantidad_cuota.Name = "txt_cantidad_cuota";
             this.txt_cantidad_cuota.Size = new System.Drawing.Size(52, 21);
@@ -830,7 +806,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(39, 50);
+            this.label4.Location = new System.Drawing.Point(39, 55);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 13);
             this.label4.TabIndex = 44;
@@ -841,7 +817,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(50, 27);
+            this.label3.Location = new System.Drawing.Point(50, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 42;
@@ -851,6 +827,7 @@
             // 
             this.cb_modo_calculo.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.cb_modo_calculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_modo_calculo.Enabled = false;
             this.cb_modo_calculo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_modo_calculo.FormattingEnabled = true;
             this.cb_modo_calculo.Items.AddRange(new object[] {
@@ -858,7 +835,7 @@
             "Semanal",
             "Quincenal",
             "Mensual"});
-            this.cb_modo_calculo.Location = new System.Drawing.Point(151, 23);
+            this.cb_modo_calculo.Location = new System.Drawing.Point(151, 28);
             this.cb_modo_calculo.Name = "cb_modo_calculo";
             this.cb_modo_calculo.Size = new System.Drawing.Size(108, 21);
             this.cb_modo_calculo.TabIndex = 41;
@@ -895,6 +872,129 @@
             this.Lbl_Titulo.TabIndex = 5;
             this.Lbl_Titulo.Text = ":";
             // 
+            // txt_descuento
+            // 
+            this.txt_descuento.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_descuento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_descuento.Location = new System.Drawing.Point(154, 101);
+            this.txt_descuento.MaxLength = 25;
+            this.txt_descuento.Name = "txt_descuento";
+            this.txt_descuento.Size = new System.Drawing.Size(111, 24);
+            this.txt_descuento.TabIndex = 190;
+            this.txt_descuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(79, 106);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(72, 14);
+            this.label15.TabIndex = 191;
+            this.label15.Text = "Descuento";
+            // 
+            // txt_total
+            // 
+            this.txt_total.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_total.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_total.Location = new System.Drawing.Point(154, 26);
+            this.txt_total.MaxLength = 25;
+            this.txt_total.Name = "txt_total";
+            this.txt_total.Size = new System.Drawing.Size(111, 24);
+            this.txt_total.TabIndex = 188;
+            this.txt_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Black;
+            this.label27.Location = new System.Drawing.Point(113, 31);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(38, 14);
+            this.label27.TabIndex = 189;
+            this.label27.Text = "Total";
+            // 
+            // txt_monto_pagado
+            // 
+            this.txt_monto_pagado.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.txt_monto_pagado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txt_monto_pagado.Enabled = false;
+            this.txt_monto_pagado.Location = new System.Drawing.Point(154, 52);
+            this.txt_monto_pagado.MaxLength = 25;
+            this.txt_monto_pagado.Name = "txt_monto_pagado";
+            this.txt_monto_pagado.Size = new System.Drawing.Size(111, 24);
+            this.txt_monto_pagado.TabIndex = 192;
+            this.txt_monto_pagado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(82, 80);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 14);
+            this.label16.TabIndex = 193;
+            this.label16.Text = "Pendiente";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.txt_descuento);
+            this.groupBox4.Controls.Add(this.txt_monto_pagado);
+            this.groupBox4.Controls.Add(this.label27);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.txt_total);
+            this.groupBox4.Controls.Add(this.txt_monto_pendiente);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.groupBox4.Location = new System.Drawing.Point(24, 302);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(282, 140);
+            this.groupBox4.TabIndex = 194;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Montos";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(98, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 14);
+            this.label1.TabIndex = 194;
+            this.label1.Text = "Pagado";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(76, 101);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(72, 13);
+            this.label17.TabIndex = 49;
+            this.label17.Text = "Re-Calcular";
+            // 
+            // cb_recalcular
+            // 
+            this.cb_recalcular.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.cb_recalcular.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_recalcular.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_recalcular.FormattingEnabled = true;
+            this.cb_recalcular.Items.AddRange(new object[] {
+            "",
+            "Si",
+            "No"});
+            this.cb_recalcular.Location = new System.Drawing.Point(151, 97);
+            this.cb_recalcular.Name = "cb_recalcular";
+            this.cb_recalcular.Size = new System.Drawing.Size(108, 21);
+            this.cb_recalcular.TabIndex = 48;
+            // 
             // Frm_Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -920,6 +1020,8 @@
             this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -951,7 +1053,6 @@
         private System.Windows.Forms.Label Lbl_Titulo;
         private System.Windows.Forms.ComboBox cb_cobrador;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dt_fecha_primera_cuota;
@@ -963,11 +1064,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        public System.Windows.Forms.TextBox txt_total;
         public System.Windows.Forms.ComboBox cb_cliente;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txt_monto_pendiente;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_garantia_7;
         private System.Windows.Forms.Label label13;
@@ -983,5 +1082,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_garantia_1;
         private System.Windows.Forms.Label label11;
+        internal System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txt_descuento;
+        public System.Windows.Forms.TextBox txt_monto_pagado;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label16;
+        public System.Windows.Forms.TextBox txt_total;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cb_recalcular;
     }
 }
