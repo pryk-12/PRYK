@@ -25,7 +25,7 @@ namespace JSYS_WEB
 
                 cb_cliente.DataSource = S_Factura.Listar_Clientes_X_Cobrador("B.NOMBRE LIKE'%" + "" + "%' AND A.ID_COBRADOR=" + S_Utilidades.Datos_Usuario.ID_USUARIO + "");
                 cb_cliente.DataTextField = "NOMBRE";
-                cb_cliente.DataValueField = "ID_CLIENTE";                
+                cb_cliente.DataValueField = "REFERENCIA";                
                 cb_cliente.DataBind();
                 cb_cliente.SelectedIndex = -1;
                 

@@ -15,11 +15,6 @@ namespace JSYS.Formularios
             public string NOMBRE { get; set; }
         }
 
-        public class _VENDEDOR
-        {
-            public int ID_VENDEDOR { get; set; }
-            public string NOMBRE { get; set; }
-        }
         public class _COBRADOR
         {
             public int ID_COBRADOR { get; set; }
@@ -72,33 +67,22 @@ namespace JSYS.Formularios
             
             string condicion = "";
             int id_factura = 0;
-            int contrato = 0;
 
-            if (txt_numero_factura.Text.Equals(""))
+
+            if (txt_contrato.Text.Equals(""))
             {
                 id_factura = 0;
             }
             else
             {
-                id_factura = Convert.ToInt32(txt_numero_factura.Text);
-            }
-
-            if (txt_contrato.Text.Equals(""))
-            {
-                contrato = 0;
-            }
-            else
-            {
-                contrato = Convert.ToInt32(txt_contrato.Text);
+                id_factura = Convert.ToInt32(txt_contrato.Text);
             }
 
             if (ch_incluir_fechas.Checked == true)
             {
                 condicion = @"([ID_FACTURA] = " + id_factura + " OR 0 = " + id_factura + @")
-                          and ([NUMERO_CONTRATO] = " + contrato + " OR 0 = " + contrato + @")
                           and ([NUMERO_LOTERIA] = '" + cb_numero_loteria.Text + "' OR '' = '" + cb_numero_loteria.Text + @"')
                           and ([NOMBRE] = '" + cb_cliente.Text + "' OR '' = '" + cb_cliente.Text + @"')
-                          and ([VENDEDOR] = '" + cb_vendedor.Text + "' OR '' = '" + cb_vendedor.Text + @"')
                           and ([COBRADOR] = '" + cb_cobrador.Text + "' OR '' = '" + cb_cobrador.Text + @"')
                           and ([ESTADO] = '" + cb_estado.Text + "' OR '' = '" + cb_estado.Text + @"')
                           and ([FECHA] Between('" + dt_desde.Value.Date + "', '" + dt_hasta.Value.Date + "'))";
@@ -106,10 +90,8 @@ namespace JSYS.Formularios
             else
             {
                 condicion = @"([ID_FACTURA] = " + id_factura + " OR 0 = " + id_factura + @")
-                          and ([NUMERO_CONTRATO] = " + contrato + " OR 0 = " + contrato + @")
                           and ([NUMERO_LOTERIA] = '" + cb_numero_loteria.Text + "' OR '' = '" + cb_numero_loteria.Text + @"')
                           and ([NOMBRE] = '" + cb_cliente.Text + "' OR '' = '" + cb_cliente.Text + @"')
-                          and ([VENDEDOR] = '" + cb_vendedor.Text + "' OR '' = '" + cb_vendedor.Text + @"')
                           and ([COBRADOR] = '" + cb_cobrador.Text + "' OR '' = '" + cb_cobrador.Text + @"')
                           and ([ESTADO] = '" + cb_estado.Text + "' OR '' = '" + cb_estado.Text + @"')";
             }

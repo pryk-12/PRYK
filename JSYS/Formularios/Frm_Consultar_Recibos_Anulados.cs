@@ -22,17 +22,21 @@ namespace JSYS.Formularios
             try
             {
                 string Cond = "";
-                if (cb_buscar.Text == "Numero Recibo")
+                if (cb_buscar.Text == "No. Recibo")
                 {
                     Cond = "(A.ID_RECIBO=" + Txt_Buscar.Text + " AND A.ESTADO='A')";
                 }
-                else if (cb_buscar.Text == "Numero Factura")
+                else if (cb_buscar.Text == "No. Contrato")
                 {
                     Cond = "(A.ID_FACTURA=" + Txt_Buscar.Text + " AND A.ESTADO='A')";
                 }
                 else if (cb_buscar.Text == "Cliente")
                 {
                     Cond = "(C.NOMBRE LIKE'%" + Txt_Buscar.Text + "%' AND A.ESTADO='A')";
+                }
+                else if (cb_buscar.Text == "Cedula")
+                {
+                    Cond = "(C.NUMERO_IDENTIFICACION LIKE'%" + Txt_Buscar.Text + "%' AND A.ESTADO='A')";
                 }
                 else if (cb_buscar.Text == "Cobrador" || cb_buscar.Text == "")
                 {

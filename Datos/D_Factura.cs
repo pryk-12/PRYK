@@ -247,8 +247,6 @@ namespace Datos
             {
                 var obj_cuadre = db.CUADRES_DIARIOS.Where(f => f.FECHA == obj.FECHA).Single();
                 obj_cuadre.VALOR_ANULADO = obj.VALOR_ANULADO;
-                obj_cuadre.VALOR_CXP_ANULADO = obj.VALOR_CXP_ANULADO;
-                obj_cuadre.VALOR_CXP_PAGADO = obj.VALOR_CXP_PAGADO;
                 obj_cuadre.VALOR_PAGADO = obj.VALOR_PAGADO;
                 obj_cuadre.VALOR_TOTAL = obj.VALOR_TOTAL;
                 db.SaveChanges();

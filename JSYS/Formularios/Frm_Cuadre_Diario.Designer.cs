@@ -43,20 +43,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_recibo_anulado = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_cxp_total = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_cxp_anulado = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_cxp_pagado = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_total_general = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -65,7 +54,7 @@
             this.groupBox2.Controls.Add(this.btn_entregar);
             this.groupBox2.Location = new System.Drawing.Point(8, 49);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(88, 305);
+            this.groupBox2.Size = new System.Drawing.Size(88, 165);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             // 
@@ -107,7 +96,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(539, 46);
+            this.panel1.Size = new System.Drawing.Size(437, 46);
             this.panel1.TabIndex = 55;
             // 
             // label2
@@ -233,129 +222,10 @@
             this.textBox1.TabIndex = 21;
             this.textBox1.Visible = false;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.txt_cxp_total);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txt_cxp_anulado);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.txt_cxp_pagado);
-            this.groupBox3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(132, 234);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(255, 120);
-            this.groupBox3.TabIndex = 62;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Pagos a Proveedores";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(77, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 14);
-            this.label7.TabIndex = 66;
-            this.label7.Text = "Total";
-            // 
-            // txt_cxp_total
-            // 
-            this.txt_cxp_total.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_cxp_total.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_cxp_total.Enabled = false;
-            this.txt_cxp_total.Location = new System.Drawing.Point(118, 78);
-            this.txt_cxp_total.MaxLength = 25;
-            this.txt_cxp_total.Name = "txt_cxp_total";
-            this.txt_cxp_total.Size = new System.Drawing.Size(113, 22);
-            this.txt_cxp_total.TabIndex = 65;
-            this.txt_cxp_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 14);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "Anulado";
-            // 
-            // txt_cxp_anulado
-            // 
-            this.txt_cxp_anulado.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_cxp_anulado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_cxp_anulado.Enabled = false;
-            this.txt_cxp_anulado.Location = new System.Drawing.Point(118, 53);
-            this.txt_cxp_anulado.MaxLength = 25;
-            this.txt_cxp_anulado.Name = "txt_cxp_anulado";
-            this.txt_cxp_anulado.Size = new System.Drawing.Size(113, 22);
-            this.txt_cxp_anulado.TabIndex = 61;
-            this.txt_cxp_anulado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(472, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(93, 22);
-            this.textBox4.TabIndex = 21;
-            this.textBox4.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(62, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 14);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "Pagado";
-            // 
-            // txt_cxp_pagado
-            // 
-            this.txt_cxp_pagado.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_cxp_pagado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_cxp_pagado.Enabled = false;
-            this.txt_cxp_pagado.Location = new System.Drawing.Point(118, 28);
-            this.txt_cxp_pagado.MaxLength = 25;
-            this.txt_cxp_pagado.Name = "txt_cxp_pagado";
-            this.txt_cxp_pagado.Size = new System.Drawing.Size(113, 22);
-            this.txt_cxp_pagado.TabIndex = 59;
-            this.txt_cxp_pagado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(405, 310);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 14);
-            this.label9.TabIndex = 68;
-            this.label9.Text = "Total General";
-            // 
-            // txt_total_general
-            // 
-            this.txt_total_general.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.txt_total_general.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_total_general.Enabled = false;
-            this.txt_total_general.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_general.Location = new System.Drawing.Point(402, 327);
-            this.txt_total_general.MaxLength = 25;
-            this.txt_total_general.Name = "txt_total_general";
-            this.txt_total_general.Size = new System.Drawing.Size(113, 24);
-            this.txt_total_general.TabIndex = 67;
-            this.txt_total_general.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // Frm_Cuadre_Diario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
-            this.ClientSize = new System.Drawing.Size(539, 368);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_total_general);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(437, 232);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dt_fecha);
             this.Controls.Add(this.label8);
@@ -369,8 +239,6 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,15 +261,5 @@
         private System.Windows.Forms.TextBox txt_recibo_total;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_recibo_anulado;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_cxp_total;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_cxp_anulado;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_cxp_pagado;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_total_general;
     }
 }

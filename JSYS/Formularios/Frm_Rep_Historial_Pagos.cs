@@ -58,13 +58,13 @@ namespace JSYS.Formularios
             }
 
             string condicion = "";
-            if(cb_facturas.Text =="")
+            if(cb_facturas.Text =="0")
             {
-                condicion = @"([NOMBRE] = '" + cb_cliente.Text + "')";
+                condicion = @"([REFERENCIA] = '" + cb_cliente.SelectedValue + "')";
             }
-            else if (cb_facturas.Text != "")
+            else if (cb_facturas.Text != "0")
             {
-                condicion = @"([NOMBRE] = '" + cb_cliente.Text + "' AND [ID_FACTURA] = " + cb_facturas.Text + ")";
+                condicion = @"([REFERENCIA] = '" + cb_cliente.SelectedValue + "' AND [ID_FACTURA] = " + cb_facturas.Text + ")";
             }
            
 

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.cb_buscar = new System.Windows.Forms.ComboBox();
             this.DG = new System.Windows.Forms.DataGridView();
             this.ID_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +46,6 @@
             this.Txt_Buscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.panel1.SuspendLayout();
@@ -74,6 +74,20 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::JSYS.Properties.Resources.Search_16x16;
+            this.button1.Location = new System.Drawing.Point(469, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 24);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Consultar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cb_buscar
             // 
             this.cb_buscar.BackColor = System.Drawing.Color.PaleGoldenrod;
@@ -84,6 +98,7 @@
             "Numero Recibo",
             "Numero Factura",
             "Cliente",
+            "Cedula",
             "Cobrador",
             "Estado"});
             this.cb_buscar.Location = new System.Drawing.Point(69, 18);
@@ -217,20 +232,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(794, 46);
             this.panel1.TabIndex = 19;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::JSYS.Properties.Resources.Search_16x16;
-            this.button1.Location = new System.Drawing.Point(469, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 24);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Consultar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_Consultar_Recibos
             // 

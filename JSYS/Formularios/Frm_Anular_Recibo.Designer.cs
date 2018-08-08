@@ -34,16 +34,19 @@
             this.txt_observacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.cb_buscar = new System.Windows.Forms.ComboBox();
             this.cb_cobrador = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dt_desde = new System.Windows.Forms.DateTimePicker();
+            this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dt_hasta = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_id = new System.Windows.Forms.TextBox();
+            this.btn_anular = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.DG = new System.Windows.Forms.DataGridView();
@@ -54,9 +57,6 @@
             this.ID_TIPO_IDENTIFICACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SEL = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btn_anular = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,6 +101,20 @@
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::JSYS.Properties.Resources.Search_16x16;
+            this.button1.Location = new System.Drawing.Point(297, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 48);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // txt_buscar
             // 
             this.txt_buscar.BackColor = System.Drawing.Color.PaleGoldenrod;
@@ -119,8 +133,8 @@
             this.cb_buscar.Items.AddRange(new object[] {
             "",
             "Cobrador",
-            "Numero Recibo",
-            "Numero Factura"});
+            "No. Recibo",
+            "No. Contrato"});
             this.cb_buscar.Location = new System.Drawing.Point(98, 20);
             this.cb_buscar.Name = "cb_buscar";
             this.cb_buscar.Size = new System.Drawing.Size(196, 22);
@@ -170,6 +184,20 @@
             this.dt_desde.Size = new System.Drawing.Size(103, 22);
             this.dt_desde.TabIndex = 45;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::JSYS.Properties.Resources.Search_16x16;
+            this.button2.Location = new System.Drawing.Point(646, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 48);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "Buscar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -207,6 +235,26 @@
             this.txt_id.Size = new System.Drawing.Size(93, 22);
             this.txt_id.TabIndex = 21;
             this.txt_id.Visible = false;
+            // 
+            // btn_anular
+            // 
+            this.btn_anular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_anular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_anular.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_anular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_anular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_anular.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_anular.ForeColor = System.Drawing.Color.White;
+            this.btn_anular.Image = global::JSYS.Properties.Resources.Money_Coin_02_WF;
+            this.btn_anular.Location = new System.Drawing.Point(8, 15);
+            this.btn_anular.Name = "btn_anular";
+            this.btn_anular.Size = new System.Drawing.Size(71, 59);
+            this.btn_anular.TabIndex = 6;
+            this.btn_anular.Text = "Anular";
+            this.btn_anular.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_anular.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_anular.UseVisualStyleBackColor = false;
+            this.btn_anular.Click += new System.EventHandler(this.btn_anular_Click);
             // 
             // panel1
             // 
@@ -322,54 +370,6 @@
             this.SEL.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.SEL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.SEL.Width = 40;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::JSYS.Properties.Resources.Search_16x16;
-            this.button2.Location = new System.Drawing.Point(646, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 48);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "Buscar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btn_anular
-            // 
-            this.btn_anular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_anular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_anular.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_anular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_anular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_anular.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_anular.ForeColor = System.Drawing.Color.White;
-            this.btn_anular.Image = global::JSYS.Properties.Resources.Money_Coin_02_WF;
-            this.btn_anular.Location = new System.Drawing.Point(8, 15);
-            this.btn_anular.Name = "btn_anular";
-            this.btn_anular.Size = new System.Drawing.Size(71, 59);
-            this.btn_anular.TabIndex = 6;
-            this.btn_anular.Text = "Anular";
-            this.btn_anular.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_anular.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_anular.UseVisualStyleBackColor = false;
-            this.btn_anular.Click += new System.EventHandler(this.btn_anular_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::JSYS.Properties.Resources.Search_16x16;
-            this.button1.Location = new System.Drawing.Point(297, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 48);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_Anular_Recibo
             // 

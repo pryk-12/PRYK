@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_consultas = new System.Windows.Forms.Button();
-            this.btn_inventario = new System.Windows.Forms.Button();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_configuraciones = new System.Windows.Forms.Button();
@@ -39,41 +38,29 @@
             this.btn_procesos = new System.Windows.Forms.Button();
             this.btn_Mantenimiento = new System.Windows.Forms.Button();
             this.pn_matenimientos = new System.Windows.Forms.Panel();
-            this.btn_articulos = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
             this.btn_usuario = new System.Windows.Forms.Button();
             this.pn_procesos = new System.Windows.Forms.Panel();
             this.btn_anular_recibo = new System.Windows.Forms.Button();
-            this.btn_entrega_articulo = new System.Windows.Forms.Button();
             this.btn_cuadre = new System.Windows.Forms.Button();
             this.btn_cxc = new System.Windows.Forms.Button();
             this.btn_facturacion = new System.Windows.Forms.Button();
-            this.pn_inventario = new System.Windows.Forms.Panel();
-            this.btn_consultar_pago = new System.Windows.Forms.Button();
-            this.btn_anular_cxp = new System.Windows.Forms.Button();
-            this.btn_movimientos = new System.Windows.Forms.Button();
-            this.btn_proveedores = new System.Windows.Forms.Button();
-            this.btn_motivo_movimiento = new System.Windows.Forms.Button();
             this.pn_configuraciones = new System.Windows.Forms.Panel();
             this.btn_permiso = new System.Windows.Forms.Button();
             this.btn_empresa = new System.Windows.Forms.Button();
             this.pn_reporte = new System.Windows.Forms.Panel();
+            this.btn_rep_historial = new System.Windows.Forms.Button();
             this.btn_rep_reimprimir_recibos = new System.Windows.Forms.Button();
-            this.btn_rep_movimientos = new System.Windows.Forms.Button();
             this.btn_rep_cuadre = new System.Windows.Forms.Button();
             this.btn_rep_cobros_realizados = new System.Windows.Forms.Button();
             this.btn_rep_facturas = new System.Windows.Forms.Button();
-            this.btn_rep_articulo = new System.Windows.Forms.Button();
             this.pn_consultas = new System.Windows.Forms.Panel();
             this.btn_facturas_no_activas = new System.Windows.Forms.Button();
-            this.btn_movimientos_anulados = new System.Windows.Forms.Button();
             this.btn_recibos_anulados = new System.Windows.Forms.Button();
-            this.btn_rep_historial = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_matenimientos.SuspendLayout();
             this.pn_procesos.SuspendLayout();
-            this.pn_inventario.SuspendLayout();
             this.pn_configuraciones.SuspendLayout();
             this.pn_reporte.SuspendLayout();
             this.pn_consultas.SuspendLayout();
@@ -83,7 +70,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel1.Controls.Add(this.btn_consultas);
-            this.panel1.Controls.Add(this.btn_inventario);
             this.panel1.Controls.Add(this.lbl_usuario);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_configuraciones);
@@ -105,7 +91,7 @@
             this.btn_consultas.ForeColor = System.Drawing.Color.White;
             this.btn_consultas.Image = ((System.Drawing.Image)(resources.GetObject("btn_consultas.Image")));
             this.btn_consultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_consultas.Location = new System.Drawing.Point(4, 386);
+            this.btn_consultas.Location = new System.Drawing.Point(4, 326);
             this.btn_consultas.Name = "btn_consultas";
             this.btn_consultas.Size = new System.Drawing.Size(177, 56);
             this.btn_consultas.TabIndex = 7;
@@ -114,25 +100,6 @@
             this.btn_consultas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_consultas.UseVisualStyleBackColor = true;
             this.btn_consultas.Click += new System.EventHandler(this.btn_consultas_Click);
-            // 
-            // btn_inventario
-            // 
-            this.btn_inventario.FlatAppearance.BorderSize = 0;
-            this.btn_inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_inventario.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inventario.ForeColor = System.Drawing.Color.White;
-            this.btn_inventario.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventario.Image")));
-            this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inventario.Location = new System.Drawing.Point(4, 266);
-            this.btn_inventario.Name = "btn_inventario";
-            this.btn_inventario.Size = new System.Drawing.Size(177, 56);
-            this.btn_inventario.TabIndex = 6;
-            this.btn_inventario.Text = "   Inventario";
-            this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_inventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_inventario.UseVisualStyleBackColor = true;
-            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
             // 
             // lbl_usuario
             // 
@@ -166,7 +133,7 @@
             this.btn_configuraciones.ForeColor = System.Drawing.Color.White;
             this.btn_configuraciones.Image = ((System.Drawing.Image)(resources.GetObject("btn_configuraciones.Image")));
             this.btn_configuraciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_configuraciones.Location = new System.Drawing.Point(4, 446);
+            this.btn_configuraciones.Location = new System.Drawing.Point(4, 386);
             this.btn_configuraciones.Name = "btn_configuraciones";
             this.btn_configuraciones.Size = new System.Drawing.Size(189, 56);
             this.btn_configuraciones.TabIndex = 3;
@@ -185,7 +152,7 @@
             this.btn_reportes.ForeColor = System.Drawing.Color.White;
             this.btn_reportes.Image = ((System.Drawing.Image)(resources.GetObject("btn_reportes.Image")));
             this.btn_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reportes.Location = new System.Drawing.Point(4, 326);
+            this.btn_reportes.Location = new System.Drawing.Point(4, 266);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(177, 56);
             this.btn_reportes.TabIndex = 2;
@@ -237,7 +204,6 @@
             // 
             this.pn_matenimientos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pn_matenimientos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_matenimientos.Controls.Add(this.btn_articulos);
             this.pn_matenimientos.Controls.Add(this.btn_cliente);
             this.pn_matenimientos.Controls.Add(this.btn_usuario);
             this.pn_matenimientos.Dock = System.Windows.Forms.DockStyle.Top;
@@ -246,26 +212,6 @@
             this.pn_matenimientos.Size = new System.Drawing.Size(1105, 48);
             this.pn_matenimientos.TabIndex = 2;
             this.pn_matenimientos.Visible = false;
-            // 
-            // btn_articulos
-            // 
-            this.btn_articulos.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_articulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_articulos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_articulos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_articulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_articulos.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_articulos.ForeColor = System.Drawing.Color.Black;
-            this.btn_articulos.Image = ((System.Drawing.Image)(resources.GetObject("btn_articulos.Image")));
-            this.btn_articulos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_articulos.Location = new System.Drawing.Point(297, 2);
-            this.btn_articulos.Name = "btn_articulos";
-            this.btn_articulos.Size = new System.Drawing.Size(145, 42);
-            this.btn_articulos.TabIndex = 6;
-            this.btn_articulos.Text = " Articulos";
-            this.btn_articulos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_articulos.UseVisualStyleBackColor = false;
-            this.btn_articulos.Click += new System.EventHandler(this.btn_articulos_Click);
             // 
             // btn_cliente
             // 
@@ -311,7 +257,6 @@
             this.pn_procesos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pn_procesos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pn_procesos.Controls.Add(this.btn_anular_recibo);
-            this.pn_procesos.Controls.Add(this.btn_entrega_articulo);
             this.pn_procesos.Controls.Add(this.btn_cuadre);
             this.pn_procesos.Controls.Add(this.btn_cxc);
             this.pn_procesos.Controls.Add(this.btn_facturacion);
@@ -333,7 +278,7 @@
             this.btn_anular_recibo.ForeColor = System.Drawing.Color.Black;
             this.btn_anular_recibo.Image = ((System.Drawing.Image)(resources.GetObject("btn_anular_recibo.Image")));
             this.btn_anular_recibo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_anular_recibo.Location = new System.Drawing.Point(629, 2);
+            this.btn_anular_recibo.Location = new System.Drawing.Point(444, 2);
             this.btn_anular_recibo.Name = "btn_anular_recibo";
             this.btn_anular_recibo.Size = new System.Drawing.Size(145, 42);
             this.btn_anular_recibo.TabIndex = 13;
@@ -341,26 +286,6 @@
             this.btn_anular_recibo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_anular_recibo.UseVisualStyleBackColor = false;
             this.btn_anular_recibo.Click += new System.EventHandler(this.btn_anular_recibo_Click);
-            // 
-            // btn_entrega_articulo
-            // 
-            this.btn_entrega_articulo.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_entrega_articulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_entrega_articulo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_entrega_articulo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_entrega_articulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_entrega_articulo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_entrega_articulo.ForeColor = System.Drawing.Color.Black;
-            this.btn_entrega_articulo.Image = ((System.Drawing.Image)(resources.GetObject("btn_entrega_articulo.Image")));
-            this.btn_entrega_articulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_entrega_articulo.Location = new System.Drawing.Point(444, 2);
-            this.btn_entrega_articulo.Name = "btn_entrega_articulo";
-            this.btn_entrega_articulo.Size = new System.Drawing.Size(183, 42);
-            this.btn_entrega_articulo.TabIndex = 12;
-            this.btn_entrega_articulo.Text = " Entrega de Articulos";
-            this.btn_entrega_articulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_entrega_articulo.UseVisualStyleBackColor = false;
-            this.btn_entrega_articulo.Click += new System.EventHandler(this.btn_entrega_articulo_Click);
             // 
             // btn_cuadre
             // 
@@ -415,125 +340,9 @@
             this.btn_facturacion.Name = "btn_facturacion";
             this.btn_facturacion.Size = new System.Drawing.Size(145, 42);
             this.btn_facturacion.TabIndex = 1;
-            this.btn_facturacion.Text = "     Facturación";
+            this.btn_facturacion.Text = "     Préstamos";
             this.btn_facturacion.UseVisualStyleBackColor = false;
             this.btn_facturacion.Click += new System.EventHandler(this.btn_facturacion_Click);
-            // 
-            // pn_inventario
-            // 
-            this.pn_inventario.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pn_inventario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_inventario.Controls.Add(this.btn_consultar_pago);
-            this.pn_inventario.Controls.Add(this.btn_anular_cxp);
-            this.pn_inventario.Controls.Add(this.btn_movimientos);
-            this.pn_inventario.Controls.Add(this.btn_proveedores);
-            this.pn_inventario.Controls.Add(this.btn_motivo_movimiento);
-            this.pn_inventario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_inventario.Location = new System.Drawing.Point(196, 96);
-            this.pn_inventario.Name = "pn_inventario";
-            this.pn_inventario.Size = new System.Drawing.Size(1105, 48);
-            this.pn_inventario.TabIndex = 5;
-            this.pn_inventario.Visible = false;
-            // 
-            // btn_consultar_pago
-            // 
-            this.btn_consultar_pago.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_consultar_pago.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_consultar_pago.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_consultar_pago.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_consultar_pago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_consultar_pago.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_consultar_pago.ForeColor = System.Drawing.Color.Black;
-            this.btn_consultar_pago.Image = ((System.Drawing.Image)(resources.GetObject("btn_consultar_pago.Image")));
-            this.btn_consultar_pago.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_consultar_pago.Location = new System.Drawing.Point(632, 2);
-            this.btn_consultar_pago.Name = "btn_consultar_pago";
-            this.btn_consultar_pago.Size = new System.Drawing.Size(175, 42);
-            this.btn_consultar_pago.TabIndex = 12;
-            this.btn_consultar_pago.Text = " Consultar Pago CXP";
-            this.btn_consultar_pago.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_consultar_pago.UseVisualStyleBackColor = false;
-            this.btn_consultar_pago.Click += new System.EventHandler(this.btn_consultar_pago_Click);
-            // 
-            // btn_anular_cxp
-            // 
-            this.btn_anular_cxp.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_anular_cxp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_anular_cxp.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_anular_cxp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_anular_cxp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_anular_cxp.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_anular_cxp.ForeColor = System.Drawing.Color.Black;
-            this.btn_anular_cxp.Image = ((System.Drawing.Image)(resources.GetObject("btn_anular_cxp.Image")));
-            this.btn_anular_cxp.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_anular_cxp.Location = new System.Drawing.Point(485, 2);
-            this.btn_anular_cxp.Name = "btn_anular_cxp";
-            this.btn_anular_cxp.Size = new System.Drawing.Size(145, 42);
-            this.btn_anular_cxp.TabIndex = 11;
-            this.btn_anular_cxp.Text = " Consultar CXP";
-            this.btn_anular_cxp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_anular_cxp.UseVisualStyleBackColor = false;
-            this.btn_anular_cxp.Click += new System.EventHandler(this.btn_anular_cxp_Click);
-            // 
-            // btn_movimientos
-            // 
-            this.btn_movimientos.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_movimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_movimientos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_movimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_movimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_movimientos.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_movimientos.ForeColor = System.Drawing.Color.Black;
-            this.btn_movimientos.Image = ((System.Drawing.Image)(resources.GetObject("btn_movimientos.Image")));
-            this.btn_movimientos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_movimientos.Location = new System.Drawing.Point(338, 2);
-            this.btn_movimientos.Name = "btn_movimientos";
-            this.btn_movimientos.Size = new System.Drawing.Size(145, 42);
-            this.btn_movimientos.TabIndex = 10;
-            this.btn_movimientos.Text = " Movimientos";
-            this.btn_movimientos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_movimientos.UseVisualStyleBackColor = false;
-            this.btn_movimientos.Click += new System.EventHandler(this.btn_movimientos_Click);
-            // 
-            // btn_proveedores
-            // 
-            this.btn_proveedores.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_proveedores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_proveedores.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_proveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_proveedores.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_proveedores.ForeColor = System.Drawing.Color.Black;
-            this.btn_proveedores.Image = ((System.Drawing.Image)(resources.GetObject("btn_proveedores.Image")));
-            this.btn_proveedores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_proveedores.Location = new System.Drawing.Point(191, 2);
-            this.btn_proveedores.Name = "btn_proveedores";
-            this.btn_proveedores.Size = new System.Drawing.Size(145, 42);
-            this.btn_proveedores.TabIndex = 9;
-            this.btn_proveedores.Text = " Proveedores";
-            this.btn_proveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_proveedores.UseVisualStyleBackColor = false;
-            this.btn_proveedores.Click += new System.EventHandler(this.btn_proveedores_Click);
-            // 
-            // btn_motivo_movimiento
-            // 
-            this.btn_motivo_movimiento.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_motivo_movimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_motivo_movimiento.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_motivo_movimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_motivo_movimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_motivo_movimiento.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_motivo_movimiento.ForeColor = System.Drawing.Color.Black;
-            this.btn_motivo_movimiento.Image = ((System.Drawing.Image)(resources.GetObject("btn_motivo_movimiento.Image")));
-            this.btn_motivo_movimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_motivo_movimiento.Location = new System.Drawing.Point(3, 2);
-            this.btn_motivo_movimiento.Name = "btn_motivo_movimiento";
-            this.btn_motivo_movimiento.Size = new System.Drawing.Size(186, 42);
-            this.btn_motivo_movimiento.TabIndex = 1;
-            this.btn_motivo_movimiento.Text = " Motivos Movimientos";
-            this.btn_motivo_movimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_motivo_movimiento.UseVisualStyleBackColor = false;
-            this.btn_motivo_movimiento.Click += new System.EventHandler(this.btn_motivo_movimiento_Click);
             // 
             // pn_configuraciones
             // 
@@ -542,7 +351,7 @@
             this.pn_configuraciones.Controls.Add(this.btn_permiso);
             this.pn_configuraciones.Controls.Add(this.btn_empresa);
             this.pn_configuraciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_configuraciones.Location = new System.Drawing.Point(196, 144);
+            this.pn_configuraciones.Location = new System.Drawing.Point(196, 96);
             this.pn_configuraciones.Name = "pn_configuraciones";
             this.pn_configuraciones.Size = new System.Drawing.Size(1105, 48);
             this.pn_configuraciones.TabIndex = 7;
@@ -594,17 +403,35 @@
             this.pn_reporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pn_reporte.Controls.Add(this.btn_rep_historial);
             this.pn_reporte.Controls.Add(this.btn_rep_reimprimir_recibos);
-            this.pn_reporte.Controls.Add(this.btn_rep_movimientos);
             this.pn_reporte.Controls.Add(this.btn_rep_cuadre);
             this.pn_reporte.Controls.Add(this.btn_rep_cobros_realizados);
             this.pn_reporte.Controls.Add(this.btn_rep_facturas);
-            this.pn_reporte.Controls.Add(this.btn_rep_articulo);
             this.pn_reporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_reporte.Location = new System.Drawing.Point(196, 192);
+            this.pn_reporte.Location = new System.Drawing.Point(196, 144);
             this.pn_reporte.Name = "pn_reporte";
             this.pn_reporte.Size = new System.Drawing.Size(1105, 48);
             this.pn_reporte.TabIndex = 9;
             this.pn_reporte.Visible = false;
+            // 
+            // btn_rep_historial
+            // 
+            this.btn_rep_historial.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btn_rep_historial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_rep_historial.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_rep_historial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_rep_historial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_rep_historial.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rep_historial.ForeColor = System.Drawing.Color.Black;
+            this.btn_rep_historial.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_historial.Image")));
+            this.btn_rep_historial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_rep_historial.Location = new System.Drawing.Point(629, 2);
+            this.btn_rep_historial.Name = "btn_rep_historial";
+            this.btn_rep_historial.Size = new System.Drawing.Size(167, 42);
+            this.btn_rep_historial.TabIndex = 8;
+            this.btn_rep_historial.Text = "Historial de Pagos";
+            this.btn_rep_historial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_rep_historial.UseVisualStyleBackColor = false;
+            this.btn_rep_historial.Click += new System.EventHandler(this.btn_rep_historial_Click);
             // 
             // btn_rep_reimprimir_recibos
             // 
@@ -617,7 +444,7 @@
             this.btn_rep_reimprimir_recibos.ForeColor = System.Drawing.Color.Black;
             this.btn_rep_reimprimir_recibos.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_reimprimir_recibos.Image")));
             this.btn_rep_reimprimir_recibos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_reimprimir_recibos.Location = new System.Drawing.Point(754, 2);
+            this.btn_rep_reimprimir_recibos.Location = new System.Drawing.Point(460, 2);
             this.btn_rep_reimprimir_recibos.Name = "btn_rep_reimprimir_recibos";
             this.btn_rep_reimprimir_recibos.Size = new System.Drawing.Size(167, 42);
             this.btn_rep_reimprimir_recibos.TabIndex = 7;
@@ -625,26 +452,6 @@
             this.btn_rep_reimprimir_recibos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_rep_reimprimir_recibos.UseVisualStyleBackColor = false;
             this.btn_rep_reimprimir_recibos.Click += new System.EventHandler(this.btn_rep_reimprimir_recibos_Click);
-            // 
-            // btn_rep_movimientos
-            // 
-            this.btn_rep_movimientos.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_rep_movimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_rep_movimientos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_rep_movimientos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_rep_movimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rep_movimientos.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep_movimientos.ForeColor = System.Drawing.Color.Black;
-            this.btn_rep_movimientos.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_movimientos.Image")));
-            this.btn_rep_movimientos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_movimientos.Location = new System.Drawing.Point(607, 2);
-            this.btn_rep_movimientos.Name = "btn_rep_movimientos";
-            this.btn_rep_movimientos.Size = new System.Drawing.Size(145, 42);
-            this.btn_rep_movimientos.TabIndex = 6;
-            this.btn_rep_movimientos.Text = "Movimientos";
-            this.btn_rep_movimientos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rep_movimientos.UseVisualStyleBackColor = false;
-            this.btn_rep_movimientos.Click += new System.EventHandler(this.btn_rep_movimientos_Click);
             // 
             // btn_rep_cuadre
             // 
@@ -657,7 +464,7 @@
             this.btn_rep_cuadre.ForeColor = System.Drawing.Color.Black;
             this.btn_rep_cuadre.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_cuadre.Image")));
             this.btn_rep_cuadre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_cuadre.Location = new System.Drawing.Point(460, 2);
+            this.btn_rep_cuadre.Location = new System.Drawing.Point(313, 2);
             this.btn_rep_cuadre.Name = "btn_rep_cuadre";
             this.btn_rep_cuadre.Size = new System.Drawing.Size(145, 42);
             this.btn_rep_cuadre.TabIndex = 5;
@@ -677,7 +484,7 @@
             this.btn_rep_cobros_realizados.ForeColor = System.Drawing.Color.Black;
             this.btn_rep_cobros_realizados.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_cobros_realizados.Image")));
             this.btn_rep_cobros_realizados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_cobros_realizados.Location = new System.Drawing.Point(297, 2);
+            this.btn_rep_cobros_realizados.Location = new System.Drawing.Point(150, 2);
             this.btn_rep_cobros_realizados.Name = "btn_rep_cobros_realizados";
             this.btn_rep_cobros_realizados.Size = new System.Drawing.Size(161, 42);
             this.btn_rep_cobros_realizados.TabIndex = 4;
@@ -697,43 +504,23 @@
             this.btn_rep_facturas.ForeColor = System.Drawing.Color.Black;
             this.btn_rep_facturas.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_facturas.Image")));
             this.btn_rep_facturas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_facturas.Location = new System.Drawing.Point(150, 2);
+            this.btn_rep_facturas.Location = new System.Drawing.Point(3, 2);
             this.btn_rep_facturas.Name = "btn_rep_facturas";
             this.btn_rep_facturas.Size = new System.Drawing.Size(145, 42);
             this.btn_rep_facturas.TabIndex = 3;
-            this.btn_rep_facturas.Text = "Facturas";
+            this.btn_rep_facturas.Text = "Préstamos";
             this.btn_rep_facturas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_rep_facturas.UseVisualStyleBackColor = false;
             this.btn_rep_facturas.Click += new System.EventHandler(this.btn_rep_facturas_Click);
-            // 
-            // btn_rep_articulo
-            // 
-            this.btn_rep_articulo.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_rep_articulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_rep_articulo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_rep_articulo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_rep_articulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rep_articulo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep_articulo.ForeColor = System.Drawing.Color.Black;
-            this.btn_rep_articulo.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_articulo.Image")));
-            this.btn_rep_articulo.Location = new System.Drawing.Point(3, 2);
-            this.btn_rep_articulo.Name = "btn_rep_articulo";
-            this.btn_rep_articulo.Size = new System.Drawing.Size(145, 42);
-            this.btn_rep_articulo.TabIndex = 2;
-            this.btn_rep_articulo.Text = "Articulos";
-            this.btn_rep_articulo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rep_articulo.UseVisualStyleBackColor = false;
-            this.btn_rep_articulo.Click += new System.EventHandler(this.btn_rep_articulo_Click);
             // 
             // pn_consultas
             // 
             this.pn_consultas.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pn_consultas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pn_consultas.Controls.Add(this.btn_facturas_no_activas);
-            this.pn_consultas.Controls.Add(this.btn_movimientos_anulados);
             this.pn_consultas.Controls.Add(this.btn_recibos_anulados);
             this.pn_consultas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_consultas.Location = new System.Drawing.Point(196, 240);
+            this.pn_consultas.Location = new System.Drawing.Point(196, 192);
             this.pn_consultas.Name = "pn_consultas";
             this.pn_consultas.Size = new System.Drawing.Size(1105, 48);
             this.pn_consultas.TabIndex = 11;
@@ -750,7 +537,7 @@
             this.btn_facturas_no_activas.ForeColor = System.Drawing.Color.Black;
             this.btn_facturas_no_activas.Image = ((System.Drawing.Image)(resources.GetObject("btn_facturas_no_activas.Image")));
             this.btn_facturas_no_activas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_facturas_no_activas.Location = new System.Drawing.Point(368, 2);
+            this.btn_facturas_no_activas.Location = new System.Drawing.Point(172, 2);
             this.btn_facturas_no_activas.Name = "btn_facturas_no_activas";
             this.btn_facturas_no_activas.Size = new System.Drawing.Size(175, 42);
             this.btn_facturas_no_activas.TabIndex = 4;
@@ -758,26 +545,6 @@
             this.btn_facturas_no_activas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_facturas_no_activas.UseVisualStyleBackColor = false;
             this.btn_facturas_no_activas.Click += new System.EventHandler(this.btn_facturas_no_activas_Click);
-            // 
-            // btn_movimientos_anulados
-            // 
-            this.btn_movimientos_anulados.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_movimientos_anulados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_movimientos_anulados.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_movimientos_anulados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_movimientos_anulados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_movimientos_anulados.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_movimientos_anulados.ForeColor = System.Drawing.Color.Black;
-            this.btn_movimientos_anulados.Image = ((System.Drawing.Image)(resources.GetObject("btn_movimientos_anulados.Image")));
-            this.btn_movimientos_anulados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_movimientos_anulados.Location = new System.Drawing.Point(172, 2);
-            this.btn_movimientos_anulados.Name = "btn_movimientos_anulados";
-            this.btn_movimientos_anulados.Size = new System.Drawing.Size(194, 42);
-            this.btn_movimientos_anulados.TabIndex = 3;
-            this.btn_movimientos_anulados.Text = " Movimientos Anulados";
-            this.btn_movimientos_anulados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_movimientos_anulados.UseVisualStyleBackColor = false;
-            this.btn_movimientos_anulados.Click += new System.EventHandler(this.btn_movimientos_anulados_Click);
             // 
             // btn_recibos_anulados
             // 
@@ -799,26 +566,6 @@
             this.btn_recibos_anulados.UseVisualStyleBackColor = false;
             this.btn_recibos_anulados.Click += new System.EventHandler(this.btn_recibos_anulados_Click);
             // 
-            // btn_rep_historial
-            // 
-            this.btn_rep_historial.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_rep_historial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_rep_historial.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_rep_historial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_rep_historial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rep_historial.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep_historial.ForeColor = System.Drawing.Color.Black;
-            this.btn_rep_historial.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_historial.Image")));
-            this.btn_rep_historial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_historial.Location = new System.Drawing.Point(923, 2);
-            this.btn_rep_historial.Name = "btn_rep_historial";
-            this.btn_rep_historial.Size = new System.Drawing.Size(167, 42);
-            this.btn_rep_historial.TabIndex = 8;
-            this.btn_rep_historial.Text = "Historial de Pagos";
-            this.btn_rep_historial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rep_historial.UseVisualStyleBackColor = false;
-            this.btn_rep_historial.Click += new System.EventHandler(this.btn_rep_historial_Click);
-            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -829,7 +576,6 @@
             this.Controls.Add(this.pn_consultas);
             this.Controls.Add(this.pn_reporte);
             this.Controls.Add(this.pn_configuraciones);
-            this.Controls.Add(this.pn_inventario);
             this.Controls.Add(this.pn_procesos);
             this.Controls.Add(this.pn_matenimientos);
             this.Controls.Add(this.panel1);
@@ -843,7 +589,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pn_matenimientos.ResumeLayout(false);
             this.pn_procesos.ResumeLayout(false);
-            this.pn_inventario.ResumeLayout(false);
             this.pn_configuraciones.ResumeLayout(false);
             this.pn_reporte.ResumeLayout(false);
             this.pn_consultas.ResumeLayout(false);
@@ -864,32 +609,20 @@
         private System.Windows.Forms.Button btn_usuario;
         private System.Windows.Forms.Panel pn_procesos;
         private System.Windows.Forms.Button btn_anular_recibo;
-        private System.Windows.Forms.Button btn_entrega_articulo;
         private System.Windows.Forms.Button btn_cuadre;
         private System.Windows.Forms.Button btn_cxc;
         private System.Windows.Forms.Button btn_facturacion;
         private System.Windows.Forms.Label lbl_usuario;
-        private System.Windows.Forms.Button btn_articulos;
-        private System.Windows.Forms.Button btn_inventario;
-        private System.Windows.Forms.Panel pn_inventario;
-        private System.Windows.Forms.Button btn_consultar_pago;
-        private System.Windows.Forms.Button btn_anular_cxp;
-        private System.Windows.Forms.Button btn_movimientos;
-        private System.Windows.Forms.Button btn_proveedores;
-        private System.Windows.Forms.Button btn_motivo_movimiento;
         private System.Windows.Forms.Panel pn_configuraciones;
         private System.Windows.Forms.Button btn_empresa;
         private System.Windows.Forms.Panel pn_reporte;
-        private System.Windows.Forms.Button btn_rep_movimientos;
         private System.Windows.Forms.Button btn_rep_cuadre;
         private System.Windows.Forms.Button btn_rep_cobros_realizados;
         private System.Windows.Forms.Button btn_rep_facturas;
-        private System.Windows.Forms.Button btn_rep_articulo;
         private System.Windows.Forms.Button btn_rep_reimprimir_recibos;
         private System.Windows.Forms.Button btn_consultas;
         private System.Windows.Forms.Panel pn_consultas;
         private System.Windows.Forms.Button btn_recibos_anulados;
-        private System.Windows.Forms.Button btn_movimientos_anulados;
         private System.Windows.Forms.Button btn_facturas_no_activas;
         private System.Windows.Forms.Button btn_permiso;
         private System.Windows.Forms.Button btn_rep_historial;

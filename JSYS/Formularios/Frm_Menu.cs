@@ -26,9 +26,6 @@ namespace JSYS.Formularios
                 var obj_2 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Menu - Procesos").SingleOrDefault();
                 btn_procesos.Enabled = obj_2.ACCESO == true ? true : false;
 
-                var obj_3 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Menu - Inventario").SingleOrDefault();
-                btn_inventario.Enabled = obj_3.ACCESO == true ? true : false;
-
                 var obj_4 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Menu - Reportes").SingleOrDefault();
                 btn_reportes.Enabled = obj_4.ACCESO == true ? true : false;
 
@@ -45,11 +42,8 @@ namespace JSYS.Formularios
                 var obj_8 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Mantenimientos - Clientes").SingleOrDefault();
                 btn_cliente.Enabled = obj_8.ACCESO == true ? true : false;
 
-                var obj_9 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Mantenimientos - Articulos").SingleOrDefault();
-                btn_articulos.Enabled = obj_9.ACCESO == true ? true : false;
-
                 //Botones Barra Procesos
-                var obj_10 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Procesos - Facturación").SingleOrDefault();
+                var obj_10 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Procesos - Prestamos").SingleOrDefault();
                 btn_facturacion.Enabled = obj_10.ACCESO == true ? true : false;
 
                 var obj_11 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Procesos - CXC").SingleOrDefault();
@@ -58,43 +52,18 @@ namespace JSYS.Formularios
                 var obj_12 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Procesos - Cuadre Diario").SingleOrDefault();
                 btn_cuadre.Enabled = obj_12.ACCESO == true ? true : false;
 
-                var obj_13 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Procesos - Entrega Articulo").SingleOrDefault();
-                btn_entrega_articulo.Enabled = obj_13.ACCESO == true ? true : false;
-
                 var obj_14 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Procesos - Anular Recibo").SingleOrDefault();
-                btn_anular_recibo.Enabled = obj_14.ACCESO == true ? true : false;
-
-                //Botones Barra Inventario
-                var obj_15 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Inventario - Consultar CXP").SingleOrDefault();
-                btn_anular_cxp.Enabled = obj_15.ACCESO == true ? true : false;
-
-                var obj_16 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Inventario - Consultar Pago CXP").SingleOrDefault();
-                btn_consultar_pago.Enabled = obj_16.ACCESO == true ? true : false;
-                
-                var obj_17 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Inventario - Movimientos").SingleOrDefault();
-                btn_movimientos.Enabled = obj_17.ACCESO == true ? true : false;
-
-                var obj_18 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Inventario - Proveedores").SingleOrDefault();
-                btn_proveedores.Enabled = obj_18.ACCESO == true ? true : false;
-
-                var obj_19 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Inventario - Motivo Movimiento").SingleOrDefault();
-                btn_motivo_movimiento.Enabled = obj_19.ACCESO == true ? true : false;
+                btn_anular_recibo.Enabled = obj_14.ACCESO == true ? true : false; 
 
                 //Botones Barra Reportes
-                var obj_20 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Articulos").SingleOrDefault();
-                btn_rep_articulo.Enabled = obj_20.ACCESO == true ? true : false;
-
                 var obj_21 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Cobros Realizados").SingleOrDefault();
                 btn_rep_cobros_realizados.Enabled = obj_21.ACCESO == true ? true : false;
 
                 var obj_22 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Cuadre Diario").SingleOrDefault();
                 btn_rep_cuadre.Enabled = obj_22.ACCESO == true ? true : false;
 
-                var obj_23 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Facturas").SingleOrDefault();
+                var obj_23 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Prestamos").SingleOrDefault();
                 btn_rep_facturas.Enabled = obj_23.ACCESO == true ? true : false;
-
-                var obj_24 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Movimientos").SingleOrDefault();
-                btn_rep_movimientos.Enabled = obj_24.ACCESO == true ? true : false;
 
                 var obj_25 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Reportes - Reimprimir Recibos").SingleOrDefault();
                 btn_rep_reimprimir_recibos.Enabled = obj_25.ACCESO == true ? true : false;
@@ -103,31 +72,24 @@ namespace JSYS.Formularios
                 btn_rep_historial.Enabled = obj_31.ACCESO == true ? true : false;
 
                 //Botones Barra Consultas
-                var obj_26 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Consultas - Facturas Inactivas").SingleOrDefault();
+                var obj_26 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Consultas - Prestamos Inactivos").SingleOrDefault();
                 btn_facturas_no_activas.Enabled = obj_26.ACCESO == true ? true : false;
-
-                var obj_27 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Consultas - Movimientos Anulados").SingleOrDefault();
-                btn_movimientos_anulados.Enabled = obj_27.ACCESO == true ? true : false;
 
                 var obj_28 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Consultas - Recibos Anulados").SingleOrDefault();
                 btn_recibos_anulados.Enabled = obj_28.ACCESO == true ? true : false;
-
 
                 //Botones Barra Configuraciones
                 var obj_29 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Configuraciones - Empresa").SingleOrDefault();
                 btn_empresa.Enabled = obj_29.ACCESO == true ? true : false;
 
                 var obj_30 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Configuraciones - Permisos").SingleOrDefault();
-                btn_permiso.Enabled = obj_30.ACCESO == true ? true : false;
-                
+                btn_permiso.Enabled = obj_30.ACCESO == true ? true : false;                
             }
             catch
             {
                 S_Utilidades.Mensaje_Error("Revisar si este Usuario tiene los Permisos Asignados");
-                this.Enabled = false;
-            }
-           
-          
+                Application.Exit();
+            }        
         }
 
         private void Frm_Menu_Load(object sender, EventArgs e)
@@ -144,14 +106,13 @@ namespace JSYS.Formularios
             }
 
             lbl_usuario.Text = "Usuario:  " + S_Utilidades.Datos_Usuario.USUARIO;
-            //Cargar_Permisos();
+           Cargar_Permisos();
         }
 
         public void ocultar_barra_menu(bool opcion)
         {
             pn_matenimientos.Visible = opcion;
             pn_procesos.Visible = opcion;
-            pn_inventario.Visible = opcion;
             pn_configuraciones.Visible = opcion;
             pn_reporte.Visible = opcion;
             pn_consultas.Visible = opcion;
@@ -188,14 +149,14 @@ namespace JSYS.Formularios
             {
                 e.Cancel = false;
                 this.Dispose();
-                //try
-                //{
-                   S_Utilidades.Crear_Backup();
-                //}
-                //catch
-                //{
+                try
+                {
+                    S_Utilidades.Crear_Backup();
+                }
+                catch
+                {
 
-                //}
+                }
                 Application.Exit();
             }
             else
@@ -215,52 +176,7 @@ namespace JSYS.Formularios
             }
         }
 
-        private void btn_cobradore_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_vendedores_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_articulos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_motivo_movimiento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_inventario_Click(object sender, EventArgs e)
-        {
-            ocultar_barra_menu(false);
-            pn_inventario.Visible = true;
-        }
-
-        private void btn_proveedores_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_movimientos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_anular_cxp_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_consultar_pago_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void btn_empresa_Click(object sender, EventArgs e)
         {
             Form Frm_Empresa = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Empresa").SingleOrDefault();
@@ -311,28 +227,12 @@ namespace JSYS.Formularios
             }
         }
 
-        private void btn_entrega_articulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_cuadre_Click(object sender, EventArgs e)
         {
             Form Frm_Cuadre_Diario = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Cuadre_Diario").SingleOrDefault();
             if (Frm_Cuadre_Diario == null)
             {
                 Frm_Cuadre_Diario frm = new Frm_Cuadre_Diario();
-                frm.MdiParent = this;
-                frm.Show();
-            }
-        }
-
-        private void btn_rep_articulo_Click(object sender, EventArgs e)
-        {
-            Form Frm_Rep_Articulos = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Rep_Articulos").SingleOrDefault();
-            if (Frm_Rep_Articulos == null)
-            {
-                Frm_Rep_Articulos frm = new Frm_Rep_Articulos();
                 frm.MdiParent = this;
                 frm.Show();
             }
@@ -377,17 +277,6 @@ namespace JSYS.Formularios
             }
         }
 
-        private void btn_rep_movimientos_Click(object sender, EventArgs e)
-        {
-            Form Frm_Rep_Movimientos = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Rep_Movimientos").SingleOrDefault();
-            if (Frm_Rep_Movimientos == null)
-            {
-                Frm_Rep_Movimientos frm = new Frm_Rep_Movimientos();
-                frm.MdiParent = this;
-                frm.Show();
-            }
-        }
-
         private void btn_rep_reimprimir_recibos_Click(object sender, EventArgs e)
         {
             Form Frm_Reimprimir_Recibos = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Reimprimir_Recibos").SingleOrDefault();
@@ -416,11 +305,6 @@ namespace JSYS.Formularios
             pn_consultas.Visible = true;
         }
 
-        private void btn_movimientos_anulados_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_facturas_no_activas_Click(object sender, EventArgs e)
         {
             Form Frm_Consultar_Facturas_Anuladas = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Consultar_Facturas_Anuladas").SingleOrDefault();
@@ -430,11 +314,6 @@ namespace JSYS.Formularios
                 frm.MdiParent = this;
                 frm.Show();
             }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_permiso_Click(object sender, EventArgs e)

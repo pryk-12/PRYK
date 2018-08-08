@@ -32,6 +32,10 @@ namespace JSYS.Formularios
             {
                 Cond = "(C.NOMBRE LIKE'%" + Txt_Buscar.Text + "%')";
             }
+            else if (cb_buscar.Text == "Cedula")
+            {
+                Cond = "(C.NUMERO_IDENTIFICACION LIKE'%" + Txt_Buscar.Text + "%')";
+            }
             else if (cb_buscar.Text == "Cobrador" || cb_buscar.Text =="")
             {
                 Cond = "(D.USUARIO LIKE'%" + Txt_Buscar.Text + "%')";

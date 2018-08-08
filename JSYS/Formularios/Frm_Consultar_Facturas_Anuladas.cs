@@ -18,13 +18,13 @@ namespace JSYS.Formularios
             {
                 string Condicion = "";
 
-                if (cb_buscar.Text == "No.")
+                if (cb_buscar.Text == "No. Contrato")
                 {
                     Condicion = "(A.ID_FACTURA =" + Txt_Buscar.Text + ")";
                 }
-                if (cb_buscar.Text == "Contrato" || cb_buscar.Text == "")
+                if (cb_buscar.Text == "Cedula" || cb_buscar.Text == "")
                 {
-                    Condicion = "(A.NUMERO_CONTRATO=" + Txt_Buscar.Text + ")";
+                    Condicion = "(B.NUMERO_IDENTIFICACION LIKE'%" + Txt_Buscar.Text + "%')";
                 }
                 if (cb_buscar.Text == "Cliente" || cb_buscar.Text =="")
                 {

@@ -16,15 +16,9 @@ namespace JSYS.Formularios
         {
             DateTime fecha = dt_fecha.Value;
             txt_recibo_pagado.Text = S_Factura.Listar_Cuadre(fecha)[0].VALOR_PAGADO.ToString("N2");
-            txt_recibo_anulado.Text = S_Factura.Listar_Cuadre(fecha)[0].VALOR_ANULADO.ToString("N2");
-            txt_cxp_pagado.Text = S_Factura.Listar_Cuadre(fecha)[0].VALOR_PAGADO_CXP.ToString("N2");
-            txt_cxp_anulado.Text = S_Factura.Listar_Cuadre(fecha)[0].VALOR_PAGADO_CXP.ToString("N2");
+            txt_recibo_anulado.Text = S_Factura.Listar_Cuadre(fecha)[0].VALOR_ANULADO.ToString("N2");        
             decimal total_recibo = Convert.ToDecimal(txt_recibo_pagado.Text) - Convert.ToDecimal(txt_recibo_anulado.Text);
-            decimal total_cxp = Convert.ToDecimal(txt_cxp_pagado.Text) - Convert.ToDecimal(txt_cxp_anulado.Text);
-            decimal total_general = total_recibo - total_cxp;
             txt_recibo_total.Text = total_recibo.ToString("N2");
-            txt_cxp_total.Text = total_cxp.ToString("N2");
-            txt_total_general.Text = total_general.ToString("N2");
         }
 
         private void Frm_Cuadre_Diario_Load(object sender, EventArgs e)
@@ -46,10 +40,8 @@ namespace JSYS.Formularios
                 string fecha = dt_fecha.Value.Date.ToString("dd/MM/yyyy");
                 obj_cuadre.FECHA = fecha;
                 obj_cuadre.VALOR_ANULADO = Convert.ToDecimal(txt_recibo_anulado.Text);
-                obj_cuadre.VALOR_CXP_ANULADO = Convert.ToDecimal(txt_cxp_anulado.Text);
-                obj_cuadre.VALOR_CXP_PAGADO = Convert.ToDecimal(txt_cxp_pagado.Text);
                 obj_cuadre.VALOR_PAGADO = Convert.ToDecimal(txt_recibo_pagado.Text);
-                obj_cuadre.VALOR_TOTAL = Convert.ToDecimal(txt_total_general.Text);
+                obj_cuadre.VALOR_TOTAL = Convert.ToDecimal(txt_recibo_total.Text);
 
                 var obj = db.CUADRES_DIARIOS.Where(c => c.FECHA == fecha);
 

@@ -501,13 +501,13 @@ namespace JSYS.Formularios
             if (txt_numero_factura.Text.Equals(""))
             {
                 cb_estado.Text = "Activo";
-                cb_estado.Enabled = false;
-                cb_recalcular.Text = "No";
+                cb_estado.Enabled = false;              
                 cb_recalcular.Enabled = false;
                 txt_descuento.Text = "0";
                 txt_descuento.Enabled = false;
                 txt_monto_pagado.Enabled = false;
             }
+            cb_recalcular.Text = "No";
         }
 
         private void button2_Click_1(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace JSYS.Formularios
         {
             InitializeComponent();
             DG.AutoGenerateColumns = false;
-            S_Utilidades.Llenar_ComboBox<JSYS.Formularios.Frm_Factura._COBRADOR>(cb_cobrador, "NOMBRE", "ID_COBRADOR", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A'", "COBRADORES");
+            S_Utilidades.Llenar_ComboBox<JSYS.Formularios.Frm_Factura._USUARIO>(cb_cobrador, "NOMBRE", "ID_USUARIO", "NOMBRE LIKE'%" + "" + "%' AND ESTADO='A' AND TIPO='Cobrador'", "USUARIOS");
         }
 
         private void cb_buscar_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,15 +37,15 @@ namespace JSYS.Formularios
             {
                 if (cb_buscar.Text == "Cobrador")
                 {
-                    Condicion = "(B.ID_COBRADOR=" + cb_cobrador.SelectedValue + " AND A.ESTADO='V' AND (CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) >= '" + desde.Date.ToString("yyyy-MM-dd") + "' and CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) <= '" + hasta.Date.ToString("yyyy-MM-dd") + "'))";
+                    Condicion = "(B.ID_COBRADOR=" + cb_cobrador.SelectedValue + " AND A.ESTADO='V' AND E.RE_CALCULADO='NO' AND B.ID_ESTADO IN (1,5) AND (CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) >= '" + desde.Date.ToString("yyyy-MM-dd") + "' and CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) <= '" + hasta.Date.ToString("yyyy-MM-dd") + "'))";
                 }
-                if (cb_buscar.Text == "Numero Factura")
+                if (cb_buscar.Text == "No. Contrato")
                 {
-                    Condicion = "(A.ID_FACTURA=" + txt_buscar.Text + " AND A.ESTADO='V' AND (CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) >= '" + desde.Date.ToString("yyyy-MM-dd") + "' and CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) <= '" + hasta.Date.ToString("yyyy-MM-dd") + "'))";
+                    Condicion = "(A.ID_FACTURA=" + txt_buscar.Text + " AND A.ESTADO='V' AND E.RE_CALCULADO='NO' AND B.ID_ESTADO IN (1,5) AND (CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) >= '" + desde.Date.ToString("yyyy-MM-dd") + "' and CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) <= '" + hasta.Date.ToString("yyyy-MM-dd") + "'))";
                 }
-                if (cb_buscar.Text == "Numero Recibo")
+                if (cb_buscar.Text == "No. Recibo")
                 {
-                    Condicion = "(A.ID_RECIBO=" + txt_buscar.Text + " AND A.ESTADO='V' AND (CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) >= '" + desde.Date.ToString("yyyy-MM-dd") + "' and CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) <= '" + hasta.Date.ToString("yyyy-MM-dd") + "'))";
+                    Condicion = "(A.ID_RECIBO=" + txt_buscar.Text + " AND A.ESTADO='V' AND E.RE_CALCULADO='NO' AND B.ID_ESTADO IN (1,5) AND (CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) >= '" + desde.Date.ToString("yyyy-MM-dd") + "' and CONVERT(smalldatetime, CONVERT(char(10), A.FECHA_CREADO, 103), 103) <= '" + hasta.Date.ToString("yyyy-MM-dd") + "'))";
                 }
                 DG.DataSource = S_Factura.Listar_Recibos(Condicion);
             }
@@ -116,15 +116,15 @@ namespace JSYS.Formularios
             {
                 if (cb_buscar.Text == "Cobrador")
                 {
-                    Condicion = "(B.ID_COBRADOR=" + cb_cobrador.SelectedValue + " AND A.ESTADO='V')";
+                    Condicion = "(B.ID_COBRADOR=" + cb_cobrador.SelectedValue + " AND A.ESTADO='V' AND E.RE_CALCULADO='NO' AND B.ID_ESTADO IN (1,5))";
                 }
-                if (cb_buscar.Text == "Numero Factura")
+                if (cb_buscar.Text == "No. Contrato")
                 {
-                    Condicion = "(A.ID_FACTURA=" + txt_buscar.Text + " AND A.ESTADO='V')";
+                    Condicion = "(A.ID_FACTURA=" + txt_buscar.Text + " AND A.ESTADO='V' AND E.RE_CALCULADO='NO' B.ID_ESTADO IN (1,5))";
                 }
-                if (cb_buscar.Text == "Numero Recibo")
+                if (cb_buscar.Text == "No. Recibo")
                 {
-                    Condicion = "(A.ID_RECIBO=" + txt_buscar.Text + " AND A.ESTADO='V')";
+                    Condicion = "(A.ID_RECIBO=" + txt_buscar.Text + " AND A.ESTADO='V' AND E.RE_CALCULADO='NO' B.ID_ESTADO IN (1,5))";
                 }
                 DG.DataSource = S_Factura.Listar_Recibos(Condicion);
             }

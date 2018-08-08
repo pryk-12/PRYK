@@ -100,7 +100,7 @@ namespace JSYS_WEB
                 Actualizar_Montos();
                 var ultimo_recibo = db.RECIBOS_COBRADOS.Where(r => r.CREADO_POR == S_Utilidades.Datos_Usuario.USUARIO).Max(r => r.ID_RECIBO);
                 S_Utilidades.Datos_Entidades.ID_RECIBO = ultimo_recibo;
-                Response.Redirect("Visor_Reporte_Crystal.aspx");
+                Response.Redirect("Visor_Reporte.aspx");
             }
             catch
             {
