@@ -4,24 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BD_JSYSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="ARTICULOS">
-          <Key>
-            <PropertyRef Name="ID_ARTICULO" />
-          </Key>
-          <Property Name="ID_ARTICULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="REFERENCIA" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="PRECIO_COMPRA" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="PRECIO_VENTA1" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="PRECIO_VENTA2" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="PRECIO_VENTA3" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="STOCK_MININO" Type="int" Nullable="false" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="CREADO_POR" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
-          <Property Name="IMAGEN" Type="image" />
-        </EntityType>
+    <Schema Namespace="BD_JSYSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CLIENTES">
           <Key>
             <PropertyRef Name="REFERENCIA" />
@@ -52,20 +35,6 @@
           <Property Name="OBSERVACION_REFERENCIA2" Type="nvarchar(max)" />
           <Property Name="OBSERVACION" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="COBRADORES">
-          <Key>
-            <PropertyRef Name="ID_COBRADOR" />
-          </Key>
-          <Property Name="ID_COBRADOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ID_TIPO_IDENTIFICACION" Type="int" Nullable="false" />
-          <Property Name="NUMERO_IDENTIFICACION" Type="varchar" MaxLength="20" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="SEXO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="CREADO_POR" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
-          <Property Name="RUTA" Type="varchar" MaxLength="50" />
-        </EntityType>
         <EntityType Name="CUADRES_DIARIOS">
           <Key>
             <PropertyRef Name="FECHA" />
@@ -76,25 +45,6 @@
           <Property Name="VALOR_CXP_PAGADO" Type="numeric" Precision="18" Scale="2" Nullable="false" />
           <Property Name="VALOR_CXP_ANULADO" Type="numeric" Precision="18" Scale="2" Nullable="false" />
           <Property Name="VALOR_TOTAL" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-        </EntityType>
-        <EntityType Name="CXP">
-          <Key>
-            <PropertyRef Name="ID_CXP" />
-          </Key>
-          <Property Name="ID_CXP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ID_MOVIMIENTO" Type="int" Nullable="false" />
-          <Property Name="NUMERO_FACTURA" Type="varchar" MaxLength="25" Nullable="false" />
-          <Property Name="ID_PROVEEDOR" Type="int" Nullable="false" />
-          <Property Name="MONTO_TOTAL" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="MONTO_PAGADO" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="MONTO_PENDIENTE" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="OBSERVACION" Type="varchar" MaxLength="500" />
-          <Property Name="CREADO_POR" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
-          <Property Name="ANULADO_POR" Type="varchar" MaxLength="15" />
-          <Property Name="FECHA_ANULACION" Type="varchar" MaxLength="20" />
-          <Property Name="NOTA_ANULACION" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="DETALLES_CUOTAS">
           <Key>
@@ -110,17 +60,6 @@
           <Property Name="MONTO_PAGADO" Type="numeric" Precision="18" Scale="2" Nullable="false" />
           <Property Name="MONTO_PENDIENTE" Type="numeric" Precision="18" Scale="2" Nullable="false" />
           <Property Name="RE_CALCULADO" Type="varchar" MaxLength="2" Nullable="false" />
-        </EntityType>
-        <EntityType Name="DETALLES_FACTURAS">
-          <Key>
-            <PropertyRef Name="ID_FACTURA" />
-            <PropertyRef Name="ID_ARTICULO" />
-          </Key>
-          <Property Name="ID_FACTURA" Type="int" Nullable="false" />
-          <Property Name="ID_ARTICULO" Type="int" Nullable="false" />
-          <Property Name="CANTIDAD" Type="int" Nullable="false" />
-          <Property Name="PRECIO" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="MONTO_TOTAL" Type="numeric" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="EMPRESA">
           <Key>
@@ -183,55 +122,7 @@
           <Property Name="GARANTIA6" Type="varchar" MaxLength="150" />
           <Property Name="GARANTIA7" Type="varchar" MaxLength="150" />
           <Property Name="MONTO_DESCONTADO" Type="decimal" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="INVENTARIO_ARTICULOS">
-          <Key>
-            <PropertyRef Name="ID_ARTICULO" />
-          </Key>
-          <Property Name="ID_ARTICULO" Type="int" Nullable="false" />
-          <Property Name="STOCK_ACTUAL" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="MOTIVOS_MOVIMIENTOS">
-          <Key>
-            <PropertyRef Name="ID_MOTIVO" />
-          </Key>
-          <Property Name="ID_MOTIVO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="TIPO_MOVIMIENTO" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="OBSERVACION" Type="varchar" MaxLength="500" />
-        </EntityType>
-        <EntityType Name="MOVIMIENTOS">
-          <Key>
-            <PropertyRef Name="ID_MOVIMIENTO" />
-          </Key>
-          <Property Name="ID_MOVIMIENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ID_MOTIVO" Type="int" Nullable="false" />
-          <Property Name="ID_ARTICULO" Type="int" Nullable="false" />
-          <Property Name="CANTIDAD" Type="int" Nullable="false" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="OBSERVACION" Type="varchar" MaxLength="500" />
-          <Property Name="CREADO_POR" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
-          <Property Name="ANULADO_POR" Type="varchar" MaxLength="15" />
-          <Property Name="FECHA_ANULADO" Type="varchar" MaxLength="20" />
-          <Property Name="NOTA_ANULACION" Type="varchar" MaxLength="200" />
-        </EntityType>
-        <EntityType Name="PAGOS_CXP">
-          <Key>
-            <PropertyRef Name="ID_PAGO" />
-          </Key>
-          <Property Name="ID_PAGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ID_CXP" Type="int" Nullable="false" />
-          <Property Name="MONTO_PAGADO" Type="numeric" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="OBSERVACION" Type="varchar" MaxLength="500" />
-          <Property Name="CREADO_POR" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
-          <Property Name="ANULADO_POR" Type="varchar" MaxLength="15" />
-          <Property Name="FECHA_ANULACION" Type="varchar" MaxLength="20" />
-          <Property Name="NOTA_ANULACION" Type="varchar" MaxLength="200" />
-          <Property Name="FORMA_PAGO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="RUTA" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="PANTALLAS">
           <Key>
@@ -248,22 +139,6 @@
           <Property Name="USUARIO" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="PANTALLA" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ACCESO" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="PROVEEDORES">
-          <Key>
-            <PropertyRef Name="ID_PROVEEDOR" />
-          </Key>
-          <Property Name="ID_PROVEEDOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ID_TIPO_IDENTIFICACION" Type="int" Nullable="false" />
-          <Property Name="NUMERO_IDENTIFICACION" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="DIRECCION" Type="varchar" MaxLength="500" Nullable="false" />
-          <Property Name="TELEFONO" Type="varchar" MaxLength="15" />
-          <Property Name="CELULAR" Type="varchar" MaxLength="15" />
-          <Property Name="EMAIL" Type="varchar" MaxLength="15" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="CREADO_POR" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="RECIBOS_COBRADOS">
           <Key>
@@ -314,19 +189,6 @@
           <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
           <Property Name="TIPO" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="VENDEDORES">
-          <Key>
-            <PropertyRef Name="ID_VENDEDOR" />
-          </Key>
-          <Property Name="ID_VENDEDOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ID_TIPO_IDENTIFICACION" Type="int" Nullable="false" />
-          <Property Name="NUMERO_IDENTIFICACION" Type="varchar" MaxLength="50" />
-          <Property Name="SEXO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="ESTADO" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="CREADO_POR" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="FECHA_CREADO" Type="date" Nullable="false" />
-        </EntityType>
         <Function Name="SP_LLENAR_COMBOBOX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="TABLA" Type="nvarchar" Mode="In" />
           <Parameter Name="VALOR_MOSTRAR" Type="nvarchar" Mode="In" />
@@ -334,29 +196,19 @@
           <Parameter Name="CONDICION" Type="nvarchar" Mode="In" />
         </Function>
         <EntityContainer Name="BD_JSYSModelStoreContainer">
-          <EntitySet Name="ARTICULOS" EntityType="Self.ARTICULOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="COBRADORES" EntityType="Self.COBRADORES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CUADRES_DIARIOS" EntityType="Self.CUADRES_DIARIOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CXP" EntityType="Self.CXP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DETALLES_CUOTAS" EntityType="Self.DETALLES_CUOTAS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="DETALLES_FACTURAS" EntityType="Self.DETALLES_FACTURAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ENCABEZADO_CUOTAS" EntityType="Self.ENCABEZADO_CUOTAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ESTADO_FACTURAS" EntityType="Self.ESTADO_FACTURAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FACTURAS" EntityType="Self.FACTURAS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="INVENTARIO_ARTICULOS" EntityType="Self.INVENTARIO_ARTICULOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MOTIVOS_MOVIMIENTOS" EntityType="Self.MOTIVOS_MOVIMIENTOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MOVIMIENTOS" EntityType="Self.MOVIMIENTOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="PAGOS_CXP" EntityType="Self.PAGOS_CXP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PANTALLAS" EntityType="Self.PANTALLAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PERMISOS" EntityType="Self.PERMISOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="PROVEEDORES" EntityType="Self.PROVEEDORES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RECIBOS_COBRADOS" EntityType="Self.RECIBOS_COBRADOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIPOS_IDENTIFICACIONES" EntityType="Self.TIPOS_IDENTIFICACIONES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="VENDEDORES" EntityType="Self.VENDEDORES" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -491,29 +343,19 @@
             <Parameter Name="ACCION" Mode="In" Type="String" />
             <Parameter Name="CONDICION" Mode="In" Type="String" />
           </FunctionImport>
-          <EntitySet Name="ARTICULOS" EntityType="BD_JSYSModel.ARTICULOS" />
           <EntitySet Name="CLIENTES" EntityType="BD_JSYSModel.CLIENTES" />
-          <EntitySet Name="COBRADORES" EntityType="BD_JSYSModel.COBRADORES" />
           <EntitySet Name="CUADRES_DIARIOS" EntityType="BD_JSYSModel.CUADRES_DIARIOS" />
-          <EntitySet Name="CXP" EntityType="BD_JSYSModel.CXP" />
           <EntitySet Name="DETALLES_CUOTAS" EntityType="BD_JSYSModel.DETALLES_CUOTAS" />
-          <EntitySet Name="DETALLES_FACTURAS" EntityType="BD_JSYSModel.DETALLES_FACTURAS" />
           <EntitySet Name="EMPRESA" EntityType="BD_JSYSModel.EMPRESA" />
           <EntitySet Name="ENCABEZADO_CUOTAS" EntityType="BD_JSYSModel.ENCABEZADO_CUOTAS" />
           <EntitySet Name="ESTADO_FACTURAS" EntityType="BD_JSYSModel.ESTADO_FACTURAS" />
           <EntitySet Name="FACTURAS" EntityType="BD_JSYSModel.FACTURAS" />
-          <EntitySet Name="INVENTARIO_ARTICULOS" EntityType="BD_JSYSModel.INVENTARIO_ARTICULOS" />
-          <EntitySet Name="MOTIVOS_MOVIMIENTOS" EntityType="BD_JSYSModel.MOTIVOS_MOVIMIENTOS" />
-          <EntitySet Name="MOVIMIENTOS" EntityType="BD_JSYSModel.MOVIMIENTOS" />
-          <EntitySet Name="PAGOS_CXP" EntityType="BD_JSYSModel.PAGOS_CXP" />
           <EntitySet Name="PANTALLAS" EntityType="BD_JSYSModel.PANTALLAS" />
           <EntitySet Name="PERMISOS" EntityType="BD_JSYSModel.PERMISOS" />
-          <EntitySet Name="PROVEEDORES" EntityType="BD_JSYSModel.PROVEEDORES" />
           <EntitySet Name="RECIBOS_COBRADOS" EntityType="BD_JSYSModel.RECIBOS_COBRADOS" />
           <EntitySet Name="sysdiagrams" EntityType="BD_JSYSModel.sysdiagrams" />
           <EntitySet Name="TIPOS_IDENTIFICACIONES" EntityType="BD_JSYSModel.TIPOS_IDENTIFICACIONES" />
           <EntitySet Name="USUARIOS" EntityType="BD_JSYSModel.USUARIOS" />
-          <EntitySet Name="VENDEDORES" EntityType="BD_JSYSModel.VENDEDORES" />
           </EntityContainer>
         <ComplexType Name="SP_EMPRESA_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -531,23 +373,6 @@
           <Property Type="String" Name="IMPRESORA" Nullable="true" MaxLength="100" />
           <Property Type="Binary" Name="LOGO" Nullable="true" MaxLength="Max" />
         </ComplexType>
-        <EntityType Name="ARTICULOS">
-          <Key>
-            <PropertyRef Name="ID_ARTICULO" />
-          </Key>
-          <Property Name="ID_ARTICULO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="REFERENCIA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="PRECIO_COMPRA" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="PRECIO_VENTA1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="PRECIO_VENTA2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="PRECIO_VENTA3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="STOCK_MININO" Type="Int32" Nullable="false" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="CREADO_POR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="CLIENTES">
           <Key>
             <PropertyRef Name="REFERENCIA" />
@@ -578,20 +403,6 @@
           <Property Name="OBSERVACION_REFERENCIA2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="OBSERVACION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="COBRADORES">
-          <Key>
-            <PropertyRef Name="ID_COBRADOR" />
-          </Key>
-          <Property Name="ID_COBRADOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ID_TIPO_IDENTIFICACION" Type="Int32" Nullable="false" />
-          <Property Name="NUMERO_IDENTIFICACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="SEXO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="CREADO_POR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="RUTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="CUADRES_DIARIOS">
           <Key>
             <PropertyRef Name="FECHA" />
@@ -602,25 +413,6 @@
           <Property Name="VALOR_CXP_PAGADO" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="VALOR_CXP_ANULADO" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="VALOR_TOTAL" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="CXP">
-          <Key>
-            <PropertyRef Name="ID_CXP" />
-          </Key>
-          <Property Name="ID_CXP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_MOVIMIENTO" Type="Int32" Nullable="false" />
-          <Property Name="NUMERO_FACTURA" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="ID_PROVEEDOR" Type="Int32" Nullable="false" />
-          <Property Name="MONTO_TOTAL" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="MONTO_PAGADO" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="MONTO_PENDIENTE" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="OBSERVACION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="CREADO_POR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="ANULADO_POR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_ANULACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="NOTA_ANULACION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="DETALLES_CUOTAS">
           <Key>
@@ -636,17 +428,6 @@
           <Property Name="MONTO_PAGADO" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="MONTO_PENDIENTE" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="RE_CALCULADO" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="DETALLES_FACTURAS">
-          <Key>
-            <PropertyRef Name="ID_FACTURA" />
-            <PropertyRef Name="ID_ARTICULO" />
-          </Key>
-          <Property Name="ID_FACTURA" Type="Int32" Nullable="false" />
-          <Property Name="ID_ARTICULO" Type="Int32" Nullable="false" />
-          <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
-          <Property Name="PRECIO" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="MONTO_TOTAL" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="EMPRESA">
           <Key>
@@ -709,55 +490,7 @@
           <Property Name="GARANTIA6" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="GARANTIA7" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="MONTO_DESCONTADO" Type="Decimal" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="INVENTARIO_ARTICULOS">
-          <Key>
-            <PropertyRef Name="ID_ARTICULO" />
-          </Key>
-          <Property Name="ID_ARTICULO" Type="Int32" Nullable="false" />
-          <Property Name="STOCK_ACTUAL" Type="Int32" Nullable="false" />
-        </EntityType>
-        <EntityType Name="MOTIVOS_MOVIMIENTOS">
-          <Key>
-            <PropertyRef Name="ID_MOTIVO" />
-          </Key>
-          <Property Name="ID_MOTIVO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="TIPO_MOVIMIENTO" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="OBSERVACION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="MOVIMIENTOS">
-          <Key>
-            <PropertyRef Name="ID_MOVIMIENTO" />
-          </Key>
-          <Property Name="ID_MOVIMIENTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_MOTIVO" Type="Int32" Nullable="false" />
-          <Property Name="ID_ARTICULO" Type="Int32" Nullable="false" />
-          <Property Name="CANTIDAD" Type="Int32" Nullable="false" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="OBSERVACION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="CREADO_POR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="ANULADO_POR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_ANULADO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="NOTA_ANULACION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="PAGOS_CXP">
-          <Key>
-            <PropertyRef Name="ID_PAGO" />
-          </Key>
-          <Property Name="ID_PAGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_CXP" Type="Int32" Nullable="false" />
-          <Property Name="MONTO_PAGADO" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="OBSERVACION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="CREADO_POR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="ANULADO_POR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_ANULACION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="NOTA_ANULACION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="FORMA_PAGO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RUTA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="PANTALLAS">
           <Key>
@@ -774,22 +507,6 @@
           <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="PANTALLA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ACCESO" Type="Boolean" Nullable="false" />
-        </EntityType>
-        <EntityType Name="PROVEEDORES">
-          <Key>
-            <PropertyRef Name="ID_PROVEEDOR" />
-          </Key>
-          <Property Name="ID_PROVEEDOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ID_TIPO_IDENTIFICACION" Type="Int32" Nullable="false" />
-          <Property Name="NUMERO_IDENTIFICACION" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="TELEFONO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="CELULAR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="EMAIL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="CREADO_POR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="RECIBOS_COBRADOS">
           <Key>
@@ -840,19 +557,6 @@
           <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TIPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="VENDEDORES">
-          <Key>
-            <PropertyRef Name="ID_VENDEDOR" />
-          </Key>
-          <Property Name="ID_VENDEDOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ID_TIPO_IDENTIFICACION" Type="Int32" Nullable="false" />
-          <Property Name="NUMERO_IDENTIFICACION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="SEXO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="CREADO_POR" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="FECHA_CREADO" Type="DateTime" Nullable="false" Precision="0" />
-        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -860,24 +564,6 @@
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BD_JSYSModelStoreContainer" CdmEntityContainer="BD_JSYSEntities">
           <FunctionImportMapping FunctionImportName="SP_LLENAR_COMBOBOX" FunctionName="BD_JSYSModel.Store.SP_LLENAR_COMBOBOX" />
-          <EntitySetMapping Name="ARTICULOS">
-            <EntityTypeMapping TypeName="BD_JSYSModel.ARTICULOS">
-              <MappingFragment StoreEntitySet="ARTICULOS">
-                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
-                <ScalarProperty Name="FECHA_CREADO" ColumnName="FECHA_CREADO" />
-                <ScalarProperty Name="CREADO_POR" ColumnName="CREADO_POR" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-                <ScalarProperty Name="STOCK_MININO" ColumnName="STOCK_MININO" />
-                <ScalarProperty Name="PRECIO_VENTA3" ColumnName="PRECIO_VENTA3" />
-                <ScalarProperty Name="PRECIO_VENTA2" ColumnName="PRECIO_VENTA2" />
-                <ScalarProperty Name="PRECIO_VENTA1" ColumnName="PRECIO_VENTA1" />
-                <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
-                <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
-                <ScalarProperty Name="ID_ARTICULO" ColumnName="ID_ARTICULO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CLIENTES">
             <EntityTypeMapping TypeName="BD_JSYSModel.CLIENTES">
               <MappingFragment StoreEntitySet="CLIENTES">
@@ -909,21 +595,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="COBRADORES">
-            <EntityTypeMapping TypeName="BD_JSYSModel.COBRADORES">
-              <MappingFragment StoreEntitySet="COBRADORES">
-                <ScalarProperty Name="RUTA" ColumnName="RUTA" />
-                <ScalarProperty Name="FECHA_CREADO" ColumnName="FECHA_CREADO" />
-                <ScalarProperty Name="CREADO_POR" ColumnName="CREADO_POR" />
-                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-                <ScalarProperty Name="NUMERO_IDENTIFICACION" ColumnName="NUMERO_IDENTIFICACION" />
-                <ScalarProperty Name="ID_TIPO_IDENTIFICACION" ColumnName="ID_TIPO_IDENTIFICACION" />
-                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="ID_COBRADOR" ColumnName="ID_COBRADOR" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CUADRES_DIARIOS">
             <EntityTypeMapping TypeName="BD_JSYSModel.CUADRES_DIARIOS">
               <MappingFragment StoreEntitySet="CUADRES_DIARIOS">
@@ -936,26 +607,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="CXP">
-            <EntityTypeMapping TypeName="BD_JSYSModel.CXP">
-              <MappingFragment StoreEntitySet="CXP">
-                <ScalarProperty Name="NOTA_ANULACION" ColumnName="NOTA_ANULACION" />
-                <ScalarProperty Name="FECHA_ANULACION" ColumnName="FECHA_ANULACION" />
-                <ScalarProperty Name="ANULADO_POR" ColumnName="ANULADO_POR" />
-                <ScalarProperty Name="FECHA_CREADO" ColumnName="FECHA_CREADO" />
-                <ScalarProperty Name="CREADO_POR" ColumnName="CREADO_POR" />
-                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-                <ScalarProperty Name="MONTO_PENDIENTE" ColumnName="MONTO_PENDIENTE" />
-                <ScalarProperty Name="MONTO_PAGADO" ColumnName="MONTO_PAGADO" />
-                <ScalarProperty Name="MONTO_TOTAL" ColumnName="MONTO_TOTAL" />
-                <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
-                <ScalarProperty Name="NUMERO_FACTURA" ColumnName="NUMERO_FACTURA" />
-                <ScalarProperty Name="ID_MOVIMIENTO" ColumnName="ID_MOVIMIENTO" />
-                <ScalarProperty Name="ID_CXP" ColumnName="ID_CXP" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="DETALLES_CUOTAS">
             <EntityTypeMapping TypeName="BD_JSYSModel.DETALLES_CUOTAS">
               <MappingFragment StoreEntitySet="DETALLES_CUOTAS">
@@ -965,17 +616,6 @@
                 <ScalarProperty Name="MONTO_CUOTA" ColumnName="MONTO_CUOTA" />
                 <ScalarProperty Name="FECHA" ColumnName="FECHA" />
                 <ScalarProperty Name="NUMERO_CUOTA" ColumnName="NUMERO_CUOTA" />
-                <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DETALLES_FACTURAS">
-            <EntityTypeMapping TypeName="BD_JSYSModel.DETALLES_FACTURAS">
-              <MappingFragment StoreEntitySet="DETALLES_FACTURAS">
-                <ScalarProperty Name="MONTO_TOTAL" ColumnName="MONTO_TOTAL" />
-                <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
-                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
-                <ScalarProperty Name="ID_ARTICULO" ColumnName="ID_ARTICULO" />
                 <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1020,6 +660,7 @@
           <EntitySetMapping Name="FACTURAS">
             <EntityTypeMapping TypeName="BD_JSYSModel.FACTURAS">
               <MappingFragment StoreEntitySet="FACTURAS">
+                <ScalarProperty Name="RUTA" ColumnName="RUTA" />
                 <ScalarProperty Name="MONTO_DESCONTADO" ColumnName="MONTO_DESCONTADO" />
                 <ScalarProperty Name="GARANTIA7" ColumnName="GARANTIA7" />
                 <ScalarProperty Name="GARANTIA6" ColumnName="GARANTIA6" />
@@ -1046,59 +687,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="INVENTARIO_ARTICULOS">
-            <EntityTypeMapping TypeName="BD_JSYSModel.INVENTARIO_ARTICULOS">
-              <MappingFragment StoreEntitySet="INVENTARIO_ARTICULOS">
-                <ScalarProperty Name="STOCK_ACTUAL" ColumnName="STOCK_ACTUAL" />
-                <ScalarProperty Name="ID_ARTICULO" ColumnName="ID_ARTICULO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MOTIVOS_MOVIMIENTOS">
-            <EntityTypeMapping TypeName="BD_JSYSModel.MOTIVOS_MOVIMIENTOS">
-              <MappingFragment StoreEntitySet="MOTIVOS_MOVIMIENTOS">
-                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-                <ScalarProperty Name="TIPO_MOVIMIENTO" ColumnName="TIPO_MOVIMIENTO" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
-                <ScalarProperty Name="ID_MOTIVO" ColumnName="ID_MOTIVO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MOVIMIENTOS">
-            <EntityTypeMapping TypeName="BD_JSYSModel.MOVIMIENTOS">
-              <MappingFragment StoreEntitySet="MOVIMIENTOS">
-                <ScalarProperty Name="NOTA_ANULACION" ColumnName="NOTA_ANULACION" />
-                <ScalarProperty Name="FECHA_ANULADO" ColumnName="FECHA_ANULADO" />
-                <ScalarProperty Name="ANULADO_POR" ColumnName="ANULADO_POR" />
-                <ScalarProperty Name="FECHA_CREADO" ColumnName="FECHA_CREADO" />
-                <ScalarProperty Name="CREADO_POR" ColumnName="CREADO_POR" />
-                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
-                <ScalarProperty Name="ID_ARTICULO" ColumnName="ID_ARTICULO" />
-                <ScalarProperty Name="ID_MOTIVO" ColumnName="ID_MOTIVO" />
-                <ScalarProperty Name="ID_MOVIMIENTO" ColumnName="ID_MOVIMIENTO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PAGOS_CXP">
-            <EntityTypeMapping TypeName="BD_JSYSModel.PAGOS_CXP">
-              <MappingFragment StoreEntitySet="PAGOS_CXP">
-                <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
-                <ScalarProperty Name="NOTA_ANULACION" ColumnName="NOTA_ANULACION" />
-                <ScalarProperty Name="FECHA_ANULACION" ColumnName="FECHA_ANULACION" />
-                <ScalarProperty Name="ANULADO_POR" ColumnName="ANULADO_POR" />
-                <ScalarProperty Name="FECHA_CREADO" ColumnName="FECHA_CREADO" />
-                <ScalarProperty Name="CREADO_POR" ColumnName="CREADO_POR" />
-                <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-                <ScalarProperty Name="MONTO_PAGADO" ColumnName="MONTO_PAGADO" />
-                <ScalarProperty Name="ID_CXP" ColumnName="ID_CXP" />
-                <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PANTALLAS">
             <EntityTypeMapping TypeName="BD_JSYSModel.PANTALLAS">
               <MappingFragment StoreEntitySet="PANTALLAS">
@@ -1113,23 +701,6 @@
                 <ScalarProperty Name="ACCESO" ColumnName="ACCESO" />
                 <ScalarProperty Name="PANTALLA" ColumnName="PANTALLA" />
                 <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PROVEEDORES">
-            <EntityTypeMapping TypeName="BD_JSYSModel.PROVEEDORES">
-              <MappingFragment StoreEntitySet="PROVEEDORES">
-                <ScalarProperty Name="FECHA_CREADO" ColumnName="FECHA_CREADO" />
-                <ScalarProperty Name="CREADO_POR" ColumnName="CREADO_POR" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
-                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
-                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
-                <ScalarProperty Name="NUMERO_IDENTIFICACION" ColumnName="NUMERO_IDENTIFICACION" />
-                <ScalarProperty Name="ID_TIPO_IDENTIFICACION" ColumnName="ID_TIPO_IDENTIFICACION" />
-                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1183,20 +754,6 @@
                 <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
                 <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="VENDEDORES">
-            <EntityTypeMapping TypeName="BD_JSYSModel.VENDEDORES">
-              <MappingFragment StoreEntitySet="VENDEDORES">
-                <ScalarProperty Name="FECHA_CREADO" ColumnName="FECHA_CREADO" />
-                <ScalarProperty Name="CREADO_POR" ColumnName="CREADO_POR" />
-                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
-                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
-                <ScalarProperty Name="NUMERO_IDENTIFICACION" ColumnName="NUMERO_IDENTIFICACION" />
-                <ScalarProperty Name="ID_TIPO_IDENTIFICACION" ColumnName="ID_TIPO_IDENTIFICACION" />
-                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="ID_VENDEDOR" ColumnName="ID_VENDEDOR" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

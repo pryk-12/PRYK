@@ -13,12 +13,6 @@ namespace Servicios
             return Metodo.Listar_Facturas(Condicion);
         }
 
-       public static List<E_Detalles_Factura> Listar_Detalles_Facturas(string Condicion)
-       {
-           D_Factura Metodo = new D_Factura();
-           return Metodo.Listar_Detalles_Facturas(Condicion);
-       }
-
        public static List<E_Detalles_Cuota> Listar_Detalles_Cuotas(string Condicion)
        {
            D_Factura Metodo = new D_Factura();
@@ -73,12 +67,6 @@ namespace Servicios
             Metodo.Cambiar_Estado_Factura(obj);
         }
 
-       public static void Insertar_Detalle_Factura(DETALLES_FACTURAS obj)
-       {
-           D_Factura Metodo = new D_Factura();
-           Metodo.Insertar_Detalle_Factura(obj);
-       }
-
        public static void Insertar_Detalle_Cuota(DETALLES_CUOTAS obj)
        {
            D_Factura Metodo = new D_Factura();
@@ -91,23 +79,11 @@ namespace Servicios
            Metodo.Insertar_Encabezado_Cuota(obj);
        }
 
-       public static void Actualizar_Inventario(INVENTARIO_ARTICULOS obj)
-       {
-           D_Factura Metodo = new D_Factura();
-           Metodo.Actualizar_Inventario(obj);
-       }
-
         public static void Actualizar_Encabezado_Cuota(ENCABEZADO_CUOTAS obj)
         {
             D_Factura Metodo = new D_Factura();
             Metodo.Actualizar_Encabezado_Cuota(obj);
         }
-
-        public static void Actualizar_Inventario_Entrada(INVENTARIO_ARTICULOS obj)
-       {
-           D_Factura Metodo = new D_Factura();
-           Metodo.Actualizar_Inventario_Entrada(obj);
-       }
 
         public static void Actualizar_Montos_Factura(FACTURAS obj)
         {

@@ -4,30 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c51db26c0b4946a2ae8720837e62da83" Name="Diagram1" ZoomLevel="96">
-        <EntityTypeShape EntityType="BD_JSYSModel.ARTICULOS" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.CLIENTES" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.COBRADORES" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.CUADRES_DIARIOS" Width="1.5" PointX="4.75" PointY="4.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.CXP" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.DETALLES_CUOTAS" Width="1.5" PointX="6.75" PointY="5.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.DETALLES_FACTURAS" Width="1.5" PointX="0.75" PointY="7.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.EMPRESA" Width="1.5" PointX="2.75" PointY="7.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.ENCABEZADO_CUOTAS" Width="1.5" PointX="8.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.ESTADO_FACTURAS" Width="1.5" PointX="8.75" PointY="3.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.FACTURAS" Width="1.5" PointX="8.75" PointY="6.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.INVENTARIO_ARTICULOS" Width="1.5" PointX="4.75" PointY="9.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.MOTIVOS_MOVIMIENTOS" Width="1.5" PointX="10.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.MOVIMIENTOS" Width="1.5" PointX="10.75" PointY="3.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.PAGOS_CXP" Width="1.5" PointX="10.75" PointY="7.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.PANTALLAS" Width="1.5" PointX="10.75" PointY="11.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.PERMISOS" Width="1.5" PointX="12.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.PROVEEDORES" Width="1.5" PointX="0.75" PointY="12.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.RECIBOS_COBRADOS" Width="1.5" PointX="2.75" PointY="12.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.sysdiagrams" Width="1.5" PointX="12.75" PointY="3.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.TIPOS_IDENTIFICACIONES" Width="1.5" PointX="4.75" PointY="12.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.USUARIOS" Width="1.5" PointX="12.75" PointY="6.75" />
-        <EntityTypeShape EntityType="BD_JSYSModel.VENDEDORES" Width="1.5" PointX="12.75" PointY="10.75" />
+      <Diagram DiagramId="c51db26c0b4946a2ae8720837e62da83" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="BD_JSYSModel.CLIENTES" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.CUADRES_DIARIOS" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.DETALLES_CUOTAS" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.EMPRESA" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.ENCABEZADO_CUOTAS" Width="1.5" PointX="4.75" PointY="5.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.ESTADO_FACTURAS" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.FACTURAS" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.PANTALLAS" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.PERMISOS" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.RECIBOS_COBRADOS" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.TIPOS_IDENTIFICACIONES" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BD_JSYSModel.USUARIOS" Width="1.5" PointX="8.75" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

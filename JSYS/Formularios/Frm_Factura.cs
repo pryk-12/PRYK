@@ -66,7 +66,7 @@ namespace JSYS.Formularios
                 txt_garantia_7.Text = obj_factura.GARANTIA7;
                 txt_monto_pagado.Text = obj_factura.MONTO_PAGADO.ToString("N2");
                 txt_descuento.Text = obj_factura.MONTO_DESCONTADO == null ? "0" : ((decimal)(obj_factura.MONTO_DESCONTADO)).ToString("N2");
-
+                cb_ruta.Text = obj_factura.RUTA;
 
                 if (cb_estado.Text != "Activo")
                 {
@@ -79,9 +79,11 @@ namespace JSYS.Formularios
                     groupBox4.Enabled = false;
                     groupBox6.Enabled = false;
                     groupBox7.Enabled = false;
+                    cb_ruta.Enabled = false;
                 }
 
-
+                groupBox6.Enabled = false;
+                
                 //encabezado cuotas
                 var encabezado = db.ENCABEZADO_CUOTAS.Where(e => e.ID_FACTURA == obj_factura.ID_FACTURA).Single();
                 cb_modo_calculo.Text = encabezado.MODO_CALCULO;
@@ -167,7 +169,7 @@ namespace JSYS.Formularios
         {
             if (txt_total.TextLength == 0)
             {
-                S_Utilidades.Mensaje_Informacion("La Factura no tiene Monto Calculado");
+                S_Utilidades.Mensaje_Informacion("El Prestamo no tiene Monto Calculado");
                 return;
             }
 
@@ -232,7 +234,8 @@ namespace JSYS.Formularios
                 obj_factura.GARANTIA5 = txt_garantia_5.Text.Trim();
                 obj_factura.GARANTIA6 = txt_garantia_6.Text.Trim();
                 obj_factura.GARANTIA7 = txt_garantia_7.Text.Trim();
-
+                obj_factura.MONTO_DESCONTADO = 0;
+                obj_factura.RUTA = cb_ruta.Text;
                 S_Factura.Insertar_Factura(obj_factura);
 
                 BD_JSYSEntities db = new BD_JSYSEntities();
@@ -290,6 +293,8 @@ namespace JSYS.Formularios
             obj_factura.GARANTIA5 = txt_garantia_5.Text.Trim();
             obj_factura.GARANTIA6 = txt_garantia_6.Text.Trim();
             obj_factura.GARANTIA7 = txt_garantia_7.Text.Trim();
+            obj_factura.RUTA = cb_ruta.Text;
+            obj_factura.MONTO_DESCONTADO = Convert.ToDecimal(txt_descuento.Text);
 
             S_Factura.Actualizar_Factura(obj_factura);
 
@@ -365,6 +370,7 @@ namespace JSYS.Formularios
             if (cb_cliente.Text == "")
             {
                 S_Utilidades.Mensaje_Informacion("El Cliente es Obligatorio");
+                tabControl1.SelectedIndex = 0;
                 cb_cliente.Focus();
                 return;
             }
@@ -372,6 +378,7 @@ namespace JSYS.Formularios
             if (cb_numero_loteria.Text == "")
             {
                 S_Utilidades.Mensaje_Informacion("El Numero de Loteria Obligatorio");
+                tabControl1.SelectedIndex = 0;
                 cb_numero_loteria.Focus();
                 return;
             }
@@ -379,6 +386,7 @@ namespace JSYS.Formularios
             if (cb_cobrador.Text == "")
             {
                 S_Utilidades.Mensaje_Informacion("El Cobrador es Obligatorio");
+                tabControl1.SelectedIndex = 0;
                 cb_cobrador.Focus();
                 return;
             }
@@ -386,7 +394,32 @@ namespace JSYS.Formularios
             if (cb_estado.Text == "")
             {
                 S_Utilidades.Mensaje_Informacion("El Estado es Obligatorio");
+                tabControl1.SelectedIndex = 0;
                 cb_estado.Focus();
+                return;
+            }
+
+            if (cb_modo_calculo.Text == "")
+            {
+                S_Utilidades.Mensaje_Informacion("El Modo de Calculo es Obligatorio");
+                tabControl1.SelectedIndex = 1;
+                cb_modo_calculo.Focus();
+                return;
+            }
+
+            if (txt_garantia_1.Text.Trim() == "")
+            {
+                S_Utilidades.Mensaje_Informacion("La Garantia 1 es Obligatoria");
+                tabControl1.SelectedIndex = 0;
+                txt_garantia_1.Focus();
+                return;
+            }
+
+            if (txt_cantidad_cuota.Text == "")
+            {
+                S_Utilidades.Mensaje_Informacion("La Cantidad de Cuotas es Obligatorio");
+                tabControl1.SelectedIndex = 1;
+                txt_cantidad_cuota.Focus();
                 return;
             }
 
@@ -397,6 +430,20 @@ namespace JSYS.Formularios
                 return;
             }
 
+            if (cb_recalcular.Text == "")
+            {
+                S_Utilidades.Mensaje_Informacion("Se debe Seleccionar si es Re-Caculo o No");
+                tabControl1.SelectedIndex = 1;
+                cb_recalcular.Focus();
+                return;
+            }
+            if (cb_ruta.Text == "")
+            {
+                S_Utilidades.Mensaje_Informacion("Se debe Seleccionar la Ruta");
+                tabControl1.SelectedIndex = 0;
+                cb_ruta.Focus();
+                return;
+            }
 
             if (txt_numero_factura.TextLength == 0)
             {
@@ -414,6 +461,8 @@ namespace JSYS.Formularios
                 if (txt_observacion.Text == "")
                 {
                     S_Utilidades.Mensaje_Informacion("La Observación es Obligatorio");
+                    txt_observacion.Focus();
+                    tabControl1.SelectedIndex = 0;
                     return;
                 }
 
@@ -477,6 +526,21 @@ namespace JSYS.Formularios
             report.FilterString = "([ID_FACTURA]= " + id_factura + ")";
             ReportPrintTool tool = new ReportPrintTool(report);
             tool.ShowPreview();
+        }
+
+        private void txt_cantidad_cuota_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            S_Utilidades.Permitir_Solo_Numero(sender,e);
+        }
+
+        private void txt_total_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            S_Utilidades.Permitir_Solo_Numero_y_Punto(sender,e,txt_total);
+        }
+
+        private void txt_descuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            S_Utilidades.Permitir_Solo_Numero_y_Punto(sender, e, txt_descuento);
         }
     }
 }

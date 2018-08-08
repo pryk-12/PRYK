@@ -217,46 +217,22 @@ namespace JSYS.Formularios
 
         private void btn_cobradore_Click(object sender, EventArgs e)
         {
-            Form Frm_Mant_Cobradores = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Mant_Cobradores").SingleOrDefault();
-            if (Frm_Mant_Cobradores == null)
-            {
-                Frm_Mant_Cobradores frm = new Frm_Mant_Cobradores();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_vendedores_Click(object sender, EventArgs e)
         {
-            Form Frm_Mant_Vendedores = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Mant_Vendedores").SingleOrDefault();
-            if (Frm_Mant_Vendedores == null)
-            {
-                Frm_Mant_Vendedores frm = new Frm_Mant_Vendedores();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_articulos_Click(object sender, EventArgs e)
         {
-            Form Frm_Mant_Articulos = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Mant_Articulos").SingleOrDefault();
-            if (Frm_Mant_Articulos == null)
-            {
-                Frm_Mant_Articulos frm = new Frm_Mant_Articulos();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_motivo_movimiento_Click(object sender, EventArgs e)
         {
-            Form Frm_Mant_Motivos_Movimientos = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Mant_Motivos_Movimientos").SingleOrDefault();
-            if (Frm_Mant_Motivos_Movimientos == null)
-            {
-                Frm_Mant_Motivos_Movimientos frm = new Frm_Mant_Motivos_Movimientos();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_inventario_Click(object sender, EventArgs e)
@@ -267,46 +243,22 @@ namespace JSYS.Formularios
 
         private void btn_proveedores_Click(object sender, EventArgs e)
         {
-            Form Frm_Mant_Proveedores = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Mant_Proveedores").SingleOrDefault();
-            if (Frm_Mant_Proveedores == null)
-            {
-                Frm_Mant_Proveedores frm = new Frm_Mant_Proveedores();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_movimientos_Click(object sender, EventArgs e)
         {
-            Form Frm_Mant_Movimientos = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Mant_Movimientos").SingleOrDefault();
-            if (Frm_Mant_Movimientos == null)
-            {
-                Frm_Mant_Movimientos frm = new Frm_Mant_Movimientos();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_anular_cxp_Click(object sender, EventArgs e)
         {
-            Form Frm_Consultar_CXP = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Consultar_CXP").SingleOrDefault();
-            if (Frm_Consultar_CXP == null)
-            {
-                Frm_Consultar_CXP frm = new Frm_Consultar_CXP();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_consultar_pago_Click(object sender, EventArgs e)
         {
-            Form Frm_Consultar_Pagos_CXP = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Consultar_Pagos_CXP").SingleOrDefault();
-            if (Frm_Consultar_Pagos_CXP == null)
-            {
-                Frm_Consultar_Pagos_CXP frm = new Frm_Consultar_Pagos_CXP();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_empresa_Click(object sender, EventArgs e)
@@ -361,13 +313,7 @@ namespace JSYS.Formularios
 
         private void btn_entrega_articulo_Click(object sender, EventArgs e)
         {
-            Form Frm_Entregar_Articulos = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Entregar_Articulos").SingleOrDefault();
-            if (Frm_Entregar_Articulos == null)
-            {
-                Frm_Entregar_Articulos frm = new Frm_Entregar_Articulos();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_cuadre_Click(object sender, EventArgs e)
@@ -472,13 +418,7 @@ namespace JSYS.Formularios
 
         private void btn_movimientos_anulados_Click(object sender, EventArgs e)
         {
-            Form Frm_Consultar_Movimientos_Anulados = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "Frm_Consultar_Movimientos_Anulados").SingleOrDefault();
-            if (Frm_Consultar_Movimientos_Anulados == null)
-            {
-                Frm_Consultar_Movimientos_Anulados frm = new Frm_Consultar_Movimientos_Anulados();
-                frm.MdiParent = this;
-                frm.Show();
-            }
+
         }
 
         private void btn_facturas_no_activas_Click(object sender, EventArgs e)

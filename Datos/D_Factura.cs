@@ -16,13 +16,6 @@ namespace Datos
             }
         }
 
-        public List<E_Detalles_Factura> Listar_Detalles_Facturas(string Condicion)
-        {
-            using (var db = new BD_JSYSEntities())
-            {
-                return db.Database.SqlQuery<E_Detalles_Factura>(@"SP_LISTAR_DETALLES_FACTURAS @CONDICION", new SqlParameter("@CONDICION", Condicion)).ToList();
-            }
-        }
 
         public List<E_Detalles_Cuota> Listar_Detalles_Cuotas(string Condicion)
         {
@@ -77,15 +70,6 @@ namespace Datos
             using (var db = new BD_JSYSEntities())
             {
                 db.FACTURAS.Add(obj);
-                db.SaveChanges();
-            }
-        }
-
-        public void Insertar_Detalle_Factura(DETALLES_FACTURAS obj)
-        {
-            using (var db = new BD_JSYSEntities())
-            {
-                db.DETALLES_FACTURAS.Add(obj);
                 db.SaveChanges();
             }
         }
@@ -175,26 +159,7 @@ namespace Datos
                 obj_factura.GARANTIA6 = obj.GARANTIA6;
                 obj_factura.GARANTIA7 = obj.GARANTIA7;
                 obj_factura.MONTO_DESCONTADO = obj.MONTO_DESCONTADO;
-                db.SaveChanges();
-            }
-        }
-
-        public void Actualizar_Inventario(INVENTARIO_ARTICULOS obj)
-        {
-            using (var db = new BD_JSYSEntities())
-            {
-                var obj_invetario = db.INVENTARIO_ARTICULOS.Find(obj.ID_ARTICULO);
-                obj_invetario.STOCK_ACTUAL = obj_invetario.STOCK_ACTUAL - obj.STOCK_ACTUAL;
-                db.SaveChanges();
-            }
-        }
-
-        public void Actualizar_Inventario_Entrada(INVENTARIO_ARTICULOS obj)
-        {
-            using (var db = new BD_JSYSEntities())
-            {
-                var obj_invetario = db.INVENTARIO_ARTICULOS.Find(obj.ID_ARTICULO);
-                obj_invetario.STOCK_ACTUAL = obj_invetario.STOCK_ACTUAL + obj.STOCK_ACTUAL;
+                obj_factura.RUTA = obj.RUTA;
                 db.SaveChanges();
             }
         }
