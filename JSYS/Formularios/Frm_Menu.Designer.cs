@@ -28,47 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Menu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_usuario = new System.Windows.Forms.Button();
+            this.mn_usuario = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_usu_cerrar_sesion = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_consultas = new System.Windows.Forms.Button();
+            this.mn_consultas = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_cons_recibos_anulados = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_cons_prestamos_inactivos = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_configuraciones = new System.Windows.Forms.Button();
+            this.mn_configuraciones = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_conf_empresa = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_conf_permisos = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_reportes = new System.Windows.Forms.Button();
+            this.mn_reportes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_rep_prestamo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_rep_cobros_realizados = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_rep_cuadre_diario = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_rep_reimprimir_recibo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_rep_historial_pago = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_procesos = new System.Windows.Forms.Button();
+            this.mn_procesos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_proc_prestamos = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_proc_cxc = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_proc_cuadre = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_proc_anular_recibo = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Mantenimiento = new System.Windows.Forms.Button();
-            this.pn_matenimientos = new System.Windows.Forms.Panel();
-            this.btn_cliente = new System.Windows.Forms.Button();
-            this.btn_usuario = new System.Windows.Forms.Button();
-            this.pn_procesos = new System.Windows.Forms.Panel();
-            this.btn_anular_recibo = new System.Windows.Forms.Button();
-            this.btn_cuadre = new System.Windows.Forms.Button();
-            this.btn_cxc = new System.Windows.Forms.Button();
-            this.btn_facturacion = new System.Windows.Forms.Button();
-            this.pn_configuraciones = new System.Windows.Forms.Panel();
-            this.btn_permiso = new System.Windows.Forms.Button();
-            this.btn_empresa = new System.Windows.Forms.Button();
-            this.pn_reporte = new System.Windows.Forms.Panel();
-            this.btn_rep_historial = new System.Windows.Forms.Button();
-            this.btn_rep_reimprimir_recibos = new System.Windows.Forms.Button();
-            this.btn_rep_cuadre = new System.Windows.Forms.Button();
-            this.btn_rep_cobros_realizados = new System.Windows.Forms.Button();
-            this.btn_rep_facturas = new System.Windows.Forms.Button();
-            this.pn_consultas = new System.Windows.Forms.Panel();
-            this.btn_facturas_no_activas = new System.Windows.Forms.Button();
-            this.btn_recibos_anulados = new System.Windows.Forms.Button();
+            this.mn_mantenimientos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_mant_usuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_mant_cliente = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.mn_usuario.SuspendLayout();
+            this.mn_consultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pn_matenimientos.SuspendLayout();
-            this.pn_procesos.SuspendLayout();
-            this.pn_configuraciones.SuspendLayout();
-            this.pn_reporte.SuspendLayout();
-            this.pn_consultas.SuspendLayout();
+            this.mn_configuraciones.SuspendLayout();
+            this.mn_reportes.SuspendLayout();
+            this.mn_procesos.SuspendLayout();
+            this.mn_mantenimientos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel1.Controls.Add(this.btn_usuario);
             this.panel1.Controls.Add(this.btn_consultas);
             this.panel1.Controls.Add(this.lbl_usuario);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -82,8 +100,61 @@
             this.panel1.Size = new System.Drawing.Size(196, 560);
             this.panel1.TabIndex = 0;
             // 
+            // btn_usuario
+            // 
+            this.btn_usuario.ContextMenuStrip = this.mn_usuario;
+            this.btn_usuario.FlatAppearance.BorderSize = 0;
+            this.btn_usuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_usuario.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_usuario.ForeColor = System.Drawing.Color.White;
+            this.btn_usuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuario.Image")));
+            this.btn_usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_usuario.Location = new System.Drawing.Point(4, 462);
+            this.btn_usuario.Name = "btn_usuario";
+            this.btn_usuario.Size = new System.Drawing.Size(189, 56);
+            this.btn_usuario.TabIndex = 8;
+            this.btn_usuario.Text = "   ";
+            this.btn_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_usuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_usuario.UseVisualStyleBackColor = true;
+            this.btn_usuario.Click += new System.EventHandler(this.btn_usuario_Click);
+            // 
+            // mn_usuario
+            // 
+            this.mn_usuario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_usu_cerrar_sesion,
+            this.toolStripSeparator11,
+            this.toolStripMenuItem2});
+            this.mn_usuario.Name = "mn_mantenimientos";
+            this.mn_usuario.Size = new System.Drawing.Size(175, 58);
+            // 
+            // btn_usu_cerrar_sesion
+            // 
+            this.btn_usu_cerrar_sesion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_usu_cerrar_sesion.Image = ((System.Drawing.Image)(resources.GetObject("btn_usu_cerrar_sesion.Image")));
+            this.btn_usu_cerrar_sesion.Name = "btn_usu_cerrar_sesion";
+            this.btn_usu_cerrar_sesion.Size = new System.Drawing.Size(174, 24);
+            this.btn_usu_cerrar_sesion.Text = "Cerrar Sesión";
+            this.btn_usu_cerrar_sesion.Click += new System.EventHandler(this.btn_usu_cerrar_sesion_Click);
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(171, 6);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 24);
+            this.toolStripMenuItem2.Text = "Cambiar Clave";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // btn_consultas
             // 
+            this.btn_consultas.ContextMenuStrip = this.mn_consultas;
             this.btn_consultas.FlatAppearance.BorderSize = 0;
             this.btn_consultas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_consultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -101,6 +172,38 @@
             this.btn_consultas.UseVisualStyleBackColor = true;
             this.btn_consultas.Click += new System.EventHandler(this.btn_consultas_Click);
             // 
+            // mn_consultas
+            // 
+            this.mn_consultas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_cons_recibos_anulados,
+            this.toolStripSeparator9,
+            this.btn_cons_prestamos_inactivos});
+            this.mn_consultas.Name = "mn_mantenimientos";
+            this.mn_consultas.Size = new System.Drawing.Size(210, 58);
+            // 
+            // btn_cons_recibos_anulados
+            // 
+            this.btn_cons_recibos_anulados.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_cons_recibos_anulados.Image = ((System.Drawing.Image)(resources.GetObject("btn_cons_recibos_anulados.Image")));
+            this.btn_cons_recibos_anulados.Name = "btn_cons_recibos_anulados";
+            this.btn_cons_recibos_anulados.Size = new System.Drawing.Size(209, 24);
+            this.btn_cons_recibos_anulados.Text = "Recibos Anulados";
+            this.btn_cons_recibos_anulados.Click += new System.EventHandler(this.btn_cons_recibos_anulados_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(206, 6);
+            // 
+            // btn_cons_prestamos_inactivos
+            // 
+            this.btn_cons_prestamos_inactivos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_cons_prestamos_inactivos.Image = ((System.Drawing.Image)(resources.GetObject("btn_cons_prestamos_inactivos.Image")));
+            this.btn_cons_prestamos_inactivos.Name = "btn_cons_prestamos_inactivos";
+            this.btn_cons_prestamos_inactivos.Size = new System.Drawing.Size(209, 24);
+            this.btn_cons_prestamos_inactivos.Text = "Préstamos Inactivos";
+            this.btn_cons_prestamos_inactivos.Click += new System.EventHandler(this.btn_cons_prestamos_inactivos_Click);
+            // 
             // lbl_usuario
             // 
             this.lbl_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -112,6 +215,7 @@
             this.lbl_usuario.Size = new System.Drawing.Size(12, 16);
             this.lbl_usuario.TabIndex = 5;
             this.lbl_usuario.Text = ".";
+            this.lbl_usuario.Visible = false;
             // 
             // pictureBox1
             // 
@@ -126,6 +230,7 @@
             // 
             // btn_configuraciones
             // 
+            this.btn_configuraciones.ContextMenuStrip = this.mn_configuraciones;
             this.btn_configuraciones.FlatAppearance.BorderSize = 0;
             this.btn_configuraciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_configuraciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,8 +248,41 @@
             this.btn_configuraciones.UseVisualStyleBackColor = true;
             this.btn_configuraciones.Click += new System.EventHandler(this.btn_configuraciones_Click);
             // 
+            // mn_configuraciones
+            // 
+            this.mn_configuraciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_conf_empresa,
+            this.toolStripSeparator10,
+            this.btn_conf_permisos});
+            this.mn_configuraciones.Name = "mn_mantenimientos";
+            this.mn_configuraciones.Size = new System.Drawing.Size(197, 58);
+            // 
+            // btn_conf_empresa
+            // 
+            this.btn_conf_empresa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_conf_empresa.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_empresa.Image")));
+            this.btn_conf_empresa.Name = "btn_conf_empresa";
+            this.btn_conf_empresa.Size = new System.Drawing.Size(196, 24);
+            this.btn_conf_empresa.Text = "Datos de Empresa";
+            this.btn_conf_empresa.Click += new System.EventHandler(this.btn_conf_empresa_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(193, 6);
+            // 
+            // btn_conf_permisos
+            // 
+            this.btn_conf_permisos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_conf_permisos.Image = ((System.Drawing.Image)(resources.GetObject("btn_conf_permisos.Image")));
+            this.btn_conf_permisos.Name = "btn_conf_permisos";
+            this.btn_conf_permisos.Size = new System.Drawing.Size(196, 24);
+            this.btn_conf_permisos.Text = "Permisos";
+            this.btn_conf_permisos.Click += new System.EventHandler(this.btn_conf_permisos_Click);
+            // 
             // btn_reportes
             // 
+            this.btn_reportes.ContextMenuStrip = this.mn_reportes;
             this.btn_reportes.FlatAppearance.BorderSize = 0;
             this.btn_reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -162,8 +300,89 @@
             this.btn_reportes.UseVisualStyleBackColor = true;
             this.btn_reportes.Click += new System.EventHandler(this.btn_reportes_Click);
             // 
+            // mn_reportes
+            // 
+            this.mn_reportes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_rep_prestamo,
+            this.toolStripSeparator5,
+            this.btn_rep_cobros_realizados,
+            this.toolStripSeparator6,
+            this.btn_rep_cuadre_diario,
+            this.toolStripSeparator7,
+            this.btn_rep_reimprimir_recibo,
+            this.toolStripSeparator8,
+            this.btn_rep_historial_pago});
+            this.mn_reportes.Name = "mn_mantenimientos";
+            this.mn_reportes.Size = new System.Drawing.Size(209, 148);
+            // 
+            // btn_rep_prestamo
+            // 
+            this.btn_rep_prestamo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_rep_prestamo.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_prestamo.Image")));
+            this.btn_rep_prestamo.Name = "btn_rep_prestamo";
+            this.btn_rep_prestamo.Size = new System.Drawing.Size(208, 24);
+            this.btn_rep_prestamo.Text = "Préstamos";
+            this.btn_rep_prestamo.Click += new System.EventHandler(this.btn_rep_prestamo_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(205, 6);
+            // 
+            // btn_rep_cobros_realizados
+            // 
+            this.btn_rep_cobros_realizados.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_rep_cobros_realizados.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_cobros_realizados.Image")));
+            this.btn_rep_cobros_realizados.Name = "btn_rep_cobros_realizados";
+            this.btn_rep_cobros_realizados.Size = new System.Drawing.Size(208, 24);
+            this.btn_rep_cobros_realizados.Text = "Cobros Realizados";
+            this.btn_rep_cobros_realizados.Click += new System.EventHandler(this.btn_rep_cobros_realizados_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(205, 6);
+            // 
+            // btn_rep_cuadre_diario
+            // 
+            this.btn_rep_cuadre_diario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_rep_cuadre_diario.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_cuadre_diario.Image")));
+            this.btn_rep_cuadre_diario.Name = "btn_rep_cuadre_diario";
+            this.btn_rep_cuadre_diario.Size = new System.Drawing.Size(208, 24);
+            this.btn_rep_cuadre_diario.Text = "Cuadre Diario";
+            this.btn_rep_cuadre_diario.Click += new System.EventHandler(this.btn_rep_cuadre_diario_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(205, 6);
+            // 
+            // btn_rep_reimprimir_recibo
+            // 
+            this.btn_rep_reimprimir_recibo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_rep_reimprimir_recibo.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_reimprimir_recibo.Image")));
+            this.btn_rep_reimprimir_recibo.Name = "btn_rep_reimprimir_recibo";
+            this.btn_rep_reimprimir_recibo.Size = new System.Drawing.Size(208, 24);
+            this.btn_rep_reimprimir_recibo.Text = "Reimprimir Recibos";
+            this.btn_rep_reimprimir_recibo.Click += new System.EventHandler(this.btn_rep_reimprimir_recibo_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(205, 6);
+            // 
+            // btn_rep_historial_pago
+            // 
+            this.btn_rep_historial_pago.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_rep_historial_pago.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_historial_pago.Image")));
+            this.btn_rep_historial_pago.Name = "btn_rep_historial_pago";
+            this.btn_rep_historial_pago.Size = new System.Drawing.Size(208, 24);
+            this.btn_rep_historial_pago.Text = "Historial de Pagos";
+            this.btn_rep_historial_pago.Click += new System.EventHandler(this.btn_rep_historial_pago_Click);
+            // 
             // btn_procesos
             // 
+            this.btn_procesos.ContextMenuStrip = this.mn_procesos;
             this.btn_procesos.FlatAppearance.BorderSize = 0;
             this.btn_procesos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_procesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,8 +400,73 @@
             this.btn_procesos.UseVisualStyleBackColor = true;
             this.btn_procesos.Click += new System.EventHandler(this.btn_procesos_Click);
             // 
+            // mn_procesos
+            // 
+            this.mn_procesos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_proc_prestamos,
+            this.toolStripSeparator2,
+            this.btn_proc_cxc,
+            this.toolStripSeparator3,
+            this.btn_proc_cuadre,
+            this.toolStripSeparator4,
+            this.btn_proc_anular_recibo});
+            this.mn_procesos.Name = "mn_mantenimientos";
+            this.mn_procesos.Size = new System.Drawing.Size(208, 118);
+            // 
+            // btn_proc_prestamos
+            // 
+            this.btn_proc_prestamos.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_proc_prestamos.Image = ((System.Drawing.Image)(resources.GetObject("btn_proc_prestamos.Image")));
+            this.btn_proc_prestamos.Name = "btn_proc_prestamos";
+            this.btn_proc_prestamos.Size = new System.Drawing.Size(207, 24);
+            this.btn_proc_prestamos.Text = "Préstamos";
+            this.btn_proc_prestamos.Click += new System.EventHandler(this.btn_proc_prestamos_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
+            // 
+            // btn_proc_cxc
+            // 
+            this.btn_proc_cxc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_proc_cxc.Image = ((System.Drawing.Image)(resources.GetObject("btn_proc_cxc.Image")));
+            this.btn_proc_cxc.Name = "btn_proc_cxc";
+            this.btn_proc_cxc.Size = new System.Drawing.Size(207, 24);
+            this.btn_proc_cxc.Text = "Cuentas Por Cobrar";
+            this.btn_proc_cxc.Click += new System.EventHandler(this.btn_proc_cxc_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(204, 6);
+            // 
+            // btn_proc_cuadre
+            // 
+            this.btn_proc_cuadre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_proc_cuadre.Image = ((System.Drawing.Image)(resources.GetObject("btn_proc_cuadre.Image")));
+            this.btn_proc_cuadre.Name = "btn_proc_cuadre";
+            this.btn_proc_cuadre.Size = new System.Drawing.Size(207, 24);
+            this.btn_proc_cuadre.Text = "Cuadre Diario";
+            this.btn_proc_cuadre.Click += new System.EventHandler(this.btn_proc_cuadre_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(204, 6);
+            // 
+            // btn_proc_anular_recibo
+            // 
+            this.btn_proc_anular_recibo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_proc_anular_recibo.Image = ((System.Drawing.Image)(resources.GetObject("btn_proc_anular_recibo.Image")));
+            this.btn_proc_anular_recibo.Name = "btn_proc_anular_recibo";
+            this.btn_proc_anular_recibo.Size = new System.Drawing.Size(207, 24);
+            this.btn_proc_anular_recibo.Text = "Anular Recibo(s)";
+            this.btn_proc_anular_recibo.Click += new System.EventHandler(this.btn_proc_anular_recibo_Click);
+            // 
             // btn_Mantenimiento
             // 
+            this.btn_Mantenimiento.ContextMenuStrip = this.mn_mantenimientos;
             this.btn_Mantenimiento.FlatAppearance.BorderSize = 0;
             this.btn_Mantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Mantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -200,371 +484,37 @@
             this.btn_Mantenimiento.UseVisualStyleBackColor = true;
             this.btn_Mantenimiento.Click += new System.EventHandler(this.btn_Mantenimiento_Click);
             // 
-            // pn_matenimientos
+            // mn_mantenimientos
             // 
-            this.pn_matenimientos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pn_matenimientos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_matenimientos.Controls.Add(this.btn_cliente);
-            this.pn_matenimientos.Controls.Add(this.btn_usuario);
-            this.pn_matenimientos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_matenimientos.Location = new System.Drawing.Point(196, 0);
-            this.pn_matenimientos.Name = "pn_matenimientos";
-            this.pn_matenimientos.Size = new System.Drawing.Size(1105, 48);
-            this.pn_matenimientos.TabIndex = 2;
-            this.pn_matenimientos.Visible = false;
+            this.mn_mantenimientos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_mant_usuario,
+            this.toolStripSeparator1,
+            this.btn_mant_cliente});
+            this.mn_mantenimientos.Name = "mn_mantenimientos";
+            this.mn_mantenimientos.Size = new System.Drawing.Size(134, 58);
             // 
-            // btn_cliente
+            // btn_mant_usuario
             // 
-            this.btn_cliente.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_cliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_cliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cliente.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cliente.ForeColor = System.Drawing.Color.Black;
-            this.btn_cliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_cliente.Image")));
-            this.btn_cliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cliente.Location = new System.Drawing.Point(150, 2);
-            this.btn_cliente.Name = "btn_cliente";
-            this.btn_cliente.Size = new System.Drawing.Size(145, 42);
-            this.btn_cliente.TabIndex = 3;
-            this.btn_cliente.Text = " Clientes";
-            this.btn_cliente.UseVisualStyleBackColor = false;
-            this.btn_cliente.Click += new System.EventHandler(this.btn_cliente_Click);
+            this.btn_mant_usuario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_mant_usuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_mant_usuario.Image")));
+            this.btn_mant_usuario.Name = "btn_mant_usuario";
+            this.btn_mant_usuario.Size = new System.Drawing.Size(133, 24);
+            this.btn_mant_usuario.Text = "Usuarios";
+            this.btn_mant_usuario.Click += new System.EventHandler(this.btn_mant_usuario_Click);
             // 
-            // btn_usuario
+            // toolStripSeparator1
             // 
-            this.btn_usuario.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_usuario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_usuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_usuario.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_usuario.ForeColor = System.Drawing.Color.Black;
-            this.btn_usuario.Image = ((System.Drawing.Image)(resources.GetObject("btn_usuario.Image")));
-            this.btn_usuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_usuario.Location = new System.Drawing.Point(3, 2);
-            this.btn_usuario.Name = "btn_usuario";
-            this.btn_usuario.Size = new System.Drawing.Size(145, 42);
-            this.btn_usuario.TabIndex = 2;
-            this.btn_usuario.Text = "   Usuarios";
-            this.btn_usuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_usuario.UseVisualStyleBackColor = false;
-            this.btn_usuario.Click += new System.EventHandler(this.btn_usuario_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(130, 6);
             // 
-            // pn_procesos
+            // btn_mant_cliente
             // 
-            this.pn_procesos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pn_procesos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_procesos.Controls.Add(this.btn_anular_recibo);
-            this.pn_procesos.Controls.Add(this.btn_cuadre);
-            this.pn_procesos.Controls.Add(this.btn_cxc);
-            this.pn_procesos.Controls.Add(this.btn_facturacion);
-            this.pn_procesos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_procesos.Location = new System.Drawing.Point(196, 48);
-            this.pn_procesos.Name = "pn_procesos";
-            this.pn_procesos.Size = new System.Drawing.Size(1105, 48);
-            this.pn_procesos.TabIndex = 3;
-            this.pn_procesos.Visible = false;
-            // 
-            // btn_anular_recibo
-            // 
-            this.btn_anular_recibo.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_anular_recibo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_anular_recibo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_anular_recibo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_anular_recibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_anular_recibo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_anular_recibo.ForeColor = System.Drawing.Color.Black;
-            this.btn_anular_recibo.Image = ((System.Drawing.Image)(resources.GetObject("btn_anular_recibo.Image")));
-            this.btn_anular_recibo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_anular_recibo.Location = new System.Drawing.Point(444, 2);
-            this.btn_anular_recibo.Name = "btn_anular_recibo";
-            this.btn_anular_recibo.Size = new System.Drawing.Size(145, 42);
-            this.btn_anular_recibo.TabIndex = 13;
-            this.btn_anular_recibo.Text = " Anular Recibos";
-            this.btn_anular_recibo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_anular_recibo.UseVisualStyleBackColor = false;
-            this.btn_anular_recibo.Click += new System.EventHandler(this.btn_anular_recibo_Click);
-            // 
-            // btn_cuadre
-            // 
-            this.btn_cuadre.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_cuadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_cuadre.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cuadre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_cuadre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cuadre.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cuadre.ForeColor = System.Drawing.Color.Black;
-            this.btn_cuadre.Image = ((System.Drawing.Image)(resources.GetObject("btn_cuadre.Image")));
-            this.btn_cuadre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cuadre.Location = new System.Drawing.Point(297, 2);
-            this.btn_cuadre.Name = "btn_cuadre";
-            this.btn_cuadre.Size = new System.Drawing.Size(145, 42);
-            this.btn_cuadre.TabIndex = 10;
-            this.btn_cuadre.Text = "Cuadre";
-            this.btn_cuadre.UseVisualStyleBackColor = false;
-            this.btn_cuadre.Click += new System.EventHandler(this.btn_cuadre_Click);
-            // 
-            // btn_cxc
-            // 
-            this.btn_cxc.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_cxc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_cxc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cxc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_cxc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cxc.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cxc.ForeColor = System.Drawing.Color.Black;
-            this.btn_cxc.Image = ((System.Drawing.Image)(resources.GetObject("btn_cxc.Image")));
-            this.btn_cxc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cxc.Location = new System.Drawing.Point(150, 2);
-            this.btn_cxc.Name = "btn_cxc";
-            this.btn_cxc.Size = new System.Drawing.Size(145, 42);
-            this.btn_cxc.TabIndex = 9;
-            this.btn_cxc.Text = " CXC";
-            this.btn_cxc.UseVisualStyleBackColor = false;
-            this.btn_cxc.Click += new System.EventHandler(this.btn_cxc_Click);
-            // 
-            // btn_facturacion
-            // 
-            this.btn_facturacion.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_facturacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_facturacion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_facturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_facturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_facturacion.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_facturacion.ForeColor = System.Drawing.Color.Black;
-            this.btn_facturacion.Image = ((System.Drawing.Image)(resources.GetObject("btn_facturacion.Image")));
-            this.btn_facturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_facturacion.Location = new System.Drawing.Point(3, 2);
-            this.btn_facturacion.Name = "btn_facturacion";
-            this.btn_facturacion.Size = new System.Drawing.Size(145, 42);
-            this.btn_facturacion.TabIndex = 1;
-            this.btn_facturacion.Text = "     Préstamos";
-            this.btn_facturacion.UseVisualStyleBackColor = false;
-            this.btn_facturacion.Click += new System.EventHandler(this.btn_facturacion_Click);
-            // 
-            // pn_configuraciones
-            // 
-            this.pn_configuraciones.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pn_configuraciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_configuraciones.Controls.Add(this.btn_permiso);
-            this.pn_configuraciones.Controls.Add(this.btn_empresa);
-            this.pn_configuraciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_configuraciones.Location = new System.Drawing.Point(196, 96);
-            this.pn_configuraciones.Name = "pn_configuraciones";
-            this.pn_configuraciones.Size = new System.Drawing.Size(1105, 48);
-            this.pn_configuraciones.TabIndex = 7;
-            this.pn_configuraciones.Visible = false;
-            // 
-            // btn_permiso
-            // 
-            this.btn_permiso.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_permiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_permiso.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_permiso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_permiso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_permiso.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_permiso.ForeColor = System.Drawing.Color.Black;
-            this.btn_permiso.Image = ((System.Drawing.Image)(resources.GetObject("btn_permiso.Image")));
-            this.btn_permiso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_permiso.Location = new System.Drawing.Point(150, 2);
-            this.btn_permiso.Name = "btn_permiso";
-            this.btn_permiso.Size = new System.Drawing.Size(145, 42);
-            this.btn_permiso.TabIndex = 22;
-            this.btn_permiso.Text = "Permisos";
-            this.btn_permiso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_permiso.UseVisualStyleBackColor = false;
-            this.btn_permiso.Click += new System.EventHandler(this.btn_permiso_Click);
-            // 
-            // btn_empresa
-            // 
-            this.btn_empresa.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_empresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_empresa.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_empresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_empresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_empresa.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_empresa.ForeColor = System.Drawing.Color.Black;
-            this.btn_empresa.Image = ((System.Drawing.Image)(resources.GetObject("btn_empresa.Image")));
-            this.btn_empresa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_empresa.Location = new System.Drawing.Point(3, 2);
-            this.btn_empresa.Name = "btn_empresa";
-            this.btn_empresa.Size = new System.Drawing.Size(145, 42);
-            this.btn_empresa.TabIndex = 2;
-            this.btn_empresa.Text = "Empresa";
-            this.btn_empresa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_empresa.UseVisualStyleBackColor = false;
-            this.btn_empresa.Click += new System.EventHandler(this.btn_empresa_Click);
-            // 
-            // pn_reporte
-            // 
-            this.pn_reporte.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pn_reporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_reporte.Controls.Add(this.btn_rep_historial);
-            this.pn_reporte.Controls.Add(this.btn_rep_reimprimir_recibos);
-            this.pn_reporte.Controls.Add(this.btn_rep_cuadre);
-            this.pn_reporte.Controls.Add(this.btn_rep_cobros_realizados);
-            this.pn_reporte.Controls.Add(this.btn_rep_facturas);
-            this.pn_reporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_reporte.Location = new System.Drawing.Point(196, 144);
-            this.pn_reporte.Name = "pn_reporte";
-            this.pn_reporte.Size = new System.Drawing.Size(1105, 48);
-            this.pn_reporte.TabIndex = 9;
-            this.pn_reporte.Visible = false;
-            // 
-            // btn_rep_historial
-            // 
-            this.btn_rep_historial.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_rep_historial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_rep_historial.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_rep_historial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_rep_historial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rep_historial.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep_historial.ForeColor = System.Drawing.Color.Black;
-            this.btn_rep_historial.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_historial.Image")));
-            this.btn_rep_historial.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_historial.Location = new System.Drawing.Point(629, 2);
-            this.btn_rep_historial.Name = "btn_rep_historial";
-            this.btn_rep_historial.Size = new System.Drawing.Size(167, 42);
-            this.btn_rep_historial.TabIndex = 8;
-            this.btn_rep_historial.Text = "Historial de Pagos";
-            this.btn_rep_historial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rep_historial.UseVisualStyleBackColor = false;
-            this.btn_rep_historial.Click += new System.EventHandler(this.btn_rep_historial_Click);
-            // 
-            // btn_rep_reimprimir_recibos
-            // 
-            this.btn_rep_reimprimir_recibos.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_rep_reimprimir_recibos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_rep_reimprimir_recibos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_rep_reimprimir_recibos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_rep_reimprimir_recibos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rep_reimprimir_recibos.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep_reimprimir_recibos.ForeColor = System.Drawing.Color.Black;
-            this.btn_rep_reimprimir_recibos.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_reimprimir_recibos.Image")));
-            this.btn_rep_reimprimir_recibos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_reimprimir_recibos.Location = new System.Drawing.Point(460, 2);
-            this.btn_rep_reimprimir_recibos.Name = "btn_rep_reimprimir_recibos";
-            this.btn_rep_reimprimir_recibos.Size = new System.Drawing.Size(167, 42);
-            this.btn_rep_reimprimir_recibos.TabIndex = 7;
-            this.btn_rep_reimprimir_recibos.Text = "Reimprimir Recibos";
-            this.btn_rep_reimprimir_recibos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rep_reimprimir_recibos.UseVisualStyleBackColor = false;
-            this.btn_rep_reimprimir_recibos.Click += new System.EventHandler(this.btn_rep_reimprimir_recibos_Click);
-            // 
-            // btn_rep_cuadre
-            // 
-            this.btn_rep_cuadre.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_rep_cuadre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_rep_cuadre.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_rep_cuadre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_rep_cuadre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rep_cuadre.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep_cuadre.ForeColor = System.Drawing.Color.Black;
-            this.btn_rep_cuadre.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_cuadre.Image")));
-            this.btn_rep_cuadre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_cuadre.Location = new System.Drawing.Point(313, 2);
-            this.btn_rep_cuadre.Name = "btn_rep_cuadre";
-            this.btn_rep_cuadre.Size = new System.Drawing.Size(145, 42);
-            this.btn_rep_cuadre.TabIndex = 5;
-            this.btn_rep_cuadre.Text = "Cuadre Diario";
-            this.btn_rep_cuadre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rep_cuadre.UseVisualStyleBackColor = false;
-            this.btn_rep_cuadre.Click += new System.EventHandler(this.btn_rep_cuadre_Click);
-            // 
-            // btn_rep_cobros_realizados
-            // 
-            this.btn_rep_cobros_realizados.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_rep_cobros_realizados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_rep_cobros_realizados.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_rep_cobros_realizados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_rep_cobros_realizados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rep_cobros_realizados.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep_cobros_realizados.ForeColor = System.Drawing.Color.Black;
-            this.btn_rep_cobros_realizados.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_cobros_realizados.Image")));
-            this.btn_rep_cobros_realizados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_cobros_realizados.Location = new System.Drawing.Point(150, 2);
-            this.btn_rep_cobros_realizados.Name = "btn_rep_cobros_realizados";
-            this.btn_rep_cobros_realizados.Size = new System.Drawing.Size(161, 42);
-            this.btn_rep_cobros_realizados.TabIndex = 4;
-            this.btn_rep_cobros_realizados.Text = "Cobros Realizados";
-            this.btn_rep_cobros_realizados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rep_cobros_realizados.UseVisualStyleBackColor = false;
-            this.btn_rep_cobros_realizados.Click += new System.EventHandler(this.btn_rep_cobros_realizados_Click);
-            // 
-            // btn_rep_facturas
-            // 
-            this.btn_rep_facturas.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_rep_facturas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_rep_facturas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_rep_facturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_rep_facturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_rep_facturas.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rep_facturas.ForeColor = System.Drawing.Color.Black;
-            this.btn_rep_facturas.Image = ((System.Drawing.Image)(resources.GetObject("btn_rep_facturas.Image")));
-            this.btn_rep_facturas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_rep_facturas.Location = new System.Drawing.Point(3, 2);
-            this.btn_rep_facturas.Name = "btn_rep_facturas";
-            this.btn_rep_facturas.Size = new System.Drawing.Size(145, 42);
-            this.btn_rep_facturas.TabIndex = 3;
-            this.btn_rep_facturas.Text = "Préstamos";
-            this.btn_rep_facturas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_rep_facturas.UseVisualStyleBackColor = false;
-            this.btn_rep_facturas.Click += new System.EventHandler(this.btn_rep_facturas_Click);
-            // 
-            // pn_consultas
-            // 
-            this.pn_consultas.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pn_consultas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_consultas.Controls.Add(this.btn_facturas_no_activas);
-            this.pn_consultas.Controls.Add(this.btn_recibos_anulados);
-            this.pn_consultas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pn_consultas.Location = new System.Drawing.Point(196, 192);
-            this.pn_consultas.Name = "pn_consultas";
-            this.pn_consultas.Size = new System.Drawing.Size(1105, 48);
-            this.pn_consultas.TabIndex = 11;
-            this.pn_consultas.Visible = false;
-            // 
-            // btn_facturas_no_activas
-            // 
-            this.btn_facturas_no_activas.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_facturas_no_activas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_facturas_no_activas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_facturas_no_activas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_facturas_no_activas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_facturas_no_activas.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_facturas_no_activas.ForeColor = System.Drawing.Color.Black;
-            this.btn_facturas_no_activas.Image = ((System.Drawing.Image)(resources.GetObject("btn_facturas_no_activas.Image")));
-            this.btn_facturas_no_activas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_facturas_no_activas.Location = new System.Drawing.Point(172, 2);
-            this.btn_facturas_no_activas.Name = "btn_facturas_no_activas";
-            this.btn_facturas_no_activas.Size = new System.Drawing.Size(175, 42);
-            this.btn_facturas_no_activas.TabIndex = 4;
-            this.btn_facturas_no_activas.Text = " Facturas No Activas";
-            this.btn_facturas_no_activas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_facturas_no_activas.UseVisualStyleBackColor = false;
-            this.btn_facturas_no_activas.Click += new System.EventHandler(this.btn_facturas_no_activas_Click);
-            // 
-            // btn_recibos_anulados
-            // 
-            this.btn_recibos_anulados.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btn_recibos_anulados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_recibos_anulados.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_recibos_anulados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_recibos_anulados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_recibos_anulados.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_recibos_anulados.ForeColor = System.Drawing.Color.Black;
-            this.btn_recibos_anulados.Image = ((System.Drawing.Image)(resources.GetObject("btn_recibos_anulados.Image")));
-            this.btn_recibos_anulados.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_recibos_anulados.Location = new System.Drawing.Point(3, 2);
-            this.btn_recibos_anulados.Name = "btn_recibos_anulados";
-            this.btn_recibos_anulados.Size = new System.Drawing.Size(167, 42);
-            this.btn_recibos_anulados.TabIndex = 2;
-            this.btn_recibos_anulados.Text = " Recibos Anulados";
-            this.btn_recibos_anulados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_recibos_anulados.UseVisualStyleBackColor = false;
-            this.btn_recibos_anulados.Click += new System.EventHandler(this.btn_recibos_anulados_Click);
+            this.btn_mant_cliente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_mant_cliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_mant_cliente.Image")));
+            this.btn_mant_cliente.Name = "btn_mant_cliente";
+            this.btn_mant_cliente.Size = new System.Drawing.Size(133, 24);
+            this.btn_mant_cliente.Text = "Clientes";
+            this.btn_mant_cliente.Click += new System.EventHandler(this.btn_mant_cliente_Click);
             // 
             // Frm_Menu
             // 
@@ -573,11 +523,6 @@
             this.BackgroundImage = global::JSYS.Properties.Resources.ventas;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1301, 560);
-            this.Controls.Add(this.pn_consultas);
-            this.Controls.Add(this.pn_reporte);
-            this.Controls.Add(this.pn_configuraciones);
-            this.Controls.Add(this.pn_procesos);
-            this.Controls.Add(this.pn_matenimientos);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "Frm_Menu";
@@ -586,12 +531,13 @@
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.mn_usuario.ResumeLayout(false);
+            this.mn_consultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pn_matenimientos.ResumeLayout(false);
-            this.pn_procesos.ResumeLayout(false);
-            this.pn_configuraciones.ResumeLayout(false);
-            this.pn_reporte.ResumeLayout(false);
-            this.pn_consultas.ResumeLayout(false);
+            this.mn_configuraciones.ResumeLayout(false);
+            this.mn_reportes.ResumeLayout(false);
+            this.mn_procesos.ResumeLayout(false);
+            this.mn_mantenimientos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -604,27 +550,42 @@
         private System.Windows.Forms.Button btn_reportes;
         private System.Windows.Forms.Button btn_configuraciones;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pn_matenimientos;
-        private System.Windows.Forms.Button btn_cliente;
-        private System.Windows.Forms.Button btn_usuario;
-        private System.Windows.Forms.Panel pn_procesos;
-        private System.Windows.Forms.Button btn_anular_recibo;
-        private System.Windows.Forms.Button btn_cuadre;
-        private System.Windows.Forms.Button btn_cxc;
-        private System.Windows.Forms.Button btn_facturacion;
         private System.Windows.Forms.Label lbl_usuario;
-        private System.Windows.Forms.Panel pn_configuraciones;
-        private System.Windows.Forms.Button btn_empresa;
-        private System.Windows.Forms.Panel pn_reporte;
-        private System.Windows.Forms.Button btn_rep_cuadre;
-        private System.Windows.Forms.Button btn_rep_cobros_realizados;
-        private System.Windows.Forms.Button btn_rep_facturas;
-        private System.Windows.Forms.Button btn_rep_reimprimir_recibos;
         private System.Windows.Forms.Button btn_consultas;
-        private System.Windows.Forms.Panel pn_consultas;
-        private System.Windows.Forms.Button btn_recibos_anulados;
-        private System.Windows.Forms.Button btn_facturas_no_activas;
-        private System.Windows.Forms.Button btn_permiso;
-        private System.Windows.Forms.Button btn_rep_historial;
+        private System.Windows.Forms.ContextMenuStrip mn_mantenimientos;
+        private System.Windows.Forms.ToolStripMenuItem btn_mant_usuario;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem btn_mant_cliente;
+        private System.Windows.Forms.ContextMenuStrip mn_procesos;
+        private System.Windows.Forms.ToolStripMenuItem btn_proc_prestamos;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem btn_proc_cxc;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.Button btn_usuario;
+        private System.Windows.Forms.ContextMenuStrip mn_usuario;
+        private System.Windows.Forms.ToolStripMenuItem btn_usu_cerrar_sesion;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ContextMenuStrip mn_consultas;
+        private System.Windows.Forms.ToolStripMenuItem btn_cons_recibos_anulados;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripMenuItem btn_cons_prestamos_inactivos;
+        private System.Windows.Forms.ContextMenuStrip mn_configuraciones;
+        private System.Windows.Forms.ToolStripMenuItem btn_conf_empresa;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripMenuItem btn_conf_permisos;
+        private System.Windows.Forms.ContextMenuStrip mn_reportes;
+        private System.Windows.Forms.ToolStripMenuItem btn_rep_prestamo;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem btn_rep_cobros_realizados;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem btn_rep_cuadre_diario;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem btn_rep_reimprimir_recibo;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem btn_rep_historial_pago;
+        private System.Windows.Forms.ToolStripMenuItem btn_proc_cuadre;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem btn_proc_anular_recibo;
     }
 }

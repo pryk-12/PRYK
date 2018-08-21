@@ -57,8 +57,7 @@
     <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
@@ -97,6 +96,12 @@
     </Compile>
     <Compile Include="Formularios\Frm_Anular_Recibo.Designer.cs">
       <DependentUpon>Frm_Anular_Recibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Frm_Cambiar_Clave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Frm_Cambiar_Clave.Designer.cs">
+      <DependentUpon>Frm_Cambiar_Clave.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Frm_Cliente.cs">
       <SubType>Form</SubType>
@@ -282,6 +287,9 @@
     </Compile>
     <EmbeddedResource Include="Formularios\Frm_Anular_Recibo.resx">
       <DependentUpon>Frm_Anular_Recibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Frm_Cambiar_Clave.resx">
+      <DependentUpon>Frm_Cambiar_Clave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frm_Cliente.resx">
       <DependentUpon>Frm_Cliente.cs</DependentUpon>

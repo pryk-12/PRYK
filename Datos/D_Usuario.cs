@@ -43,7 +43,7 @@ namespace Datos
        {
            using (var db = new BD_JSYSEntities())
            {
-               var obj_usuario = db.USUARIOS.Find(obj.ID_USUARIO);
+               var obj_usuario = db.USUARIOS.Where( a=> a.USUARIO == obj.USUARIO).SingleOrDefault();
                obj_usuario.CLAVE = obj.CLAVE;
                db.SaveChanges();
            }
