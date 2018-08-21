@@ -83,13 +83,13 @@ namespace JSYS.Formularios
                 btn_empresa.Enabled = obj_29.ACCESO == true ? true : false;
 
                 var obj_30 = db.PERMISOS.Where(a => a.USUARIO == S_Utilidades.Datos_Usuario.USUARIO).Where(a => a.PANTALLA == "Configuraciones - Permisos").SingleOrDefault();
-                btn_permiso.Enabled = obj_30.ACCESO == true ? true : false;                
+                btn_permiso.Enabled = obj_30.ACCESO == true ? true : false;
             }
             catch
             {
                 S_Utilidades.Mensaje_Error("Revisar si este Usuario tiene los Permisos Asignados");
-                Application.Exit();
-            }        
+                Close();
+            }
         }
 
         private void Frm_Menu_Load(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace JSYS.Formularios
             }
 
             lbl_usuario.Text = "Usuario:  " + S_Utilidades.Datos_Usuario.USUARIO;
-           Cargar_Permisos();
+           //Cargar_Permisos();
         }
 
         public void ocultar_barra_menu(bool opcion)
